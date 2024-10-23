@@ -43,12 +43,12 @@
     &quot;assignee&quot;: &quot;LordLucky04&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/aguslibong/TPF_BDA.git&quot;,
-    &quot;accountId&quot;: &quot;7dba63b1-8a35-421d-8f2f-fc536855c4a4&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/aguslibong/TPF_BDA_grupo94.git",
+    "accountId": "7dba63b1-8a35-421d-8f2f-fc536855c4a4"
   }
-}</component>
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -83,7 +83,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "advanced.settings",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -92,10 +92,17 @@
       <recent name="C:\Users\nacho\Documents\Facultad\backend\TPF_BDA" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.TpfBdaApplication">
     <configuration name="TpfBdaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="TPF_BDA" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.utn.frc.backend.TPF_BDA.TpfBdaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehiculoPosicionesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="vehiculoPosiciones" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.frc.utn.backend.vehiculoPosiciones.VehiculoPosicionesApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -119,7 +126,7 @@
       <updated>1729624108047</updated>
       <workItem from="1729624109180" duration="6669000" />
       <workItem from="1729636799500" duration="8000" />
-      <workItem from="1729695724390" duration="8575000" />
+      <workItem from="1729695724390" duration="9901000" />
     </task>
     <servers />
   </component>
