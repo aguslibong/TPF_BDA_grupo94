@@ -4,10 +4,20 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/vehiculoPosiciones/pom.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="openjdk-23" project-jdk-type="JavaSDK" />
+=======
+        <option value="$PROJECT_DIR$/interesadosPruebas/pom.xml" />
+        <option value="$PROJECT_DIR$/vehiculoPosiciones/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="23" project-jdk-type="JavaSDK" />
+>>>>>>> b56547988e74c5b77b3ab5bbf08df6c7c2104c67
 </project>

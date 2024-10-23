@@ -1,4 +1,4 @@
-package ar.edu.utn.frc.backend.TPF_BDA.entities;
+package ar.edu.frc.utn.backend.interesadosPruebas.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -18,7 +18,7 @@ public class Prueba {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "ID_VEHICULO")
-    private Vehiculo idVehiculo;
+    private long idVehiculo;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "ID_INTERESADO")

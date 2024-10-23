@@ -1,4 +1,4 @@
-package ar.edu.utn.frc.backend.TPF_BDA.entities;
+package ar.edu.frc.utn.backend.interesadosPruebas.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
