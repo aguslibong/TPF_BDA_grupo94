@@ -2,26 +2,10 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-<<<<<<< HEAD
-      <profile default="true" name="Default" enabled="true" />
-=======
->>>>>>> b56547988e74c5b77b3ab5bbf08df6c7c2104c67
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-<<<<<<< HEAD
-        <module name="vehiculoPosiciones" />
-      </profile>
-    </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="TPF_BDA" target="21" />
-    </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="TPF_BDA" options="-parameters" />
-=======
         <module name="interesadosPruebas" />
         <module name="gateway" />
         <module name="vehiculoPosiciones" />
@@ -32,7 +16,6 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="gateway" options="-parameters" />
       <module name="interesadosPruebas" options="-parameters" />
->>>>>>> b56547988e74c5b77b3ab5bbf08df6c7c2104c67
       <module name="vehiculoPosiciones" options="-parameters" />
     </option>
   </component>
