@@ -16,8 +16,7 @@ public class Prueba {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "ID_VEHICULO")
+    @Column(name = "ID_VEHICULO")
     private long idVehiculo;
 
     @ManyToOne(cascade = CascadeType.ALL)
