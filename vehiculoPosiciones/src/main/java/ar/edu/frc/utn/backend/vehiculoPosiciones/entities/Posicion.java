@@ -20,7 +20,7 @@ public class Posicion {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "ID_VEHICULO")
-    private Vehiculo idVehiculo;
+    private Vehiculo vehiculo;
 
     @Column(name = "FECHA_HORA", nullable = false)
     private String fechaHora;

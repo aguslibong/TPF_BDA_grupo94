@@ -1,0 +1,235 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_23_10_2024_16_30_[Changes]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_23_10_2024_16_30_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_23_10_2024_16_30_[Changes]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1729711844824)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_23_10_2024_16_30_[Changes]/shelved.patch	(date 1729711844824)
+@@ -0,0 +1,103 @@
++Index: .idea/workspace.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e31adbf3-3d5f-4b7d-9317-905b8c40f447\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Empleado.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Empleado.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Interesado.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Interesado.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;LordLucky04&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\r\n  \"selectedUrlAndAccountId\": {\r\n    \"url\": \"https://github.com/aguslibong/TPF_BDA_grupo94.git\",\r\n    \"accountId\": \"7dba63b1-8a35-421d-8f2f-fc536855c4a4\"\r\n  }\r\n}]]></component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHomeTypeForPersistence\" value=\"WRAPPER\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2no0QotaG3HMat98juyesBCJdTZ\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"Application.InteresadosPruebasApplication.executor\": \"Run\",\r\n    \"RequestMappingsPanelOrder0\": \"0\",\r\n    \"RequestMappingsPanelOrder1\": \"1\",\r\n    \"RequestMappingsPanelWidth0\": \"75\",\r\n    \"RequestMappingsPanelWidth1\": \"75\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"Spring Boot.TpfBdaApplication.executor\": \"Run\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"D:/UTN/2024/Backend/TPF_grupo94\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"Project\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n<<<<<<< HEAD\r\n    \"settings.editor.selected.configurable\": \"MavenSettings\",\r\n=======\r\n    \"settings.editor.selected.configurable\": \"reference.settings.project.maven.importing\",\r\n>>>>>>> b56547988e74c5b77b3ab5bbf08df6c7c2104c67\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\nacho\\Documents\\Facultad\\backend\\TPF_BDA\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Spring Boot.TpfBdaApplication\">\r\n    <configuration name=\"TpfBdaApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"TPF_BDA\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"ar.edu.utn.frc.backend.TPF_BDA.TpfBdaApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"VehiculoPosicionesApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"vehiculoPosiciones\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"ar.edu.frc.utn.backend.vehiculoPosiciones.VehiculoPosicionesApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e31adbf3-3d5f-4b7d-9317-905b8c40f447\" name=\"Changes\" comment=\"\" />\r\n      <created>1729624108047</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1729624108047</updated>\r\n      <workItem from=\"1729624109180\" duration=\"6669000\" />\r\n      <workItem from=\"1729636799500\" duration=\"8000\" />\r\n      <workItem from=\"1729695724390\" duration=\"9901000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/.idea/workspace.xml b/.idea/workspace.xml
++--- a/.idea/workspace.xml	(revision ccb24b527dd1afdb7b659b2b8af89679bf0e2039)
+++++ b/.idea/workspace.xml	(date 1729711815026)
++@@ -5,9 +5,22 @@
++   </component>
++   <component name="ChangeListManager">
++     <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="">
++-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Empleado.java" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Interesado.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Interesado.java" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+++      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+++      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+++      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+++      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+++      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/backend/TPF_BDA/TpfBdaApplication.java" beforeDir="false" />
+++      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/backend/TPF_BDA/entities/Empleado.java" beforeDir="false" />
+++      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/backend/TPF_BDA/entities/Interesado.java" beforeDir="false" />
+++      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/backend/TPF_BDA/entities/Marca.java" beforeDir="false" />
+++      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/backend/TPF_BDA/entities/Modelo.java" beforeDir="false" />
+++      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/backend/TPF_BDA/entities/Posicion.java" beforeDir="false" />
+++      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/backend/TPF_BDA/entities/Prueba.java" beforeDir="false" />
+++      <change beforePath="$PROJECT_DIR$/src/main/java/ar/edu/utn/frc/backend/TPF_BDA/entities/Vehiculo.java" beforeDir="false" />
+++      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
+++      <change beforePath="$PROJECT_DIR$/src/test/java/ar/edu/utn/frc/backend/TPF_BDA/TpfBdaApplicationTests.java" beforeDir="false" />
++     </list>
++     <option name="SHOW_DIALOG" value="false" />
++     <option name="HIGHLIGHT_CONFLICTS" value="true" />
++@@ -53,8 +66,6 @@
++   </component>
++   <component name="PropertiesComponent"><![CDATA[{
++   "keyToString": {
++-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
++-    "Application.InteresadosPruebasApplication.executor": "Run",
++     "RequestMappingsPanelOrder0": "0",
++     "RequestMappingsPanelOrder1": "1",
++     "RequestMappingsPanelWidth0": "75",
++@@ -62,9 +73,8 @@
++     "RunOnceActivity.ShowReadmeOnStart": "true",
++     "Spring Boot.TpfBdaApplication.executor": "Run",
++     "git-widget-placeholder": "main",
++-    "ignore.virus.scanning.warn.message": "true",
++     "kotlin-language-version-configured": "true",
++-    "last_opened_file_path": "D:/UTN/2024/Backend/TPF_grupo94",
+++    "last_opened_file_path": "C:/Users/nacho/Documents/Facultad/backend/TPF_BDA",
++     "node.js.detected.package.eslint": "true",
++     "node.js.detected.package.tslint": "true",
++     "node.js.selected.package.eslint": "(autodetect)",
++@@ -73,11 +83,7 @@
++     "project.structure.last.edited": "Project",
++     "project.structure.proportion": "0.0",
++     "project.structure.side.proportion": "0.2",
++-<<<<<<< HEAD
++     "settings.editor.selected.configurable": "MavenSettings",
++-=======
++-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
++->>>>>>> b56547988e74c5b77b3ab5bbf08df6c7c2104c67
++     "vue.rearranger.settings.migration": "true"
++   }
++ }]]></component>
++@@ -101,6 +107,14 @@
++         <option name="Make" enabled="true" />
++       </method>
++     </configuration>
+++  </component>
+++  <component name="SharedIndexes">
+++    <attachedChunks>
+++      <set>
+++        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+++        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+++      </set>
+++    </attachedChunks>
++   </component>
++   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++   <component name="TaskManager">
++Index: interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>package ar.edu.frc.utn.backend.interesadosPruebas.entities;\r\n\r\nimport jakarta.persistence.*;\r\nimport lombok.AllArgsConstructor;\r\nimport lombok.Data;\r\nimport lombok.NoArgsConstructor;\r\n\r\n@Entity\r\n@Table(name = \"Pruebas\")\r\n@Data\r\n@NoArgsConstructor\r\n@AllArgsConstructor\r\npublic class Prueba {\r\n\r\n    @Id\r\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\r\n    private long id;\r\n\r\n    @ManyToOne(cascade = CascadeType.ALL)\r\n    @JoinColumn(name = \"ID_VEHICULO\")\r\n    private long idVehiculo;\r\n\r\n    @ManyToOne(cascade = CascadeType.ALL)\r\n    @JoinColumn(name = \"ID_INTERESADO\")\r\n    private Interesado idInteresado;\r\n\r\n    @ManyToOne(cascade = CascadeType.ALL)\r\n    @JoinColumn(name = \"ID_EMPLEADO\")\r\n    private Empleado idEmpleado;\r\n\r\n    @Column(name = \"FECHA_HORA_INICIO\", nullable = false)\r\n    private String fechaHoraInicio;\r\n\r\n    @Column(name = \"FECHA_HORA_FIN\", nullable = false)\r\n    private String fechaHoraFin;\r\n\r\n    @Column(name = \"COMENTARIOS\", nullable = false)\r\n    private String comentarios;\r\n}\r\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java b/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java
++--- a/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java	(revision ccb24b527dd1afdb7b659b2b8af89679bf0e2039)
+++++ b/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java	(date 1729711815027)
++@@ -16,8 +16,7 @@
++     @GeneratedValue(strategy = GenerationType.IDENTITY)
++     private long id;
++ 
++-    @ManyToOne(cascade = CascadeType.ALL)
++-    @JoinColumn(name = "ID_VEHICULO")
+++    @Column(name = "ID_VEHICULO")
++     private long idVehiculo;
++ 
++     @ManyToOne(cascade = CascadeType.ALL)
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_23_10_2024_16_31_[Changes]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_23_10_2024_16_31_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_23_10_2024_16_31_[Changes]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1729711870129)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_23_10_2024_16_31_[Changes]/shelved.patch	(date 1729711870129)
+@@ -0,0 +1,97 @@
++Index: .idea/workspace.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e31adbf3-3d5f-4b7d-9317-905b8c40f447\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Empleado.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Empleado.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Interesado.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Interesado.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;LordLucky04&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\"><![CDATA[{\r\n  \"selectedUrlAndAccountId\": {\r\n    \"url\": \"https://github.com/aguslibong/TPF_BDA_grupo94.git\",\r\n    \"accountId\": \"7dba63b1-8a35-421d-8f2f-fc536855c4a4\"\r\n  }\r\n}]]></component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHomeTypeForPersistence\" value=\"WRAPPER\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2no0QotaG3HMat98juyesBCJdTZ\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"Application.InteresadosPruebasApplication.executor\": \"Run\",\r\n    \"RequestMappingsPanelOrder0\": \"0\",\r\n    \"RequestMappingsPanelOrder1\": \"1\",\r\n    \"RequestMappingsPanelWidth0\": \"75\",\r\n    \"RequestMappingsPanelWidth1\": \"75\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"Spring Boot.TpfBdaApplication.executor\": \"Run\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"last_opened_file_path\": \"D:/UTN/2024/Backend/TPF_grupo94\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"Project\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n<<<<<<< HEAD\r\n    \"settings.editor.selected.configurable\": \"MavenSettings\",\r\n=======\r\n    \"settings.editor.selected.configurable\": \"reference.settings.project.maven.importing\",\r\n>>>>>>> b56547988e74c5b77b3ab5bbf08df6c7c2104c67\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\nacho\\Documents\\Facultad\\backend\\TPF_BDA\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Spring Boot.TpfBdaApplication\">\r\n    <configuration name=\"TpfBdaApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"TPF_BDA\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"ar.edu.utn.frc.backend.TPF_BDA.TpfBdaApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"VehiculoPosicionesApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"vehiculoPosiciones\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"ar.edu.frc.utn.backend.vehiculoPosiciones.VehiculoPosicionesApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e31adbf3-3d5f-4b7d-9317-905b8c40f447\" name=\"Changes\" comment=\"\" />\r\n      <created>1729624108047</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1729624108047</updated>\r\n      <workItem from=\"1729624109180\" duration=\"6669000\" />\r\n      <workItem from=\"1729636799500\" duration=\"8000\" />\r\n      <workItem from=\"1729695724390\" duration=\"9901000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/.idea/workspace.xml b/.idea/workspace.xml
++--- a/.idea/workspace.xml	(revision ccb24b527dd1afdb7b659b2b8af89679bf0e2039)
+++++ b/.idea/workspace.xml	(date 1729711851709)
++@@ -4,11 +4,7 @@
++     <option name="autoReloadType" value="SELECTIVE" />
++   </component>
++   <component name="ChangeListManager">
++-    <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="">
++-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Empleado.java" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Interesado.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Interesado.java" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java" afterDir="false" />
++-    </list>
+++    <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="" />
++     <option name="SHOW_DIALOG" value="false" />
++     <option name="HIGHLIGHT_CONFLICTS" value="true" />
++     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++@@ -30,12 +26,12 @@
++     &quot;assignee&quot;: &quot;LordLucky04&quot;
++   }
++ }</component>
++-  <component name="GithubPullRequestsUISettings"><![CDATA[{
++-  "selectedUrlAndAccountId": {
++-    "url": "https://github.com/aguslibong/TPF_BDA_grupo94.git",
++-    "accountId": "7dba63b1-8a35-421d-8f2f-fc536855c4a4"
+++  <component name="GithubPullRequestsUISettings">{
+++  &quot;selectedUrlAndAccountId&quot;: {
+++    &quot;url&quot;: &quot;https://github.com/aguslibong/TPF_BDA_grupo94.git&quot;,
+++    &quot;accountId&quot;: &quot;7dba63b1-8a35-421d-8f2f-fc536855c4a4&quot;
++   }
++-}]]></component>
+++}</component>
++   <component name="MavenImportPreferences">
++     <option name="generalSettings">
++       <MavenGeneralSettings>
++@@ -53,18 +49,15 @@
++   </component>
++   <component name="PropertiesComponent"><![CDATA[{
++   "keyToString": {
++-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
++-    "Application.InteresadosPruebasApplication.executor": "Run",
++     "RequestMappingsPanelOrder0": "0",
++     "RequestMappingsPanelOrder1": "1",
++     "RequestMappingsPanelWidth0": "75",
++     "RequestMappingsPanelWidth1": "75",
++     "RunOnceActivity.ShowReadmeOnStart": "true",
++     "Spring Boot.TpfBdaApplication.executor": "Run",
++-    "git-widget-placeholder": "main",
++-    "ignore.virus.scanning.warn.message": "true",
+++    "git-widget-placeholder": "Merging main",
++     "kotlin-language-version-configured": "true",
++-    "last_opened_file_path": "D:/UTN/2024/Backend/TPF_grupo94",
+++    "last_opened_file_path": "C:/Users/nacho/Documents/Facultad/backend/TPF_BDA/gateway",
++     "node.js.detected.package.eslint": "true",
++     "node.js.detected.package.tslint": "true",
++     "node.js.selected.package.eslint": "(autodetect)",
++@@ -73,11 +66,7 @@
++     "project.structure.last.edited": "Project",
++     "project.structure.proportion": "0.0",
++     "project.structure.side.proportion": "0.2",
++-<<<<<<< HEAD
++     "settings.editor.selected.configurable": "MavenSettings",
++-=======
++-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
++->>>>>>> b56547988e74c5b77b3ab5bbf08df6c7c2104c67
++     "vue.rearranger.settings.migration": "true"
++   }
++ }]]></component>
++@@ -102,6 +91,14 @@
++       </method>
++     </configuration>
++   </component>
+++  <component name="SharedIndexes">
+++    <attachedChunks>
+++      <set>
+++        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+++        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+++      </set>
+++    </attachedChunks>
+++  </component>
++   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++   <component name="TaskManager">
++     <task active="true" id="Default" summary="Default task">
++@@ -113,6 +110,7 @@
++       <workItem from="1729624109180" duration="6669000" />
++       <workItem from="1729636799500" duration="8000" />
++       <workItem from="1729695724390" duration="9901000" />
+++      <workItem from="1729711257904" duration="593000" />
++     </task>
++     <servers />
++   </component>
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_23_10_2024_16_30__Changes_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_23_10_2024_16_30__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_23_10_2024_16_30__Changes_.xml
+new file mode 100644
+--- /dev/null	(date 1729711851571)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_23_10_2024_16_30__Changes_.xml	(date 1729711851571)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Update_at_23_10_2024_16_30_[Changes]" date="1729711844836" recycled="false" toDelete="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_10_2024_16_30_[Changes]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 23/10/2024 16:30 [Changes]" />
++</changelist>
+\ No newline at end of file

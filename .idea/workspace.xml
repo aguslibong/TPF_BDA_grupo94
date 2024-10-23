@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Interesado.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Interesado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java" afterDir="false" />
+    <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="Solucionado entidades">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Posicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Posicion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,12 +29,12 @@
     &quot;assignee&quot;: &quot;LordLucky04&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/aguslibong/TPF_BDA_grupo94.git",
-    "accountId": "7dba63b1-8a35-421d-8f2f-fc536855c4a4"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/aguslibong/TPF_BDA_grupo94.git&quot;,
+    &quot;accountId&quot;: &quot;7dba63b1-8a35-421d-8f2f-fc536855c4a4&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -51,36 +50,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.InteresadosPruebasApplication.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.TpfBdaApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/UTN/2024/Backend/TPF_grupo94",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-<<<<<<< HEAD
-    "settings.editor.selected.configurable": "MavenSettings",
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.InteresadosPruebasApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.TpfBdaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/UTN/2024/Backend/TPF_grupo94&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
 =======
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
->>>>>>> b56547988e74c5b77b3ab5bbf08df6c7c2104c67
-    "vue.rearranger.settings.migration": "true"
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; b56547988e74c5b77b3ab5bbf08df6c7c2104c67
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nacho\Documents\Facultad\backend\TPF_BDA" />
@@ -102,6 +101,14 @@
       </method>
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -118,5 +125,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Solucionado entidades" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solucionado entidades" />
   </component>
 </project>
