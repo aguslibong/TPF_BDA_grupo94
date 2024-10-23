@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="MavenProjectsManager">
-    <option name="originalFiles">
-      <list>
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/vehiculoPosiciones/pom.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="openjdk-23" project-jdk-type="JavaSDK" />
-=======
-        <option value="$PROJECT_DIR$/interesadosPruebas/pom.xml" />
-        <option value="$PROJECT_DIR$/vehiculoPosiciones/pom.xml" />
-        <option value="$PROJECT_DIR$/gateway/pom.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="23" project-jdk-type="JavaSDK" />
->>>>>>> b56547988e74c5b77b3ab5bbf08df6c7c2104c67
+    <component name="ExternalStorageConfigurationManager" enabled="true" />
+    <component name="MavenProjectsManager">
+        <option name="originalFiles">
+            <list>
+                <option value="$PROJECT_DIR$/pom.xml" />
+                <option value="$PROJECT_DIR$/vehiculoPosiciones/pom.xml" />
+            </list>
+        </option>
+    </component>
+    <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="openjdk-23" project-jdk-type="JavaSDK" />
 </project>
