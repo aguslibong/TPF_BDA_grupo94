@@ -93,24 +93,22 @@ public class PruebaServiceImpl implements PruebaService {
     private VehiculoDTO fetchVehiculo(Integer idVehiculo) {
         try {
             RestTemplate template = new RestTemplate();
-            ResponseEntity<VehiculoDTO> res = template.getForEntity("http://localhost:8081/api/vehiculo/{id}", VehiculoDTO.class, idVehiculo);
 
-            if (res.getStatusCode().is2xxSuccessful()) {
-                return res.getBody();
-            } else {
-                throw new RuntimeException("El vehiculo no existe");
-            }
+            ResponseEntity<VehiculoDTO> res = template.getForEntity("http://localhost:8080/api/vehiculo/{id}", VehiculoDTO.class, idVehiculo);
+
+            if (res.getStatusCode().is2xxSuccessful()) return res.getBody();
 
         } catch (HttpClientErrorException ex) {
-            throw new RuntimeException("No exitoso la respuesta del cliente", ex);
+            throw new RuntimeException("No exitoso la respuesta el vehiculo no existe", ex);
         }
+        return null;
     }
 
     private void validateVehiculo(Integer idVehiculo) {
 
         List<Prueba> listapruebaVehiculo = pruebarepository.findAllByIdVehiculo(idVehiculo);
-        boolean isVehiculoOcupado = listapruebaVehiculo.stream()
-                .anyMatch(prueba -> prueba.getFechaHoraFin() == prueba.getFechaHoraInicio());
+
+        boolean isVehiculoOcupado = listapruebaVehiculo.stream().anyMatch(prueba -> prueba.getFechaHoraFin() == prueba.getFechaHoraInicio());
 
         if (isVehiculoOcupado) {
             throw new RuntimeException("El Vehiculo esta siendo usado en otra prueba");

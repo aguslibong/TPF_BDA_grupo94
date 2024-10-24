@@ -10,14 +10,13 @@ import org.springframework.context.annotation.Configuration;
 public class GWconfig {
     @Bean
     public RouteLocator configurarRutas(RouteLocatorBuilder builder,
-                                        @org.springframework.beans.factory.annotation.Value("${microservicios.vehiculos}") String uriVehiculos,
+                                        @Value("${microservicios.vehiculos}") String uriVehiculos,
                                         @Value("${microservicios.interesados}") String uriInteresados) {
         return builder.routes()
                 // Ruteo al Microservicio de interesados
-                .route(p -> p.path("/api/prueba/").uri(uriInteresados))
+                .route(p -> p.path("/api/prueba/**").uri(uriInteresados))
                 // Ruteo al Microservicio de vehiculos
                 .route(p -> p.path("/api/vehiculo/**").uri(uriVehiculos))
                 .build();
-
     }
 }

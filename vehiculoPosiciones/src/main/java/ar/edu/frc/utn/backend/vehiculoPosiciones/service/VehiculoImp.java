@@ -4,13 +4,14 @@ import ar.edu.frc.utn.backend.vehiculoPosiciones.DTO.VehiculoDTO;
 import ar.edu.frc.utn.backend.vehiculoPosiciones.entities.Vehiculo;
 import ar.edu.frc.utn.backend.vehiculoPosiciones.repository.VehiculoRepository;
 import ar.edu.frc.utn.backend.vehiculoPosiciones.service.interfaces.Servicio;
+import ar.edu.frc.utn.backend.vehiculoPosiciones.service.interfaces.VehiculoService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class VehiculoImp implements Servicio<VehiculoDTO, Integer> {
+public class VehiculoImp extends ServicioImp<VehiculoDTO, Integer> implements VehiculoService {
 
     private final VehiculoRepository vehiculoRepository;
     public VehiculoImp(VehiculoRepository vehiculoRepository) {

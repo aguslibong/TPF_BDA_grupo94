@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public interface Servicio<T, K> {
+public abstract interface Servicio<T, K> {
 
     void create(T t);
     void update(T t);
