@@ -21,11 +21,11 @@ public class Prueba {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "ID_INTERESADO")
-    private Interesado idInteresado;
+    private Interesado Interesado;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "ID_EMPLEADO")
-    private Empleado idEmpleado;
+    private Empleado Empleado;
 
     @Column(name = "FECHA_HORA_INICIO", nullable = false)
     private String fechaHoraInicio;

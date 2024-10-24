@@ -28,11 +28,13 @@ public class Interesado {
     private String apellido;
 
     @Column(name = "RESTRINGIDO", nullable = false)
-    private int restringido;
+    private boolean restringido;
 
     @Column(name = "NRO_LICENCIA", nullable = false)
     private int nroLicencia;
 
     @Column(name = "FECHA_VENCIMIENTO_LICENCIA", nullable = false)
     private String fechaVencimientoLicencia;
+
+
 }
