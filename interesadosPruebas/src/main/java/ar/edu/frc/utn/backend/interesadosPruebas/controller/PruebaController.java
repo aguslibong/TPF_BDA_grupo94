@@ -19,17 +19,14 @@ public class PruebaController {
     }
 
     @PostMapping
-    public ResponseEntity<Prueba> crearPrueba(@RequestBody PruebaDTO pruebaDTO){
+    public ResponseEntity<Prueba> crearPrueba(@RequestBody PruebaDTO pruebaDTO) {
         try {
-            Prueba prueba = pruebaService.crearPrueba(pruebaDTO);
+            pruebaService.crearPrueba(pruebaDTO);
             return ResponseEntity.ok().build();
         } catch (IllegalArgumentException e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("Error-Message", e.getMessage()).build();
-        } catch DateTimeParseException
-        catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
-
-
 }

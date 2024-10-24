@@ -5,7 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @Entity
+@Table(name = "Interesados")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -34,7 +38,7 @@ public class Interesado {
     private int nroLicencia;
 
     @Column(name = "FECHA_VENCIMIENTO_LICENCIA", nullable = false)
-    private String fechaVencimientoLicencia;
+    private LocalDate fechaVencimientoLicencia;
 
 
 }

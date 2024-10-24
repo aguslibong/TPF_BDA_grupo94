@@ -5,18 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="Solucionado entidades">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/EmpleadoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/InteresadoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/PruebaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_10_2024_16_31__Changes_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/ar/edu/frc/utn/backend/gateway/GWconfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/DTO/VehiculoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/Servicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/VehiculoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/controller/VehiculoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/repository/VehiculoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/VehiculoImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/interfaces/Servicio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
-    <list id="83f0fbaa-9992-4223-9963-33fd28e4ce5b" name="Changes by Agus" comment="">
+      <change beforePath="$PROJECT_DIR$/agencia.db" beforeDir="false" afterPath="$PROJECT_DIR$/agencia.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Interesado.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Interesado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Vehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Vehiculo.java" afterDir="false" />
+    </list>
+    <list id="83f0fbaa-9992-4223-9963-33fd28e4ce5b" name="Changes by Agus" comment="" />
+    <list id="69da239c-c717-4530-abe3-0696ac5d98e2" name="Changes by Usuario" comment="">
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/PruebaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/PruebaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +42,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -46,6 +62,52 @@
     &quot;accountId&quot;: &quot;7dba63b1-8a35-421d-8f2f-fc536855c4a4&quot;
   }
 }</component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="5" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+        <range start1="5" end1="5" start2="7" end2="8" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+        <range start1="8" end1="8" start2="11" end2="12" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="9" end1="9" start2="13" end2="15" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="11" end1="13" start2="17" end2="19" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="20" end1="20" start2="26" end2="27" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+        <range start1="22" end1="23" start2="29" end2="30" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="25" end1="25" start2="32" end2="33" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+        <range start1="28" end1="29" start2="36" end2="37" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="30" end1="30" start2="38" end2="43" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+        <range start1="32" end1="33" start2="45" end2="46" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+        <range start1="37" end1="39" start2="50" end2="55" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+        <range start1="40" end1="44" start2="56" end2="56" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+        <range start1="45" end1="51" start2="57" end2="61" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+        <range start1="53" end1="55" start2="63" end2="65" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+        <range start1="59" end1="59" start2="69" end2="86" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+        <range start1="61" end1="61" start2="88" end2="98" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+        <range start1="63" end1="64" start2="100" end2="107" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="68" end1="73" start2="111" end2="114" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="75" end1="75" start2="116" end2="117" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java">
+      <ranges>
+        <range start1="6" end1="6" start2="6" end2="8" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="30" end1="31" start2="32" end2="33" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="33" end1="34" start2="35" end2="36" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java">
+      <ranges>
+        <range start1="4" end1="5" start2="4" end2="4" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="8" end1="9" start2="7" end2="8" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java">
+      <ranges>
+        <range start1="21" end1="22" start2="21" end2="22" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="23" end1="24" start2="23" end2="24" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+        <range start1="27" end1="36" start2="27" end2="32" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+      </ranges>
+    </file>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -92,6 +154,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ar.edu.frc.utn.backend.gateway" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nacho\Documents\Facultad\backend\TPF_BDA" />
     </key>
@@ -106,7 +171,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.InteresadosPruebasApplication">
+  <component name="RunManager" selected="Spring Boot.VehiculoPosicionesApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -167,6 +232,7 @@
       <workItem from="1729636799500" duration="8000" />
       <workItem from="1729695724390" duration="9901000" />
       <workItem from="1729717569622" duration="10500000" />
+      <workItem from="1729736805540" duration="11597000" />
     </task>
     <servers />
   </component>

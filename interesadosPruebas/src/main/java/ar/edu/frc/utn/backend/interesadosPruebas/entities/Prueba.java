@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Table(name = "Pruebas")
 @Data
@@ -28,10 +30,10 @@ public class Prueba {
     private Empleado Empleado;
 
     @Column(name = "FECHA_HORA_INICIO", nullable = false)
-    private String fechaHoraInicio;
+    private LocalDateTime fechaHoraInicio;
 
     @Column(name = "FECHA_HORA_FIN", nullable = false)
-    private String fechaHoraFin;
+    private LocalDateTime fechaHoraFin;
 
     @Column(name = "COMENTARIOS", nullable = false)
     private String comentarios;
