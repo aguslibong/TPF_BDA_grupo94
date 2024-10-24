@@ -5,40 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="Solucionado entidades">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/ar/edu/utn/frc/backend/gateway/GWconfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agencia.db" beforeDir="false" afterPath="$PROJECT_DIR$/agencia.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/ar/edu/frc/utn/backend/gateway/GWconfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/ar/edu/frc/utn/backend/gateway/GatewayApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/test/java/ar/edu/frc/utn/backend/gateway/GatewayApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Interesado.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Interesado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/InteresadoServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/InteresadoServiceImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/controller/VehiculoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/controller/VehiculoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Marca.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Marca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/VehiculoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/VehiculoImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" afterDir="false" />
     </list>
     <list id="83f0fbaa-9992-4223-9963-33fd28e4ce5b" name="Changes by Agus" comment="">
       <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/DTO/PruebaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/DTO/PruebaDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/PruebaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/PruebaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/InteresadoServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/InteresadoServiceImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/InteresadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/InteresadoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Modelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Posicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Posicion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" afterDir="false" />
     </list>
     <list id="186700cc-4f13-45b1-8739-d28aa3ed534f" name="Changes by AGUSTIN" comment="">
       <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" afterDir="false" />
@@ -74,35 +51,18 @@
   }
 }</component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/InteresadoServiceImp.java">
-      <ranges>
-        <range start1="8" end1="8" start2="8" end2="9" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
-        <range start1="13" end1="13" start2="14" end2="15" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
-        <range start1="14" end1="15" start2="16" end2="17" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
-        <range start1="22" end1="22" start2="24" end2="28" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java">
-      <ranges>
-        <range start1="18" end1="19" start2="18" end2="19" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
-        <range start1="21" end1="22" start2="21" end2="22" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
-      </ranges>
-    </file>
     <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java">
       <ranges>
-        <range start1="18" end1="18" start2="18" end2="19" changelist="186700cc-4f13-45b1-8739-d28aa3ed534f" />
-        <range start1="38" end1="57" start2="39" end2="69" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
-        <range start1="58" end1="61" start2="70" end2="77" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
-        <range start1="62" end1="67" start2="78" end2="81" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
-        <range start1="68" end1="72" start2="82" end2="86" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
-        <range start1="73" end1="79" start2="87" end2="91" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
-        <range start1="80" end1="87" start2="92" end2="97" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
-        <range start1="88" end1="92" start2="98" end2="104" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
-        <range start1="93" end1="98" start2="105" end2="113" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
-        <range start1="99" end1="107" start2="114" end2="122" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
-        <range start1="108" end1="109" start2="123" end2="123" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
-        <range start1="110" end1="115" start2="124" end2="125" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
-        <range start1="116" end1="116" start2="126" end2="146" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="21" end1="21" start2="21" end2="23" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="28" end1="28" start2="30" end2="31" changelist="186700cc-4f13-45b1-8739-d28aa3ed534f" />
+        <range start1="30" end1="31" start2="33" end2="34" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="34" end1="34" start2="37" end2="38" changelist="186700cc-4f13-45b1-8739-d28aa3ed534f" />
+        <range start1="36" end1="36" start2="40" end2="41" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="107" end1="108" start2="112" end2="113" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="122" end1="123" start2="127" end2="128" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="134" end1="134" start2="139" end2="140" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="137" end1="138" start2="143" end2="145" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="145" end1="145" start2="152" end2="178" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
       </ranges>
     </file>
   </component>
@@ -169,7 +129,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayApplication">
+  <component name="RunManager" selected="Spring Boot.InteresadosPruebasApplication">
     <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -249,6 +209,7 @@
       <workItem from="1729749327709" duration="1424000" />
       <workItem from="1729777045304" duration="4526000" />
       <workItem from="1729781690914" duration="2551000" />
+      <workItem from="1729790372354" duration="3685000" />
     </task>
     <servers />
   </component>

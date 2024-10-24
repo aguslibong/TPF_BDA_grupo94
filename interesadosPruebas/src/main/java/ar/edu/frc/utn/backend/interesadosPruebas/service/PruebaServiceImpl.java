@@ -19,6 +19,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 public class PruebaServiceImpl implements PruebaService {
@@ -26,14 +28,17 @@ public class PruebaServiceImpl implements PruebaService {
     private final PruebaRepository pruebarepository;
     private final InteresadoRepository interesadorepository;
     private final EmpleadoRepository empleadorepository;
+    private final PruebaRepository pruebaRepository;
 
     // Constructor con inyección de dependencias
-    public PruebaServiceImpl(PruebaRepository pruebarepository, InteresadoRepository interesadorepository, EmpleadoRepository empleadoRepository) {
+    public PruebaServiceImpl(PruebaRepository pruebarepository, InteresadoRepository interesadorepository, EmpleadoRepository empleadoRepository, PruebaRepository pruebaRepository) {
         this.pruebarepository = pruebarepository;
         this.interesadorepository = interesadorepository;
         this.empleadorepository = empleadoRepository;
+        this.pruebaRepository = pruebaRepository;
     }
 
+    //PUNTO 1 CREAR PRUEBA
     @Override
     public void crearPrueba(PruebaDTO pruebaDTO) {
         try {
@@ -105,7 +110,7 @@ public class PruebaServiceImpl implements PruebaService {
 
         List<Prueba> listapruebaVehiculo = pruebarepository.findAllByIdVehiculo(idVehiculo);
         boolean isVehiculoOcupado = listapruebaVehiculo.stream()
-                .anyMatch(prueba -> prueba.getFechaHoraFin() == null);
+                .anyMatch(prueba -> prueba.getFechaHoraFin() == prueba.getFechaHoraInicio());
 
         if (isVehiculoOcupado) {
             throw new RuntimeException("El Vehiculo esta siendo usado en otra prueba");
@@ -120,7 +125,7 @@ public class PruebaServiceImpl implements PruebaService {
         prueba.setEmpleado(empleado);
         prueba.setIdVehiculo(pruebaDTO.getIdVehiculo());
         prueba.setFechaHoraInicio(fechaHoraActual);
-
+        prueba.setFechaHoraFin(fechaHoraActual);
 
         return prueba;
     }
@@ -132,16 +137,40 @@ public class PruebaServiceImpl implements PruebaService {
         dto.setIdInteresado(prueba.getInteresado().getID());
         dto.setIdVehiculo(prueba.getIdVehiculo());
         dto.setIdEmpleado(prueba.getEmpleado().getLEGAJO());
+        dto.setIdPrueba(prueba.getId());
         return dto;
     }
 
-    public Iterable<PruebaDTO> obetenerListaPruebasMomento() {
+    @Override
+    public Iterable<PruebaDTO> obtenerListaPruebasMomento() {
         Iterable<Prueba> listaPrueba = pruebarepository.findAllByFechaHoraFinNull();
         List<PruebaDTO> listaPruebaDTO = new ArrayList<>();
         for (Prueba prueba : listaPrueba) {
             listaPruebaDTO.add(convertirAPruebaDTO(prueba));
         }
         return listaPruebaDTO;
+    }
+
+    @Override
+    public PruebaDTO finalizarPrueba(int idPruebaFinalizar, String comentario)  {
+        try {
+            Prueba pruebaFinalizar = pruebaRepository.findById(idPruebaFinalizar);
+            if(pruebaFinalizar == null) {
+                throw new RuntimeException("El Id no existe");
+            }
+            Iterable<PruebaDTO> iterable = obtenerListaPruebasMomento();
+            List<PruebaDTO> listaMomento = StreamSupport.stream(iterable.spliterator(), false).collect(Collectors.toList());
+            if(listaMomento.stream().filter(pruebaDTO -> pruebaDTO.getIdPrueba()==(idPruebaFinalizar)).count() == 0) {
+                throw new RuntimeException("La prueba ya finalizo");
+            }
+            LocalDateTime fechaHoraActualfinalizar = LocalDateTime.now();
+            pruebaFinalizar.setFechaHoraFin(fechaHoraActualfinalizar);
+            pruebaFinalizar.setComentarios(comentario);
+            
+
+        } catch (RuntimeException e) {
+            throw new RuntimeException(e);
+        };
     }
 
 

@@ -29,11 +29,24 @@ public class PruebaController {
             throw new RuntimeException(e);
         }
     }
-    @GetMapping("/pruebasEnCurso")
+
+    @GetMapping("/momento")
     public ResponseEntity<Iterable<PruebaDTO>> getPruebasEnCurso() {
         try {
             Iterable<PruebaDTO> lista = pruebaService.obetenerListaPruebasMomento();
             return ResponseEntity.ok(lista);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("Error-Message", e.getMessage()).build();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @PutMapping("/finalizar/{id}")
+    public ResponseEntity<PruebaDTO> putPruebaFinalizar(@PathVariable int id, @RequestBody String comentario){
+        try{
+            PruebaDTO pruebaDTO = pruebaService.finalizarPrueba(id,comentario);
+            return ResponseEntity.ok(pruebaDTO);
         } catch (IllegalArgumentException e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("Error-Message", e.getMessage()).build();
         } catch (Exception e) {

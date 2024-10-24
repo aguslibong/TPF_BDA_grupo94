@@ -7,5 +7,7 @@ public interface PruebaService {
 
     void crearPrueba(PruebaDTO prueba) throws Exception;
 
-    Iterable<PruebaDTO> obetenerListaPruebasMomento() throws Exception;
+    Iterable<PruebaDTO> obtenerListaPruebasMomento() throws Exception;
+
+    PruebaDTO finalizarPrueba(int id, String comentario) throws Exception;
 }

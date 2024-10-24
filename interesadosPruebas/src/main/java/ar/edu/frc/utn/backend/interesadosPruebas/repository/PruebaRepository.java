@@ -13,7 +13,7 @@ public interface PruebaRepository extends CrudRepository<Prueba, Integer> {
     @Query("SELECT p FROM Prueba p WHERE p.idVehiculo = :idVehiculo")
     List<Prueba> findAllByIdVehiculo(@Param("idVehiculo") Integer idVehiculo);
 
-    @Query("SELECT p FROM Prueba p WHERE p.fechaHoraFin = null")
+    @Query("SELECT p FROM Prueba p WHERE p.fechaHoraFin = p.fechaHoraInicio")
     List<Prueba> findAllByFechaHoraFinNull();
 
 }

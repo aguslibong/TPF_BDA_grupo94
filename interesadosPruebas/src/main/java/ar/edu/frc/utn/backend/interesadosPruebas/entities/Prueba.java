@@ -16,7 +16,8 @@ public class Prueba {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long ID;
+    @Column(name = "ID")
+    private int id;
 
     @Column(name = "ID_VEHICULO")
     private int idVehiculo;
