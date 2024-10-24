@@ -6,18 +6,24 @@ import ar.edu.frc.utn.backend.interesadosPruebas.repository.InteresadoRepository
 import ar.edu.frc.utn.backend.interesadosPruebas.service.interfaces.InteresadoService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
 public class InteresadoServiceImp implements InteresadoService {
     private final InteresadoRepository repository;
 
-    public InteresadoServiceImp(InteresadoRepository repository) {
+
+    public InteresadoServiceImp(InteresadoRepository repository ) {
         this.repository = repository;
     }
     
     @Override
     public Optional<Interesado> findById(int id){
         return repository.findById(id);
+    }
+
+    public Iterable<Interesado> findAll(){
+        return repository.findAll();
     }
 }

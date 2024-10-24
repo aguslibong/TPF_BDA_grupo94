@@ -6,4 +6,6 @@ import ar.edu.frc.utn.backend.interesadosPruebas.entities.Prueba;
 public interface PruebaService {
 
     void crearPrueba(PruebaDTO prueba) throws Exception;
+
+    Iterable<PruebaDTO> obetenerListaPruebasMomento() throws Exception;
 }

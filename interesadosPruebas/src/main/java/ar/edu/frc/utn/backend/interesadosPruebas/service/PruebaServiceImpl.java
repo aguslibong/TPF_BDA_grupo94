@@ -16,6 +16,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,83 +37,112 @@ public class PruebaServiceImpl implements PruebaService {
     @Override
     public void crearPrueba(PruebaDTO pruebaDTO) {
         try {
-            System.out.println(pruebaDTO.getIdInteresado());
-            //verificar si llegan toddos los datos necesarios
-            if (Integer.valueOf(pruebaDTO.getIdEmpleado()) == null || Integer.valueOf(pruebaDTO.getIdInteresado()) == null || Integer.valueOf(pruebaDTO.getIdVehiculo()) == null) {
-                throw new IllegalArgumentException("No se han cargado todos los datos necesarios para la creación de la prueba");
-            }
-            // Buscar el interesado por ID
-            Optional<Interesado> optionalInteresado = interesadorepository.findById(pruebaDTO.getIdInteresado());
-            Optional<Empleado> optionalEmpleado = empleadorepository.findById(pruebaDTO.getIdEmpleado());
-            // Verificar si el interesado existe
-            if (optionalInteresado.isEmpty()) {
-                throw new IllegalArgumentException("Interesado con ID " + pruebaDTO.getIdInteresado() + " no encontrado.");
-            }
-            if (optionalEmpleado.isEmpty()) {
-                throw new IllegalArgumentException("Empleado con ID " + pruebaDTO.getIdEmpleado() + " no encontrado.");
-            }
-            // Obtener el objeto Interesado y empleado del Optional
-            Empleado empleado = optionalEmpleado.get();
-            Interesado interesado = optionalInteresado.get();
-            // Parsear la fecha de vencimiento desde String a LocalDate
+            validatePruebaDTO(pruebaDTO);
 
-            LocalDateTime fechaHoraActual = LocalDateTime.now();
-            LocalDateTime fechaHoraFinal = LocalDateTime.now().plusHours(1);
-            LocalDate fechaActual = LocalDate.now();
+            Interesado interesado = getInteresado(pruebaDTO.getIdInteresado());
+            Empleado empleado = getEmpleado(pruebaDTO.getIdEmpleado());
 
-            // Verificar si la licencia está vencida
+            validateInteresado(interesado);
 
-            if (interesado.getFechaVencimientoLicencia().isBefore(fechaActual)) {
-                throw new RuntimeException("La licencia del interesado está vencida.");
-            }
+            VehiculoDTO vehiculoDTO = fetchVehiculo(pruebaDTO.getIdVehiculo());
 
-            // Verificar si la Interesado restringido
-            if (interesado.isRestringido()) {
-                throw new RuntimeException("El Cliente esta restringido");
-            }
+            validateVehiculo(pruebaDTO.getIdVehiculo());
 
-            try {
-                RestTemplate template = new RestTemplate();
+            Prueba prueba = createPruebaEntity(pruebaDTO, interesado, empleado);
 
-                ResponseEntity<VehiculoDTO> res = template.getForEntity(
-                        "api/vehiculo/{id}", VehiculoDTO.class, pruebaDTO.getIdVehiculo()
-                );
-
-                if (res.getStatusCode().is2xxSuccessful()) {
-                    System.out.println("Se encontró exitosamente");
-                } else {
-                    throw new RuntimeException("El vehiculo no existe");
-                }
-                ;
-
-
-            } catch (HttpClientErrorException ex) {
-                // La repuesta no es exitosa.
-                throw new RuntimeException("No exitoso la respuesta del cliente", ex);
-            }
-
-            //verificacion Vehiculo
-            List<Prueba> listapruebaVehiculo = pruebarepository.findAllByIdVehiculo(pruebaDTO.getIdVehiculo());
-            if (listapruebaVehiculo.stream().filter(prueba -> prueba.getFechaHoraFin().isBefore(fechaHoraActual)).count() != 0) {
-                throw new RuntimeException("El Vehiculo esta siendo usado en otra prueba");
-            }
-
-            // Crear la entidad Prueba, Tiene el argsContructor recordar usar eso
-            Prueba prueba = new Prueba();
-            prueba.setInteresado(interesado);
-            prueba.setEmpleado(empleado);
-            prueba.setIdVehiculo(pruebaDTO.getIdVehiculo());
-            prueba.setFechaHoraInicio(fechaHoraActual);
-            prueba.setFechaHoraFin(fechaHoraFinal);
-            prueba.setComentarios(pruebaDTO.getComentario());
-
-            // Setear otros atributos según corresponda...
-
-            // Guardar en la base de datos y devolver la entidad guardada
             pruebarepository.save(prueba);
+
         } catch (RuntimeException e) {
             throw new RuntimeException(e);
         }
     }
+
+    private void validatePruebaDTO(PruebaDTO pruebaDTO) {
+        if (Integer.valueOf(pruebaDTO.getIdEmpleado()) == null || Integer.valueOf(pruebaDTO.getIdInteresado()) == null || Integer.valueOf(pruebaDTO.getIdVehiculo()) == null) {
+            throw new IllegalArgumentException("No se han cargado todos los datos necesarios para la creación de la prueba");
+        }
+    }
+
+    private Interesado getInteresado(Integer idInteresado) {
+        return interesadorepository.findById(idInteresado)
+                .orElseThrow(() -> new IllegalArgumentException("Interesado con ID " + idInteresado + " no encontrado."));
+    }
+
+    private Empleado getEmpleado(Integer idEmpleado) {
+        return empleadorepository.findById(idEmpleado)
+                .orElseThrow(() -> new IllegalArgumentException("Empleado con ID " + idEmpleado + " no encontrado."));
+    }
+
+    private void validateInteresado(Interesado interesado) {
+        LocalDate fechaActual = LocalDate.now();
+
+        if (interesado.getFechaVencimientoLicencia().isBefore(fechaActual)) {
+            throw new RuntimeException("La licencia del interesado está vencida.");
+        }
+
+        if (interesado.isRestringido()) {
+            throw new RuntimeException("El Cliente esta restringido");
+        }
+    }
+
+    private VehiculoDTO fetchVehiculo(Integer idVehiculo) {
+        try {
+            RestTemplate template = new RestTemplate();
+            ResponseEntity<VehiculoDTO> res = template.getForEntity("http://localhost:8081/api/vehiculo/{id}", VehiculoDTO.class, idVehiculo);
+
+            if (res.getStatusCode().is2xxSuccessful()) {
+                return res.getBody();
+            } else {
+                throw new RuntimeException("El vehiculo no existe");
+            }
+
+        } catch (HttpClientErrorException ex) {
+            throw new RuntimeException("No exitoso la respuesta del cliente", ex);
+        }
+    }
+
+    private void validateVehiculo(Integer idVehiculo) {
+
+        List<Prueba> listapruebaVehiculo = pruebarepository.findAllByIdVehiculo(idVehiculo);
+        boolean isVehiculoOcupado = listapruebaVehiculo.stream()
+                .anyMatch(prueba -> prueba.getFechaHoraFin() == null);
+
+        if (isVehiculoOcupado) {
+            throw new RuntimeException("El Vehiculo esta siendo usado en otra prueba");
+        }
+    }
+
+    private Prueba createPruebaEntity(PruebaDTO pruebaDTO, Interesado interesado, Empleado empleado) {
+        LocalDateTime fechaHoraActual = LocalDateTime.now();
+
+        Prueba prueba = new Prueba();
+        prueba.setInteresado(interesado);
+        prueba.setEmpleado(empleado);
+        prueba.setIdVehiculo(pruebaDTO.getIdVehiculo());
+        prueba.setFechaHoraInicio(fechaHoraActual);
+
+
+        return prueba;
+    }
+
+
+    //Listar todas las pruebas en curso en un momento dado
+    private PruebaDTO convertirAPruebaDTO (Prueba prueba) {
+        PruebaDTO dto = new PruebaDTO();
+        dto.setIdInteresado(prueba.getInteresado().getID());
+        dto.setIdVehiculo(prueba.getIdVehiculo());
+        dto.setIdEmpleado(prueba.getEmpleado().getLEGAJO());
+        return dto;
+    }
+
+    public Iterable<PruebaDTO> obetenerListaPruebasMomento() {
+        Iterable<Prueba> listaPrueba = pruebarepository.findAllByFechaHoraFinNull();
+        List<PruebaDTO> listaPruebaDTO = new ArrayList<>();
+        for (Prueba prueba : listaPrueba) {
+            listaPruebaDTO.add(convertirAPruebaDTO(prueba));
+        }
+        return listaPruebaDTO;
+    }
+
 
 }

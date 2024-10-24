@@ -29,4 +29,16 @@ public class PruebaController {
             throw new RuntimeException(e);
         }
     }
+    @GetMapping("/pruebasEnCurso")
+    public ResponseEntity<Iterable<PruebaDTO>> getPruebasEnCurso() {
+        try {
+            Iterable<PruebaDTO> lista = pruebaService.obetenerListaPruebasMomento();
+            return ResponseEntity.ok(lista);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("Error-Message", e.getMessage()).build();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }

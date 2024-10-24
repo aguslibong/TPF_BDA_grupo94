@@ -3,9 +3,15 @@ server:
 
 spring:
   datasource:
-    url: jdbc:sqlite:../agencia.db
+    url: jdbc:sqlite:agencia.db
     driver-class-name: org.sqlite.JDBC
   jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: none
+      naming:
+        # StandardImpl is used in order to not transform the attributes and tables from CamelCase to snake_case
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     properties:
       hibernate:
-        dialect: org.hibernate.community.dialect.SQLiteDialect
+        show_sql: true

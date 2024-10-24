@@ -17,7 +17,7 @@ public class Interesado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer ID;
 
     @Column(name = "TIPO_DOCUMENTO", nullable = false, columnDefinition = "VARCHAR(3) DEFAULT 'DNI'")
     private String tipoDocumento;

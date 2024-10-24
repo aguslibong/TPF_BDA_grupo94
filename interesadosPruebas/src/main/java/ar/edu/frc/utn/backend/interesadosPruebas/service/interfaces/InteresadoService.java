@@ -7,4 +7,6 @@ import java.util.Optional;
 public interface InteresadoService {
 
     Optional<Interesado> findById(int id);
+
+    Iterable<Interesado> findAll();
 }

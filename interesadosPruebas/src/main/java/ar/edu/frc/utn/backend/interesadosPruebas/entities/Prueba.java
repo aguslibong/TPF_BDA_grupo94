@@ -16,10 +16,10 @@ public class Prueba {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long ID;
 
     @Column(name = "ID_VEHICULO")
-    private long idVehiculo;
+    private int idVehiculo;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "ID_INTERESADO")

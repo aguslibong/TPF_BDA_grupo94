@@ -7,5 +7,4 @@ public class PruebaDTO {
     private int idInteresado;
     private int idEmpleado;
     private int idVehiculo;
-    private String comentario;
 }

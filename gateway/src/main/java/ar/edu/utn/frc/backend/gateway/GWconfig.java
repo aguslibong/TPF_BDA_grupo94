@@ -14,7 +14,7 @@ public class GWconfig {
                                         @Value("${microservicios.interesados}") String uriInteresados) {
         return builder.routes()
                 // Ruteo al Microservicio de interesados
-                .route(p -> p.path("/api/prueba/**").uri(uriInteresados))
+                .route(p -> p.path("/api/prueba/").uri(uriInteresados))
                 // Ruteo al Microservicio de vehiculos
                 .route(p -> p.path("/api/vehiculo/**").uri(uriVehiculos))
                 .build();

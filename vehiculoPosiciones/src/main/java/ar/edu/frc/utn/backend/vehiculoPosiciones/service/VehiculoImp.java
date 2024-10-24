@@ -39,10 +39,10 @@ public class VehiculoImp implements Servicio<VehiculoDTO, Integer> {
     }
     @Override
     public VehiculoDTO findById(Integer id) {
-        Optional<Vehiculo> optionalVehiculo = this.vehiculoRepository.findById(id);
+        Optional<Vehiculo> optionalVehiculo = vehiculoRepository.findById(id);
 
         // Verificar si el vehículo existe
-        if (optionalVehiculo.isPresent()) {
+        if (!optionalVehiculo.isEmpty()) {
             // Obtener el objeto Vehiculo del Optional
             Vehiculo vehiculo = optionalVehiculo.get();
 

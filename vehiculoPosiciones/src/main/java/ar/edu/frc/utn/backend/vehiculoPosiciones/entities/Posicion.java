@@ -16,6 +16,7 @@ public class Posicion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private long id;
 
     @ManyToOne(cascade = CascadeType.ALL)
