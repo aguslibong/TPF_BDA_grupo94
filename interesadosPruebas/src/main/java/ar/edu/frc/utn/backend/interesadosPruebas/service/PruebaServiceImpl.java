@@ -152,25 +152,37 @@ public class PruebaServiceImpl implements PruebaService {
     }
 
     @Override
-    public PruebaDTO finalizarPrueba(int idPruebaFinalizar, String comentario)  {
+    public ResponseEntity finalizarPrueba(int idPruebaFinalizar, String comentario)  {
         try {
-            Prueba pruebaFinalizar = pruebaRepository.findById(idPruebaFinalizar);
-            if(pruebaFinalizar == null) {
+            Optional<Prueba> prueba = pruebaRepository.findById(idPruebaFinalizar);
+            if(prueba.isEmpty()) {
                 throw new RuntimeException("El Id no existe");
             }
+
+            Prueba pruebaFinalizar = prueba.get();
+
             Iterable<PruebaDTO> iterable = obtenerListaPruebasMomento();
             List<PruebaDTO> listaMomento = StreamSupport.stream(iterable.spliterator(), false).collect(Collectors.toList());
             if(listaMomento.stream().filter(pruebaDTO -> pruebaDTO.getIdPrueba()==(idPruebaFinalizar)).count() == 0) {
                 throw new RuntimeException("La prueba ya finalizo");
             }
+
             LocalDateTime fechaHoraActualfinalizar = LocalDateTime.now();
             pruebaFinalizar.setFechaHoraFin(fechaHoraActualfinalizar);
             pruebaFinalizar.setComentarios(comentario);
-            
+            pruebarepository.save(pruebaFinalizar);
+
+
+            return ResponseEntity.ok().build();
 
         } catch (RuntimeException e) {
             throw new RuntimeException(e);
-        };
+        }
+    }
+
+    @Override
+    public Iterable<Prueba> findALL() throws Exception {
+        return pruebaRepository.findAll();
     }
 
 

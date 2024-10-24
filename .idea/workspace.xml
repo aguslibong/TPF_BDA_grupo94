@@ -5,19 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="Solucionado entidades">
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agencia.db" beforeDir="false" afterPath="$PROJECT_DIR$/agencia.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" afterDir="false" />
+    </list>
+    <list id="83f0fbaa-9992-4223-9963-33fd28e4ce5b" name="Changes by Agus" comment="">
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" afterDir="false" />
     </list>
-    <list id="83f0fbaa-9992-4223-9963-33fd28e4ce5b" name="Changes by Agus" comment="">
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/DTO/PruebaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/DTO/PruebaDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/entities/Prueba.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/PruebaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/PruebaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" afterDir="false" />
-    </list>
-    <list id="186700cc-4f13-45b1-8739-d28aa3ed534f" name="Changes by AGUSTIN" comment="">
+    <list id="186700cc-4f13-45b1-8739-d28aa3ed534f" name="Changes by AGUSTIN" comment="" />
+    <list id="aaa4b668-d422-4f5d-b599-3af14f9c6115" name="Changes by nacho" comment="">
       <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" afterDir="false" />
     </list>
     <list id="69da239c-c717-4530-abe3-0696ac5d98e2" name="Changes by Usuario" comment="" />
@@ -51,18 +51,22 @@
   }
 }</component>
   <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java">
+      <ranges>
+        <range start1="35" end1="36" start2="35" end2="36" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="45" end1="46" start2="45" end2="46" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="47" end1="49" start2="47" end2="48" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="55" end1="55" start2="54" end2="66" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+      </ranges>
+    </file>
     <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java">
       <ranges>
-        <range start1="21" end1="21" start2="21" end2="23" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
-        <range start1="28" end1="28" start2="30" end2="31" changelist="186700cc-4f13-45b1-8739-d28aa3ed534f" />
-        <range start1="30" end1="31" start2="33" end2="34" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
-        <range start1="34" end1="34" start2="37" end2="38" changelist="186700cc-4f13-45b1-8739-d28aa3ed534f" />
-        <range start1="36" end1="36" start2="40" end2="41" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
-        <range start1="107" end1="108" start2="112" end2="113" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
-        <range start1="122" end1="123" start2="127" end2="128" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
-        <range start1="134" end1="134" start2="139" end2="140" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
-        <range start1="137" end1="138" start2="143" end2="145" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
-        <range start1="145" end1="145" start2="152" end2="178" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="154" end1="155" start2="154" end2="155" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="156" end1="158" start2="156" end2="158" changelist="aaa4b668-d422-4f5d-b599-3af14f9c6115" />
+        <range start1="160" end1="160" start2="160" end2="163" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="165" end1="165" start2="168" end2="169" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="168" end1="169" start2="172" end2="176" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="172" end1="173" start2="179" end2="185" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
       </ranges>
     </file>
   </component>
@@ -129,7 +133,33 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.InteresadosPruebasApplication">
+  <component name="RunManager" selected="Application.InteresadosPruebasApplication">
+    <configuration name="InteresadosPruebasApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.interesadosPruebas.InteresadosPruebasApplication" />
+      <module name="interesadosPruebas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.frc.utn.backend.interesadosPruebas.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehiculoPosicionesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.vehiculoPosiciones.VehiculoPosicionesApplication" />
+      <module name="vehiculoPosiciones" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.frc.utn.backend.vehiculoPosiciones.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -173,25 +203,15 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="HTTP Request.generated-requests | #1" />
-      <item itemvalue="Spring Boot.GatewayApplication" />
-      <item itemvalue="Spring Boot.InteresadosPruebasApplication" />
-      <item itemvalue="Spring Boot.TpfBdaApplication" />
-      <item itemvalue="Spring Boot.VehiculoPosicionesApplication" />
+      <item itemvalue="Application.InteresadosPruebasApplication" />
+      <item itemvalue="Application.VehiculoPosicionesApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.generated-requests | #1" />
+        <item itemvalue="Application.InteresadosPruebasApplication" />
+        <item itemvalue="Application.VehiculoPosicionesApplication" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
