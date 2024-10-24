@@ -23,12 +23,14 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
            if(!estaEnPrueba(posicion.getId_vehiculo())){
                throw new RuntimeException("El vehiculo no se encuentra en Prueba");
            }
-
+           if(!estaEnRadio(posicion , 44f)){
+               throw new RuntimeException("El vehiculo no se encuentra dentro del radio limite ");
+           }
 
        } catch (RuntimeException e) {
            throw new RuntimeException(e);
        }
-
+        return null;
    }
 //aca le pasamos la posicion del auto
    private boolean estaEnPrueba(int IdVehiculo){

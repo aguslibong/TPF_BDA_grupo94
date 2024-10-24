@@ -107,8 +107,12 @@ public class PruebaServiceImpl implements PruebaService {
     private void validateVehiculo(Integer idVehiculo) {
 
         List<Prueba> listapruebaVehiculo = pruebarepository.findAllByIdVehiculo(idVehiculo);
+        listapruebaVehiculo.forEach(p -> {
+            System.out.println(p.toString());
+        });
+        boolean isVehiculoOcupado = listapruebaVehiculo.stream()
+                .anyMatch(prueba -> prueba.getFechaHoraFin().equals(prueba.getFechaHoraInicio()));
 
-        boolean isVehiculoOcupado = listapruebaVehiculo.stream().anyMatch(prueba -> prueba.getFechaHoraFin() == prueba.getFechaHoraInicio());
 
         if (isVehiculoOcupado) {
             throw new RuntimeException("El Vehiculo esta siendo usado en otra prueba");
