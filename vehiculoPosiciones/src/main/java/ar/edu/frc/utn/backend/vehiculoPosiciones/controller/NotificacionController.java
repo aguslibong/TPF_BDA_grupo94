@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/notificacion")
+@RequestMapping("/api/notificacion")
 public class NotificacionController {
 
     private final NotificacionService notificacionService;
@@ -23,8 +23,14 @@ public class NotificacionController {
 
     @PostMapping
     public ResponseEntity<NotificacionDTO> crearNotificacion(@RequestBody Iterable<NotificacionDTO> notificacion) {
-        for (NotificacionDTO notificacionDTO : notificacion) {
-            notificacionService.create(notificacionDTO);
+        try {
+            for (NotificacionDTO notificacionDTO : notificacion) {
+                notificacionService.create(notificacionDTO);
+                ResponseEntity.ok().body(notificacionDTO);
+            }
+        } catch (RuntimeException e) {
+            ResponseEntity.badRequest().body(notificacion);
         }
+        return null;
     }
 }

@@ -52,7 +52,7 @@ public class NotificacionImp extends ServicioImp<NotificacionDTO, Integer> imple
         try{
             List<Notificacion> notificaciones = new ArrayList<>();
             for (NotificacionDTO dto : notificacionDTOs) {
-                if(dto.getMensaje() == null || dto.getTelefono() == null){
+                if(dto.getMensaje() == null || dto.getTelefono() == 0){
                     continue;
                 }
                 Notificacion notificacion = new Notificacion();
@@ -61,10 +61,13 @@ public class NotificacionImp extends ServicioImp<NotificacionDTO, Integer> imple
                 // etc. para todos los campos
                 notificaciones.add(notificacion);
             }
+            if (notificaciones.isEmpty()){
+                throw new RuntimeException("No se cargó ninguna notificacion");
+            }
             // Guardar las entidades en el repositorio
             notificacionRepository.saveAll(notificaciones);
-        } catch(Exception e){
-            e.printStackTrace();
+        } catch(RuntimeException e){
+            throw new RuntimeException("Error en el tiempo de ejecucion");
         }
     }
 

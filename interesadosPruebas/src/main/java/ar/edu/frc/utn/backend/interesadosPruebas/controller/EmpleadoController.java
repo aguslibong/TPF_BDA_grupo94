@@ -11,7 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class EmpleadoController {
     private final EmpleadoService empleadoService;
 
+
+
     public EmpleadoController(EmpleadoService empleadoService) {
+        
         this.empleadoService = empleadoService;
     }
 
