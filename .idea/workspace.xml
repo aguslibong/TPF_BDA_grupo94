@@ -6,17 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="Solucionado entidades">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agencia.db" beforeDir="false" afterPath="$PROJECT_DIR$/agencia.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/DTO/EmpleadoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/DTO/EmpleadoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/EmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/EmpleadoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/EmpleadoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/EmpleadoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/EmpleadoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/EmpleadoDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/PosicionImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/PosicionImp.java" afterDir="false" />
     </list>
     <list id="83f0fbaa-9992-4223-9963-33fd28e4ce5b" name="Changes by Agus" comment="" />
-    <list id="186700cc-4f13-45b1-8739-d28aa3ed534f" name="Changes by AGUSTIN" comment="">
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/PosicionImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/PosicionImp.java" afterDir="false" />
+    <list id="95b6f1c9-ea33-4eb7-9312-8c2c1e19a1bc" name="Changes by nacho" comment="">
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/ar/edu/frc/utn/backend/gateway/GWconfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/ar/edu/frc/utn/backend/gateway/GWconfig.java" afterDir="false" />
     </list>
-    <list id="aaa4b668-d422-4f5d-b599-3af14f9c6115" name="Changes by nacho" comment="" />
     <list id="69da239c-c717-4530-abe3-0696ac5d98e2" name="Changes by Usuario" comment="">
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/PruebaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/PruebaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/EmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/EmpleadoController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -48,10 +49,11 @@
   }
 }</component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/PosicionImp.java">
+    <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/EmpleadoController.java">
       <ranges>
-        <range start1="25" end1="26" start2="25" end2="28" changelist="186700cc-4f13-45b1-8739-d28aa3ed534f" />
-        <range start1="30" end1="31" start2="32" end2="33" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="2" end1="2" start2="2" end2="10" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="3" end1="3" start2="11" end2="20" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+        <range start1="5" end1="5" start2="22" end2="23" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
       </ranges>
     </file>
   </component>

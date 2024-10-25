@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EmpleadoDTO {
-    private int legajo;
-    private String telefonoContacto;
+public class NotificacionDTO {
+    private int telefono;
+    private String mensaje;
 }

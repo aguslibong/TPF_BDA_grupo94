@@ -1,5 +1,6 @@
 package ar.edu.frc.utn.backend.vehiculoPosiciones.service;
 
+import ar.edu.frc.utn.backend.vehiculoPosiciones.DTO.EmpleadoDTO;
 import ar.edu.frc.utn.backend.vehiculoPosiciones.DTO.PosicionDTO;
 import ar.edu.frc.utn.backend.vehiculoPosiciones.DTO.PruebaDTO;
 import ar.edu.frc.utn.backend.vehiculoPosiciones.entities.Posicion;
@@ -20,12 +21,25 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
       //Esto es la API que consumimos para que nos devuelva el listado
       //http://localhost:8082/api/prueba/momento
        try {
-           if(!estaEnPrueba(posicion.getId_vehiculo())){
+           PruebaDTO pruebaDTOActual = estaEnPrueba(posicion.getId_vehiculo());
+           if(pruebaDTOActual == null){
                throw new RuntimeException("El vehiculo no se encuentra en Prueba");
            }
+           //Si esta fuera del limite
            if(!estaEnRadio(posicion , 44f)){
-               throw new RuntimeException("El vehiculo no se encuentra dentro del radio limite ");
+               RestTemplate template = new RestTemplate();
+               // Llamada a la API para obtener el empleadoDTO
+               ResponseEntity<EmpleadoDTO> res = template.getForEntity(
+                       "http://localhost:8080/api/empleado/" + pruebaDTOActual.getIdEmpleado(),
+                       EmpleadoDTO.class
+               );
+               EmpleadoDTO empleado = res.getBody();
+               String TelefonoEmpleado = empleado.getTelefonoContacto();
+
+
+
            }
+
 
        } catch (RuntimeException e) {
            throw new RuntimeException(e);
@@ -33,29 +47,31 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
         return null;
    }
 //aca le pasamos la posicion del auto
-   private boolean estaEnPrueba(int IdVehiculo){
-         try {
+    private PruebaDTO estaEnPrueba(int IdVehiculo) {
+        try {
             RestTemplate template = new RestTemplate();
 
-            ResponseEntity<PruebaDTO[]> res = template.getForEntity("http://localhost:8082/api/prueba/momento", PruebaDTO[].class);
+            // Llamada a la API para obtener la lista de pruebas
+            ResponseEntity<PruebaDTO[]> res = template.getForEntity("http://localhost:8080/api/prueba/momento", PruebaDTO[].class);
 
             if (!res.getStatusCode().is2xxSuccessful()) {
-               throw new RuntimeException("Error al llamar la API");
+                throw new RuntimeException("Error al llamar la API");
             }
 
+            // Convertir el array a lista
             List<PruebaDTO> listaPruebas = Arrays.asList(res.getBody());
 
-            if (listaPruebas.stream().filter(p -> p.getIdVehiculo() == IdVehiculo).count() != 0){
-                return true;
-            } else {
-                return false;
-            }
+            // Filtrar y obtener la primera prueba que coincida con el IdVehiculo
+            return listaPruebas.stream()
+                    .filter(p -> p.getIdVehiculo() == IdVehiculo)
+                    .findFirst() // Retorna un Optional<PruebaDTO>
+                    .orElse(null); // Retorna null si no hay coincidencias
 
+        } catch (HttpClientErrorException ex) {
+            throw new RuntimeException("No fue exitosa la respuesta del cliente", ex);
+        }
+    }
 
-         } catch (HttpClientErrorException ex) {
-            throw new RuntimeException("No exitoso la respuesta del cliente", ex);
-         }
-   }
     //aca recibimos los datos de la poscion y el radio
     private boolean estaEnRadio(PosicionDTO posicionDTO, float radioLimite) {
         // Obtén las coordenadas (catetos)

@@ -16,6 +16,8 @@ public class GWconfig {
                 // Ruteo al Microservicio de interesados
                 .route(p -> p.path("/api/prueba/**").uri(uriInteresados))
                 // Ruteo al Microservicio de vehiculos
+                .route(p -> p.path("/api/interesado/**").uri(uriInteresados))
+                .route(p -> p.path("/api/empleado/**").uri(uriInteresados))
                 .route(p -> p.path("/api/vehiculo/**").uri(uriVehiculos))
                 .build();
     }
