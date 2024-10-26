@@ -19,9 +19,9 @@ public class PosicionesController {
 
 
     @PostMapping("/corroborar")
-    public ResponseEntity<Posicion> corroborarPosicion (@RequestBody PosicionDTO posicion) {
+    public ResponseEntity<String> corroborarPosicion (@RequestBody PosicionDTO posicion) {
         try {
-            Posicion posicionReturn = posicionService.corroborar(posicion);
+            String posicionReturn = posicionService.corroborar(posicion);
             return ResponseEntity.ok(posicionReturn);
         } catch (IllegalArgumentException e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("Error-Message", e.getMessage()).build();
