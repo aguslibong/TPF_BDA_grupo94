@@ -4,13 +4,15 @@ import ar.edu.frc.utn.backend.interesadosPruebas.DTO.PruebaDTO;
 import ar.edu.frc.utn.backend.interesadosPruebas.entities.Prueba;
 import org.springframework.http.ResponseEntity;
 
-public interface PruebaService {
+import java.util.List;
 
-    void crearPrueba(PruebaDTO prueba) throws Exception;
+public interface PruebaService extends Servicio<PruebaDTO,Integer> {
+
+    void create(PruebaDTO prueba) throws Exception ;
 
     Iterable<PruebaDTO> obtenerListaPruebasMomento() throws Exception;
 
     ResponseEntity finalizarPrueba(int id, String comentario) throws Exception;
 
-    Iterable<Prueba> findALL() throws Exception;
+    List<PruebaDTO> findAll() throws Exception;
 }

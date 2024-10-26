@@ -1,29 +1,58 @@
 package ar.edu.frc.utn.backend.interesadosPruebas.service;
 
+import ar.edu.frc.utn.backend.interesadosPruebas.DTO.InteresadoDTO;
+import ar.edu.frc.utn.backend.interesadosPruebas.DTO.convert.InteresadoToInteresadoDTO;
 import ar.edu.frc.utn.backend.interesadosPruebas.entities.Interesado;
 import ar.edu.frc.utn.backend.interesadosPruebas.repository.InteresadoRepository;
 
 import ar.edu.frc.utn.backend.interesadosPruebas.service.interfaces.InteresadoService;
+import ar.edu.frc.utn.backend.interesadosPruebas.service.interfaces.Servicio;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class InteresadoServiceImp implements InteresadoService {
     private final InteresadoRepository repository;
+    private final InteresadoToInteresadoDTO converter;
 
 
-    public InteresadoServiceImp(InteresadoRepository repository ) {
+    public InteresadoServiceImp(InteresadoRepository repository) {
         this.repository = repository;
+        this.converter = new InteresadoToInteresadoDTO();
     }
     
+
     @Override
-    public Optional<Interesado> findById(int id){
-        return repository.findById(id);
+    public void create(InteresadoDTO interesadoDTO) {
+
     }
 
-    public Iterable<Interesado> findAll(){
-        return repository.findAll();
+    @Override
+    public void update(InteresadoDTO interesadoDTO) {
+
+    }
+
+    @Override
+    public InteresadoDTO delete(Integer id) {
+        return null;
+    }
+
+    @Override
+    public InteresadoDTO findById(Integer id) {
+        return null;
+    }
+
+    @Override
+    public Optional<Interesado> findById(int id) {
+        return Optional.empty();
+    }
+
+    @Override
+    public List<InteresadoDTO> findAll() {
+        return repository.findAll().stream().map(converter)
+                .collect(Collectors.toList());
     }
 }

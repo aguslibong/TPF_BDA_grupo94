@@ -1,19 +1,24 @@
 package ar.edu.frc.utn.backend.interesadosPruebas.service;
 
 import ar.edu.frc.utn.backend.interesadosPruebas.DTO.EmpleadoDTO;
+import ar.edu.frc.utn.backend.interesadosPruebas.entities.Empleado;
 import ar.edu.frc.utn.backend.interesadosPruebas.repository.EmpleadoRepository;
 import ar.edu.frc.utn.backend.interesadosPruebas.repository.InteresadoRepository;
 import ar.edu.frc.utn.backend.interesadosPruebas.service.interfaces.EmpleadoService;
+import ar.edu.frc.utn.backend.interesadosPruebas.service.interfaces.Servicio;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
+@Service
 public class EmpleadoServiceImpl implements EmpleadoService {
+
     private EmpleadoRepository empleadoRepository;
 
     public EmpleadoServiceImpl(EmpleadoRepository repository ) {
         this.empleadoRepository = repository;
     }
-
 
 
     @Override
@@ -39,5 +44,10 @@ public class EmpleadoServiceImpl implements EmpleadoService {
     @Override
     public List<EmpleadoDTO> findAll() {
         return List.of();
+    }
+
+    @Override
+    public Optional<Empleado> findById(int id) {
+        return Optional.empty();
     }
 }

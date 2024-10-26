@@ -5,16 +5,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="Solucionado entidades">
+      <change afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/EmpleadoDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/restTemplate/RestTemplateConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/Servicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agencia.db" beforeDir="false" afterPath="$PROJECT_DIR$/agencia.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/controller/NotificacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/controller/NotificacionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/NotificacionImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/NotificacionImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/InteresadoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/InteresadoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/PruebaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/PruebaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/EmpleadoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/EmpleadoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/InteresadoServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/InteresadoServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/InteresadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/InteresadoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/EmpleadoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/EmpleadoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/NotificacionDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/PosicionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/PosicionDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/PruebaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/PruebaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/VehiculoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/VehiculoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/VehiculoPosicionesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/VehiculoPosicionesApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/controller/NotificacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/controller/NotificacionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/controller/PosicionesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/controller/PosicionesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/controller/VehiculoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/controller/VehiculoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Marca.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/Marca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/Modelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Notificacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/Notificacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Posicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/Posicion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Vehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/Vehiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/repository/NotificacionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/repository/NotificacionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/repository/PosicionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/repository/PosicionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/repository/VehiculoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/repository/VehiculoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/NotificacionImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/NotificacionImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/PosicionImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/PosicionImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/ServicioImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/ServicioImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/VehiculoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/VehiculoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/interfaces/NotificacionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/NotificacionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/interfaces/PosicionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/PosicionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/interfaces/Servicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/Servicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/interfaces/VehiculoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/VehiculoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/test/java/ar/edu/frc/utn/backend/vehiculoPosiciones/VehiculoPosicionesApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/test/java/ar/edu/frc/utn/backend/notificaciones/VehiculoPosicionesApplicationTests.java" afterDir="false" />
     </list>
-    <list id="83f0fbaa-9992-4223-9963-33fd28e4ce5b" name="Changes by Agus" comment="" />
-    <list id="ee9d434f-7222-40ed-921d-4670974f7a54" name="Changes by AGUSTIN" comment="">
+    <list id="83f0fbaa-9992-4223-9963-33fd28e4ce5b" name="Changes by Agus" comment="">
       <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/EmpleadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/EmpleadoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/EmpleadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/EmpleadoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/InteresadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/InteresadoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/EmpleadoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/EmpleadoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/InteresadoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/InteresadoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/PruebaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/PruebaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/EmpleadoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/EmpleadoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/InteresadoServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/InteresadoServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/InteresadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/InteresadoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/Servicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/Servicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/PosicionImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/PosicionImp.java" afterDir="false" />
     </list>
+    <list id="ee9d434f-7222-40ed-921d-4670974f7a54" name="Changes by AGUSTIN" comment="" />
     <list id="95b6f1c9-ea33-4eb7-9312-8c2c1e19a1bc" name="Changes by nacho" comment="" />
     <list id="69da239c-c717-4530-abe3-0696ac5d98e2" name="Changes by Usuario" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +74,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -46,6 +94,89 @@
     &quot;accountId&quot;: &quot;7dba63b1-8a35-421d-8f2f-fc536855c4a4&quot;
   }
 }</component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="5" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="11" end1="11" start2="12" end2="13" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="31" end1="31" start2="33" end2="34" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="38" end1="38" start2="41" end2="42" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="41" end1="63" start2="45" end2="45" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="108" end1="109" start2="90" end2="91" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="121" end1="122" start2="103" end2="105" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="135" end1="146" start2="118" end2="118" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="149" end1="149" start2="121" end2="122" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="150" end1="151" start2="123" end2="124" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="152" end1="152" start2="125" end2="126" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="155" end1="156" start2="129" end2="130" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="184" end1="188" start2="158" end2="158" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="190" end1="190" start2="160" end2="203" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/InteresadoService.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="3" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="4" end1="4" start2="5" end2="6" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="6" end1="7" start2="8" end2="9" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="10" end1="11" start2="12" end2="13" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java">
+      <ranges>
+        <range start1="5" end1="5" start2="5" end2="7" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="6" end1="7" start2="8" end2="9" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="8" end1="9" start2="10" end2="11" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="14" end1="15" start2="16" end2="17" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/PosicionImp.java">
+      <ranges>
+        <range start1="0" end1="1" start2="0" end2="1" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="2" end1="8" start2="2" end2="7" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="37" end1="37" start2="36" end2="37" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/PruebaRepository.java">
+      <ranges>
+        <range start1="4" end1="4" start2="4" end2="6" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="5" end1="6" start2="7" end2="7" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="10" end1="11" start2="11" end2="12" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="12" end1="14" start2="13" end2="18" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="17" end1="17" start2="21" end2="24" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/EmpleadoServiceImpl.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="4" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="6" end1="6" start2="7" end2="9" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="8" end1="8" start2="11" end2="12" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="9" end1="9" start2="13" end2="14" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="10" end1="10" start2="15" end2="16" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="17" end1="18" start2="23" end2="23" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="42" end1="42" start2="47" end2="52" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/repository/InteresadoRepository.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="4" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="7" end1="8" start2="8" end2="9" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="10" end1="10" start2="11" end2="12" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/InteresadoServiceImp.java">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="4" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="6" end1="6" start2="8" end2="9" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="10" end1="10" start2="13" end2="14" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="14" end1="14" start2="18" end2="19" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="16" end1="17" start2="21" end2="22" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="18" end1="18" start2="23" end2="24" changelist="83f0fbaa-9992-4223-9963-33fd28e4ce5b" />
+        <range start1="20" end1="20" start2="26" end2="47" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="21" end1="23" start2="48" end2="50" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+        <range start1="25" end1="27" start2="52" end2="56" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+      </ranges>
+    </file>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -98,6 +229,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nacho\Documents\Facultad\backend\TPF_BDA" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ar.edu.frc.utn.backend.notificaciones.service.interfaces" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -109,7 +243,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.VehiculoPosicionesApplication">
+  <component name="RunManager" selected="Spring Boot.NotificacionesApplication">
     <configuration name="GatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.gateway.GatewayApplication" />
       <module name="gateway" />
@@ -137,11 +271,11 @@
       </method>
     </configuration>
     <configuration name="VehiculoPosicionesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.vehiculoPosiciones.VehiculoPosicionesApplication" />
+      <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.notificaciones.VehiculoPosicionesApplication" />
       <module name="vehiculoPosiciones" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.edu.frc.utn.backend.vehiculoPosiciones.*" />
+          <option name="PATTERN" value="ar.edu.frc.utn.backend.notificaciones.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -184,6 +318,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NotificacionesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="notificaciones" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.frc.utn.backend.notificaciones.NotificacionesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TpfBdaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="TPF_BDA" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.utn.frc.backend.TPF_BDA.TpfBdaApplication" />
@@ -193,7 +334,7 @@
     </configuration>
     <configuration name="VehiculoPosicionesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="vehiculoPosiciones" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.frc.utn.backend.vehiculoPosiciones.VehiculoPosicionesApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.frc.utn.backend.notificaciones.VehiculoPosicionesApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -203,6 +344,7 @@
       <item itemvalue="Application.InteresadosPruebasApplication" />
       <item itemvalue="Application.VehiculoPosicionesApplication" />
       <item itemvalue="HTTP Request.generated-requests | #1" />
+      <item itemvalue="Spring Boot.NotificacionesApplication" />
       <item itemvalue="Spring Boot.GatewayApplication" />
       <item itemvalue="Spring Boot.GatewayApplication (1)" />
       <item itemvalue="Spring Boot.InteresadosPruebasApplication" />
@@ -243,11 +385,23 @@
       <workItem from="1729781690914" duration="2551000" />
       <workItem from="1729790372354" duration="3685000" />
       <workItem from="1729817793634" duration="577000" />
+      <workItem from="1729952636490" duration="7409000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Solucionado entidades" />
