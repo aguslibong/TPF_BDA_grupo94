@@ -16,6 +16,3 @@ spring:
       hibernate:
         show_sql: false
 
-twilio:
-  account_sid: ACf973241ccdedfa6fd1cd5c856763ea8a
-  auth_token: b096d3568c3f6d53ef3bf5120b463785
