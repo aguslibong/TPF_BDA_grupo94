@@ -1,6 +1,7 @@
 package ar.edu.frc.utn.backend.notificaciones.service;
 
 import ar.edu.frc.utn.backend.notificaciones.DTO.EmpleadoDTO;
+import ar.edu.frc.utn.backend.notificaciones.DTO.NotificacionDTO;
 import ar.edu.frc.utn.backend.notificaciones.DTO.PosicionDTO;
 import ar.edu.frc.utn.backend.notificaciones.DTO.PruebaDTO;
 import ar.edu.frc.utn.backend.notificaciones.entities.Posicion;
@@ -16,27 +17,29 @@ import java.util.List;
 @Service
 public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements PosicionService {
 
-   public Posicion corroborar(PosicionDTO posicion) {
+   public String corroborar(PosicionDTO posicion) {
       //Esto es la API que consumimos para que nos devuelva el listado
       //http://localhost:8082/api/prueba/momento
        try {
            PruebaDTO pruebaDTOActual = estaEnPrueba(posicion.getId_vehiculo());
            if(pruebaDTOActual == null){
-               throw new RuntimeException("El vehiculo no se encuentra en Prueba");
+               return ("El vehiculo no se encuentra en Prueba");
            }
            //Si esta fuera del limite
            if(!estaEnRadio(posicion , 44f)){
                RestTemplate template = new RestTemplate();
                // Llamada a la API para obtener el empleadoDTO
                ResponseEntity<EmpleadoDTO> res = template.getForEntity(
-                       "http://localhost:8080/api/empleado/" + pruebaDTOActual.getIdEmpleado(),
+                       "http://localhost:8082/api/empleado/" + pruebaDTOActual.getIdEmpleado(),
                        EmpleadoDTO.class
                );
                EmpleadoDTO empleado = res.getBody();
-               String TelefonoEmpleado = empleado.getTelefonoContacto();
 
-
-
+               // falta saber si es por zona peligrosa o por fuera de radio
+               String mensaje = "Se excidio del rango del Radio VOLVE PUTO"; // este mensaje se mofifica segun el caso
+               NotificacionDTO notificacionDTO = crearNotificacionDTO(empleado,mensaje);
+               //enviarNotificacion(notificacionDTO);
+               return notificacionDTO.toString();
 
            }
 
@@ -44,7 +47,7 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
        } catch (RuntimeException e) {
            throw new RuntimeException(e);
        }
-        return null;
+        return "EL vehiculo se Encuentra en una posisicon Legal";
    }
 //aca le pasamos la posicion del auto
     private PruebaDTO estaEnPrueba(int IdVehiculo) {
@@ -52,7 +55,7 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
             RestTemplate template = new RestTemplate();
 
             // Llamada a la API para obtener la lista de pruebas
-            ResponseEntity<PruebaDTO[]> res = template.getForEntity("http://localhost:8080/api/prueba/momento", PruebaDTO[].class);
+            ResponseEntity<PruebaDTO[]> res = template.getForEntity("http://localhost:8082/api/prueba/momento", PruebaDTO[].class);
 
             if (!res.getStatusCode().is2xxSuccessful()) {
                 throw new RuntimeException("Error al llamar la API");
@@ -90,6 +93,22 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
         }
     }
 
+    private NotificacionDTO crearNotificacionDTO(EmpleadoDTO empleadoDTO, String mensaje){
+        NotificacionDTO notificacionDTONueva = new NotificacionDTO();
+        notificacionDTONueva.setMensaje(mensaje);
+        notificacionDTONueva.setLegajoEmpleado(empleadoDTO.getLegajo());
+        notificacionDTONueva.setTelefonoEmpleado(notificacionDTONueva.getTelefonoEmpleado());
+
+        return notificacionDTONueva;
+    }
+
+    private void enviarNotificacion(NotificacionDTO notificacionDTO) {
+        RestTemplate template = new RestTemplate();
+        ResponseEntity<NotificacionDTO> res = template.postForEntity(
+                "http://localhost:8083/api/notificacion",
+                notificacionDTO,  // este es el body
+                NotificacionDTO.class);
+    }
 
 
     @Override

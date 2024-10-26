@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class NotificacionDTO {
     private int legajoEmpleado;
     private String mensaje;
-    private int telefonoEmpleado;
+    private String telefonoEmpleado;
 }

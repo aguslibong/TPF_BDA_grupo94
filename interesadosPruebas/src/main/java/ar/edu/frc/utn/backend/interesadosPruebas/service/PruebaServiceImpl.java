@@ -76,7 +76,7 @@ public class PruebaServiceImpl implements PruebaService {
         try {
             RestTemplate template = new RestTemplate();
 
-            ResponseEntity<VehiculoDTO> res = template.getForEntity("http://localhost:8080/api/vehiculo/{id}", VehiculoDTO.class, idVehiculo);
+            ResponseEntity<VehiculoDTO> res = template.getForEntity("http://localhost:8081/api/vehiculo/{id}", VehiculoDTO.class, idVehiculo);
 
             if (res.getStatusCode().is2xxSuccessful()) return res.getBody();
 
