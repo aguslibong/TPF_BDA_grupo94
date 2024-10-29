@@ -18,8 +18,6 @@ import java.util.Optional;
 
 @Service
 public class NotificacionImp implements NotificacionService {
-
-    private static final String TWILIO_SMS_URL = "https://api.twilio.com/2010-04-01/Accounts/{AccountSid}/Messages.json";
     private static final String TWILIO_SMS_FROM = "+15307385799";  // Cambia al número de envío de Twilio para SMS
 
     @Autowired
