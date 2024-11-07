@@ -37,4 +37,17 @@ public class InteresadoController {
         }
     }
 
+    @PutMapping ("/restringir/{id}")
+    public ResponseEntity<String> restringir(@PathVariable int id){
+        try {
+            String mensaje = interesadoService.restringir(id);
+            return ResponseEntity.ok(mensaje);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("Error-Message", e.getMessage()).build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error al enviar restringir el Interesado");
+        }
+    }
+
 }
