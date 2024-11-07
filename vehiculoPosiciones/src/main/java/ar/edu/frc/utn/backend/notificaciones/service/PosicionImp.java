@@ -27,7 +27,7 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
                 EmpleadoDTO empleado = obtenerEmpleado(pruebaDTOActual);
                 restringirInteresado(pruebaDTOActual);
                 //* falta saber si es por zona peligrosa o por fuera de radio
-                String mensaje = "Se excidio del rango del Radio"; // este mensaje se mofifica segun el caso
+                String mensaje = "Se excedió del rango del Radio"; // este mensaje se mofifica segun el caso
                 NotificacionDTO notificacionDTO = crearNotificacionDTO(empleado, mensaje);
                 return enviarNotificacion(notificacionDTO);
             }
@@ -83,6 +83,7 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
 
         // Calcula la distancia desde el origen (hipotenusa)
         double distancia = Math.sqrt(Math.pow((latitudZona-latitudAuto), 2) + Math.pow((longitudZona-longitudAuto), 2));
+        System.out.println(distancia);
 
         // Verifica si la distancia está dentro del radio límite
         if (distancia <= agenciaInfoDTO.getRadioAdmitidoKm()) {
@@ -140,7 +141,7 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
         NotificacionDTO notificacionDTONueva = new NotificacionDTO();
         notificacionDTONueva.setMensaje(mensaje);
         notificacionDTONueva.setLegajoEmpleado(empleadoDTO.getLegajo());
-        notificacionDTONueva.setTelefonoEmpleado(notificacionDTONueva.getTelefonoEmpleado());
+        notificacionDTONueva.setTelefonoEmpleado(empleadoDTO.getTelefonoContacto());
 
         return notificacionDTONueva;
     }

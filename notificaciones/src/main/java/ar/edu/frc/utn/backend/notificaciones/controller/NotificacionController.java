@@ -19,8 +19,9 @@ public class NotificacionController {
     @PostMapping
     public ResponseEntity<String> sendSMSMessage(@RequestBody NotificacionDTO notificacionDTO) {
         try {
+            System.out.println(notificacionDTO);
             notificacionService.sendSmsMessage(notificacionDTO);
-            return ResponseEntity.ok("Se almaceno la Notificacion");
+            return ResponseEntity.ok("Se almaceno la Notificacion: " + notificacionDTO.getMensaje());
         } catch (RuntimeException e) {
             // Devolver un ResponseEntity con código 500 Internal Server Error
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
