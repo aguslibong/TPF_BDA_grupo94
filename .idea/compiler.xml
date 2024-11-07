@@ -8,11 +8,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="vehiculoPosiciones" />
-        <module name="notificaciones" />
         <module name="interesadosPruebas" />
         <module name="gateway" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="notificaciones" target="21" />
+      <module name="vehiculoPosiciones (1)" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -20,6 +23,7 @@
       <module name="interesadosPruebas" options="-parameters" />
       <module name="notificaciones" options="-parameters" />
       <module name="vehiculoPosiciones" options="-parameters" />
+      <module name="vehiculoPosiciones (1)" options="-parameters" />
     </option>
   </component>
 </project>

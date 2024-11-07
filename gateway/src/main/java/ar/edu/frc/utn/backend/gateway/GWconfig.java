@@ -11,7 +11,8 @@ public class GWconfig {
     @Bean
     public RouteLocator configurarRutas(RouteLocatorBuilder builder,
                                         @Value("${microservicios.vehiculos}") String uriVehiculos,
-                                        @Value("${microservicios.interesados}") String uriInteresados) {
+                                        @Value("${microservicios.interesados}") String uriInteresados,
+                                        @Value("${microservicios.notificaciones}") String uriNotificaciones) {
         return builder.routes()
                 // Ruteo al Microservicio de interesados
                 .route(p -> p.path("/api/prueba/**").uri(uriInteresados))
@@ -19,6 +20,7 @@ public class GWconfig {
                 .route(p -> p.path("/api/interesado/**").uri(uriInteresados))
                 .route(p -> p.path("/api/empleado/**").uri(uriInteresados))
                 .route(p -> p.path("/api/vehiculo/**").uri(uriVehiculos))
+                .route(p -> p.path("/api/notificacion/**").uri(uriNotificaciones))
                 .build();
     }
 }
