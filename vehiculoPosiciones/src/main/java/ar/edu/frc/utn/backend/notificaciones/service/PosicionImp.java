@@ -73,24 +73,25 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
 
     //aca recibimos los datos de la poscion y el radio
     private boolean estaEnRadio(PosicionDTO posicionDTO, AgenciaInfoDTO agenciaInfoDTO) {
-        // Obtén las coordenadas (catetos)
+        // Obtener las coordenadas
         double latitudAuto = posicionDTO.getLatitud();
         double longitudAuto = posicionDTO.getLongitud();
-
         double latitudZona = agenciaInfoDTO.getCoordenadasAgencia().getLat();
         double longitudZona = agenciaInfoDTO.getCoordenadasAgencia().getLon();
 
+        // Factor de conversión en kilómetros
+        double factorLatitud = 111.0; // 1 grado de latitud ≈ 111 km
+        double factorLongitud = 111.0 * Math.cos(Math.toRadians(latitudAuto)); // Aproximación según latitud
 
-        // Calcula la distancia desde el origen (hipotenusa)
-        double distancia = Math.sqrt(Math.pow((latitudZona-latitudAuto), 2) + Math.pow((longitudZona-longitudAuto), 2));
-        System.out.println(distancia);
+        // Calcula la distancia euclídea ajustada
+        double distancia = Math.sqrt(
+                Math.pow((latitudZona - latitudAuto) * factorLatitud, 2) +
+                        Math.pow((longitudZona - longitudAuto) * factorLongitud, 2)
+        );
+        System.out.println(distancia); // Distancia en kilómetros aproximada
 
-        // Verifica si la distancia está dentro del radio límite
-        if (distancia <= agenciaInfoDTO.getRadioAdmitidoKm()) {
-            return true;
-        } else {
-            return false;
-        }
+        // Verifica si está dentro del radio admitido
+        return distancia <= agenciaInfoDTO.getRadioAdmitidoKm();
     }
 
     private boolean estaEnZona(PosicionDTO posicionDTO, ZonaPeligrosaDTO zonaDTO) {
