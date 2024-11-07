@@ -1,0 +1,1036 @@
+Index: notificaciones/.gitattributes
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/.gitattributes b/notificaciones/.gitattributes
+new file mode 100644
+--- /dev/null	(date 1730983284361)
++++ b/notificaciones/.gitattributes	(date 1730983284361)
+@@ -0,0 +1,2 @@
++/mvnw text eol=lf
++*.cmd text eol=crlf
+Index: notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/NotificacionesApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/NotificacionesApplication.java b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/NotificacionesApplication.java
+new file mode 100644
+--- /dev/null	(date 1730983284366)
++++ b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/NotificacionesApplication.java	(date 1730983284366)
+@@ -0,0 +1,13 @@
++package ar.edu.frc.utn.backend.notificaciones;
++
++import org.springframework.boot.SpringApplication;
++import org.springframework.boot.autoconfigure.SpringBootApplication;
++
++@SpringBootApplication
++public class NotificacionesApplication {
++
++	public static void main(String[] args) {
++		SpringApplication.run(NotificacionesApplication.class, args);
++	}
++
++}
+Index: notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/EmpleadoDTO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/EmpleadoDTO.java b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/EmpleadoDTO.java
+new file mode 100644
+--- /dev/null	(date 1730983284366)
++++ b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/EmpleadoDTO.java	(date 1730983284366)
+@@ -0,0 +1,4 @@
++package ar.edu.frc.utn.backend.notificaciones.DTO;
++
++public class EmpleadoDTO {
++}
+Index: notificaciones/mvnw
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/mvnw b/notificaciones/mvnw
+new file mode 100644
+--- /dev/null	(date 1730983284363)
++++ b/notificaciones/mvnw	(date 1730983284363)
+@@ -0,0 +1,259 @@
++#!/bin/sh
++# ----------------------------------------------------------------------------
++# Licensed to the Apache Software Foundation (ASF) under one
++# or more contributor license agreements.  See the NOTICE file
++# distributed with this work for additional information
++# regarding copyright ownership.  The ASF licenses this file
++# to you under the Apache License, Version 2.0 (the
++# "License"); you may not use this file except in compliance
++# with the License.  You may obtain a copy of the License at
++#
++#    http://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing,
++# software distributed under the License is distributed on an
++# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
++# KIND, either express or implied.  See the License for the
++# specific language governing permissions and limitations
++# under the License.
++# ----------------------------------------------------------------------------
++
++# ----------------------------------------------------------------------------
++# Apache Maven Wrapper startup batch script, version 3.3.2
++#
++# Optional ENV vars
++# -----------------
++#   JAVA_HOME - location of a JDK home dir, required when download maven via java source
++#   MVNW_REPOURL - repo url base for downloading maven distribution
++#   MVNW_USERNAME/MVNW_PASSWORD - user and password for downloading maven
++#   MVNW_VERBOSE - true: enable verbose log; debug: trace the mvnw script; others: silence the output
++# ----------------------------------------------------------------------------
++
++set -euf
++[ "${MVNW_VERBOSE-}" != debug ] || set -x
++
++# OS specific support.
++native_path() { printf %s\\n "$1"; }
++case "$(uname)" in
++CYGWIN* | MINGW*)
++  [ -z "${JAVA_HOME-}" ] || JAVA_HOME="$(cygpath --unix "$JAVA_HOME")"
++  native_path() { cygpath --path --windows "$1"; }
++  ;;
++esac
++
++# set JAVACMD and JAVACCMD
++set_java_home() {
++  # For Cygwin and MinGW, ensure paths are in Unix format before anything is touched
++  if [ -n "${JAVA_HOME-}" ]; then
++    if [ -x "$JAVA_HOME/jre/sh/java" ]; then
++      # IBM's JDK on AIX uses strange locations for the executables
++      JAVACMD="$JAVA_HOME/jre/sh/java"
++      JAVACCMD="$JAVA_HOME/jre/sh/javac"
++    else
++      JAVACMD="$JAVA_HOME/bin/java"
++      JAVACCMD="$JAVA_HOME/bin/javac"
++
++      if [ ! -x "$JAVACMD" ] || [ ! -x "$JAVACCMD" ]; then
++        echo "The JAVA_HOME environment variable is not defined correctly, so mvnw cannot run." >&2
++        echo "JAVA_HOME is set to \"$JAVA_HOME\", but \"\$JAVA_HOME/bin/java\" or \"\$JAVA_HOME/bin/javac\" does not exist." >&2
++        return 1
++      fi
++    fi
++  else
++    JAVACMD="$(
++      'set' +e
++      'unset' -f command 2>/dev/null
++      'command' -v java
++    )" || :
++    JAVACCMD="$(
++      'set' +e
++      'unset' -f command 2>/dev/null
++      'command' -v javac
++    )" || :
++
++    if [ ! -x "${JAVACMD-}" ] || [ ! -x "${JAVACCMD-}" ]; then
++      echo "The java/javac command does not exist in PATH nor is JAVA_HOME set, so mvnw cannot run." >&2
++      return 1
++    fi
++  fi
++}
++
++# hash string like Java String::hashCode
++hash_string() {
++  str="${1:-}" h=0
++  while [ -n "$str" ]; do
++    char="${str%"${str#?}"}"
++    h=$(((h * 31 + $(LC_CTYPE=C printf %d "'$char")) % 4294967296))
++    str="${str#?}"
++  done
++  printf %x\\n $h
++}
++
++verbose() { :; }
++[ "${MVNW_VERBOSE-}" != true ] || verbose() { printf %s\\n "${1-}"; }
++
++die() {
++  printf %s\\n "$1" >&2
++  exit 1
++}
++
++trim() {
++  # MWRAPPER-139:
++  #   Trims trailing and leading whitespace, carriage returns, tabs, and linefeeds.
++  #   Needed for removing poorly interpreted newline sequences when running in more
++  #   exotic environments such as mingw bash on Windows.
++  printf "%s" "${1}" | tr -d '[:space:]'
++}
++
++# parse distributionUrl and optional distributionSha256Sum, requires .mvn/wrapper/maven-wrapper.properties
++while IFS="=" read -r key value; do
++  case "${key-}" in
++  distributionUrl) distributionUrl=$(trim "${value-}") ;;
++  distributionSha256Sum) distributionSha256Sum=$(trim "${value-}") ;;
++  esac
++done <"${0%/*}/.mvn/wrapper/maven-wrapper.properties"
++[ -n "${distributionUrl-}" ] || die "cannot read distributionUrl property in ${0%/*}/.mvn/wrapper/maven-wrapper.properties"
++
++case "${distributionUrl##*/}" in
++maven-mvnd-*bin.*)
++  MVN_CMD=mvnd.sh _MVNW_REPO_PATTERN=/maven/mvnd/
++  case "${PROCESSOR_ARCHITECTURE-}${PROCESSOR_ARCHITEW6432-}:$(uname -a)" in
++  *AMD64:CYGWIN* | *AMD64:MINGW*) distributionPlatform=windows-amd64 ;;
++  :Darwin*x86_64) distributionPlatform=darwin-amd64 ;;
++  :Darwin*arm64) distributionPlatform=darwin-aarch64 ;;
++  :Linux*x86_64*) distributionPlatform=linux-amd64 ;;
++  *)
++    echo "Cannot detect native platform for mvnd on $(uname)-$(uname -m), use pure java version" >&2
++    distributionPlatform=linux-amd64
++    ;;
++  esac
++  distributionUrl="${distributionUrl%-bin.*}-$distributionPlatform.zip"
++  ;;
++maven-mvnd-*) MVN_CMD=mvnd.sh _MVNW_REPO_PATTERN=/maven/mvnd/ ;;
++*) MVN_CMD="mvn${0##*/mvnw}" _MVNW_REPO_PATTERN=/org/apache/maven/ ;;
++esac
++
++# apply MVNW_REPOURL and calculate MAVEN_HOME
++# maven home pattern: ~/.m2/wrapper/dists/{apache-maven-<version>,maven-mvnd-<version>-<platform>}/<hash>
++[ -z "${MVNW_REPOURL-}" ] || distributionUrl="$MVNW_REPOURL$_MVNW_REPO_PATTERN${distributionUrl#*"$_MVNW_REPO_PATTERN"}"
++distributionUrlName="${distributionUrl##*/}"
++distributionUrlNameMain="${distributionUrlName%.*}"
++distributionUrlNameMain="${distributionUrlNameMain%-bin}"
++MAVEN_USER_HOME="${MAVEN_USER_HOME:-${HOME}/.m2}"
++MAVEN_HOME="${MAVEN_USER_HOME}/wrapper/dists/${distributionUrlNameMain-}/$(hash_string "$distributionUrl")"
++
++exec_maven() {
++  unset MVNW_VERBOSE MVNW_USERNAME MVNW_PASSWORD MVNW_REPOURL || :
++  exec "$MAVEN_HOME/bin/$MVN_CMD" "$@" || die "cannot exec $MAVEN_HOME/bin/$MVN_CMD"
++}
++
++if [ -d "$MAVEN_HOME" ]; then
++  verbose "found existing MAVEN_HOME at $MAVEN_HOME"
++  exec_maven "$@"
++fi
++
++case "${distributionUrl-}" in
++*?-bin.zip | *?maven-mvnd-?*-?*.zip) ;;
++*) die "distributionUrl is not valid, must match *-bin.zip or maven-mvnd-*.zip, but found '${distributionUrl-}'" ;;
++esac
++
++# prepare tmp dir
++if TMP_DOWNLOAD_DIR="$(mktemp -d)" && [ -d "$TMP_DOWNLOAD_DIR" ]; then
++  clean() { rm -rf -- "$TMP_DOWNLOAD_DIR"; }
++  trap clean HUP INT TERM EXIT
++else
++  die "cannot create temp dir"
++fi
++
++mkdir -p -- "${MAVEN_HOME%/*}"
++
++# Download and Install Apache Maven
++verbose "Couldn't find MAVEN_HOME, downloading and installing it ..."
++verbose "Downloading from: $distributionUrl"
++verbose "Downloading to: $TMP_DOWNLOAD_DIR/$distributionUrlName"
++
++# select .zip or .tar.gz
++if ! command -v unzip >/dev/null; then
++  distributionUrl="${distributionUrl%.zip}.tar.gz"
++  distributionUrlName="${distributionUrl##*/}"
++fi
++
++# verbose opt
++__MVNW_QUIET_WGET=--quiet __MVNW_QUIET_CURL=--silent __MVNW_QUIET_UNZIP=-q __MVNW_QUIET_TAR=''
++[ "${MVNW_VERBOSE-}" != true ] || __MVNW_QUIET_WGET='' __MVNW_QUIET_CURL='' __MVNW_QUIET_UNZIP='' __MVNW_QUIET_TAR=v
++
++# normalize http auth
++case "${MVNW_PASSWORD:+has-password}" in
++'') MVNW_USERNAME='' MVNW_PASSWORD='' ;;
++has-password) [ -n "${MVNW_USERNAME-}" ] || MVNW_USERNAME='' MVNW_PASSWORD='' ;;
++esac
++
++if [ -z "${MVNW_USERNAME-}" ] && command -v wget >/dev/null; then
++  verbose "Found wget ... using wget"
++  wget ${__MVNW_QUIET_WGET:+"$__MVNW_QUIET_WGET"} "$distributionUrl" -O "$TMP_DOWNLOAD_DIR/$distributionUrlName" || die "wget: Failed to fetch $distributionUrl"
++elif [ -z "${MVNW_USERNAME-}" ] && command -v curl >/dev/null; then
++  verbose "Found curl ... using curl"
++  curl ${__MVNW_QUIET_CURL:+"$__MVNW_QUIET_CURL"} -f -L -o "$TMP_DOWNLOAD_DIR/$distributionUrlName" "$distributionUrl" || die "curl: Failed to fetch $distributionUrl"
++elif set_java_home; then
++  verbose "Falling back to use Java to download"
++  javaSource="$TMP_DOWNLOAD_DIR/Downloader.java"
++  targetZip="$TMP_DOWNLOAD_DIR/$distributionUrlName"
++  cat >"$javaSource" <<-END
++	public class Downloader extends java.net.Authenticator
++	{
++	  protected java.net.PasswordAuthentication getPasswordAuthentication()
++	  {
++	    return new java.net.PasswordAuthentication( System.getenv( "MVNW_USERNAME" ), System.getenv( "MVNW_PASSWORD" ).toCharArray() );
++	  }
++	  public static void main( String[] args ) throws Exception
++	  {
++	    setDefault( new Downloader() );
++	    java.nio.file.Files.copy( java.net.URI.create( args[0] ).toURL().openStream(), java.nio.file.Paths.get( args[1] ).toAbsolutePath().normalize() );
++	  }
++	}
++	END
++  # For Cygwin/MinGW, switch paths to Windows format before running javac and java
++  verbose " - Compiling Downloader.java ..."
++  "$(native_path "$JAVACCMD")" "$(native_path "$javaSource")" || die "Failed to compile Downloader.java"
++  verbose " - Running Downloader.java ..."
++  "$(native_path "$JAVACMD")" -cp "$(native_path "$TMP_DOWNLOAD_DIR")" Downloader "$distributionUrl" "$(native_path "$targetZip")"
++fi
++
++# If specified, validate the SHA-256 sum of the Maven distribution zip file
++if [ -n "${distributionSha256Sum-}" ]; then
++  distributionSha256Result=false
++  if [ "$MVN_CMD" = mvnd.sh ]; then
++    echo "Checksum validation is not supported for maven-mvnd." >&2
++    echo "Please disable validation by removing 'distributionSha256Sum' from your maven-wrapper.properties." >&2
++    exit 1
++  elif command -v sha256sum >/dev/null; then
++    if echo "$distributionSha256Sum  $TMP_DOWNLOAD_DIR/$distributionUrlName" | sha256sum -c >/dev/null 2>&1; then
++      distributionSha256Result=true
++    fi
++  elif command -v shasum >/dev/null; then
++    if echo "$distributionSha256Sum  $TMP_DOWNLOAD_DIR/$distributionUrlName" | shasum -a 256 -c >/dev/null 2>&1; then
++      distributionSha256Result=true
++    fi
++  else
++    echo "Checksum validation was requested but neither 'sha256sum' or 'shasum' are available." >&2
++    echo "Please install either command, or disable validation by removing 'distributionSha256Sum' from your maven-wrapper.properties." >&2
++    exit 1
++  fi
++  if [ $distributionSha256Result = false ]; then
++    echo "Error: Failed to validate Maven distribution SHA-256, your Maven distribution might be compromised." >&2
++    echo "If you updated your Maven version, you need to update the specified distributionSha256Sum property." >&2
++    exit 1
++  fi
++fi
++
++# unzip and move
++if command -v unzip >/dev/null; then
++  unzip ${__MVNW_QUIET_UNZIP:+"$__MVNW_QUIET_UNZIP"} "$TMP_DOWNLOAD_DIR/$distributionUrlName" -d "$TMP_DOWNLOAD_DIR" || die "failed to unzip"
++else
++  tar xzf${__MVNW_QUIET_TAR:+"$__MVNW_QUIET_TAR"} "$TMP_DOWNLOAD_DIR/$distributionUrlName" -C "$TMP_DOWNLOAD_DIR" || die "failed to untar"
++fi
++printf %s\\n "$distributionUrl" >"$TMP_DOWNLOAD_DIR/$distributionUrlNameMain/mvnw.url"
++mv -- "$TMP_DOWNLOAD_DIR/$distributionUrlNameMain" "$MAVEN_HOME" || [ -d "$MAVEN_HOME" ] || die "fail to move MAVEN_HOME"
++
++clean || :
++exec_maven "$@"
+Index: notificaciones/mvnw.cmd
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/mvnw.cmd b/notificaciones/mvnw.cmd
+new file mode 100644
+--- /dev/null	(date 1730983284363)
++++ b/notificaciones/mvnw.cmd	(date 1730983284363)
+@@ -0,0 +1,149 @@
++<# : batch portion
++@REM ----------------------------------------------------------------------------
++@REM Licensed to the Apache Software Foundation (ASF) under one
++@REM or more contributor license agreements.  See the NOTICE file
++@REM distributed with this work for additional information
++@REM regarding copyright ownership.  The ASF licenses this file
++@REM to you under the Apache License, Version 2.0 (the
++@REM "License"); you may not use this file except in compliance
++@REM with the License.  You may obtain a copy of the License at
++@REM
++@REM    http://www.apache.org/licenses/LICENSE-2.0
++@REM
++@REM Unless required by applicable law or agreed to in writing,
++@REM software distributed under the License is distributed on an
++@REM "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
++@REM KIND, either express or implied.  See the License for the
++@REM specific language governing permissions and limitations
++@REM under the License.
++@REM ----------------------------------------------------------------------------
++
++@REM ----------------------------------------------------------------------------
++@REM Apache Maven Wrapper startup batch script, version 3.3.2
++@REM
++@REM Optional ENV vars
++@REM   MVNW_REPOURL - repo url base for downloading maven distribution
++@REM   MVNW_USERNAME/MVNW_PASSWORD - user and password for downloading maven
++@REM   MVNW_VERBOSE - true: enable verbose log; others: silence the output
++@REM ----------------------------------------------------------------------------
++
++@IF "%__MVNW_ARG0_NAME__%"=="" (SET __MVNW_ARG0_NAME__=%~nx0)
++@SET __MVNW_CMD__=
++@SET __MVNW_ERROR__=
++@SET __MVNW_PSMODULEP_SAVE=%PSModulePath%
++@SET PSModulePath=
++@FOR /F "usebackq tokens=1* delims==" %%A IN (`powershell -noprofile "& {$scriptDir='%~dp0'; $script='%__MVNW_ARG0_NAME__%'; icm -ScriptBlock ([Scriptblock]::Create((Get-Content -Raw '%~f0'))) -NoNewScope}"`) DO @(
++  IF "%%A"=="MVN_CMD" (set __MVNW_CMD__=%%B) ELSE IF "%%B"=="" (echo %%A) ELSE (echo %%A=%%B)
++)
++@SET PSModulePath=%__MVNW_PSMODULEP_SAVE%
++@SET __MVNW_PSMODULEP_SAVE=
++@SET __MVNW_ARG0_NAME__=
++@SET MVNW_USERNAME=
++@SET MVNW_PASSWORD=
++@IF NOT "%__MVNW_CMD__%"=="" (%__MVNW_CMD__% %*)
++@echo Cannot start maven from wrapper >&2 && exit /b 1
++@GOTO :EOF
++: end batch / begin powershell #>
++
++$ErrorActionPreference = "Stop"
++if ($env:MVNW_VERBOSE -eq "true") {
++  $VerbosePreference = "Continue"
++}
++
++# calculate distributionUrl, requires .mvn/wrapper/maven-wrapper.properties
++$distributionUrl = (Get-Content -Raw "$scriptDir/.mvn/wrapper/maven-wrapper.properties" | ConvertFrom-StringData).distributionUrl
++if (!$distributionUrl) {
++  Write-Error "cannot read distributionUrl property in $scriptDir/.mvn/wrapper/maven-wrapper.properties"
++}
++
++switch -wildcard -casesensitive ( $($distributionUrl -replace '^.*/','') ) {
++  "maven-mvnd-*" {
++    $USE_MVND = $true
++    $distributionUrl = $distributionUrl -replace '-bin\.[^.]*$',"-windows-amd64.zip"
++    $MVN_CMD = "mvnd.cmd"
++    break
++  }
++  default {
++    $USE_MVND = $false
++    $MVN_CMD = $script -replace '^mvnw','mvn'
++    break
++  }
++}
++
++# apply MVNW_REPOURL and calculate MAVEN_HOME
++# maven home pattern: ~/.m2/wrapper/dists/{apache-maven-<version>,maven-mvnd-<version>-<platform>}/<hash>
++if ($env:MVNW_REPOURL) {
++  $MVNW_REPO_PATTERN = if ($USE_MVND) { "/org/apache/maven/" } else { "/maven/mvnd/" }
++  $distributionUrl = "$env:MVNW_REPOURL$MVNW_REPO_PATTERN$($distributionUrl -replace '^.*'+$MVNW_REPO_PATTERN,'')"
++}
++$distributionUrlName = $distributionUrl -replace '^.*/',''
++$distributionUrlNameMain = $distributionUrlName -replace '\.[^.]*$','' -replace '-bin$',''
++$MAVEN_HOME_PARENT = "$HOME/.m2/wrapper/dists/$distributionUrlNameMain"
++if ($env:MAVEN_USER_HOME) {
++  $MAVEN_HOME_PARENT = "$env:MAVEN_USER_HOME/wrapper/dists/$distributionUrlNameMain"
++}
++$MAVEN_HOME_NAME = ([System.Security.Cryptography.MD5]::Create().ComputeHash([byte[]][char[]]$distributionUrl) | ForEach-Object {$_.ToString("x2")}) -join ''
++$MAVEN_HOME = "$MAVEN_HOME_PARENT/$MAVEN_HOME_NAME"
++
++if (Test-Path -Path "$MAVEN_HOME" -PathType Container) {
++  Write-Verbose "found existing MAVEN_HOME at $MAVEN_HOME"
++  Write-Output "MVN_CMD=$MAVEN_HOME/bin/$MVN_CMD"
++  exit $?
++}
++
++if (! $distributionUrlNameMain -or ($distributionUrlName -eq $distributionUrlNameMain)) {
++  Write-Error "distributionUrl is not valid, must end with *-bin.zip, but found $distributionUrl"
++}
++
++# prepare tmp dir
++$TMP_DOWNLOAD_DIR_HOLDER = New-TemporaryFile
++$TMP_DOWNLOAD_DIR = New-Item -Itemtype Directory -Path "$TMP_DOWNLOAD_DIR_HOLDER.dir"
++$TMP_DOWNLOAD_DIR_HOLDER.Delete() | Out-Null
++trap {
++  if ($TMP_DOWNLOAD_DIR.Exists) {
++    try { Remove-Item $TMP_DOWNLOAD_DIR -Recurse -Force | Out-Null }
++    catch { Write-Warning "Cannot remove $TMP_DOWNLOAD_DIR" }
++  }
++}
++
++New-Item -Itemtype Directory -Path "$MAVEN_HOME_PARENT" -Force | Out-Null
++
++# Download and Install Apache Maven
++Write-Verbose "Couldn't find MAVEN_HOME, downloading and installing it ..."
++Write-Verbose "Downloading from: $distributionUrl"
++Write-Verbose "Downloading to: $TMP_DOWNLOAD_DIR/$distributionUrlName"
++
++$webclient = New-Object System.Net.WebClient
++if ($env:MVNW_USERNAME -and $env:MVNW_PASSWORD) {
++  $webclient.Credentials = New-Object System.Net.NetworkCredential($env:MVNW_USERNAME, $env:MVNW_PASSWORD)
++}
++[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
++$webclient.DownloadFile($distributionUrl, "$TMP_DOWNLOAD_DIR/$distributionUrlName") | Out-Null
++
++# If specified, validate the SHA-256 sum of the Maven distribution zip file
++$distributionSha256Sum = (Get-Content -Raw "$scriptDir/.mvn/wrapper/maven-wrapper.properties" | ConvertFrom-StringData).distributionSha256Sum
++if ($distributionSha256Sum) {
++  if ($USE_MVND) {
++    Write-Error "Checksum validation is not supported for maven-mvnd. `nPlease disable validation by removing 'distributionSha256Sum' from your maven-wrapper.properties."
++  }
++  Import-Module $PSHOME\Modules\Microsoft.PowerShell.Utility -Function Get-FileHash
++  if ((Get-FileHash "$TMP_DOWNLOAD_DIR/$distributionUrlName" -Algorithm SHA256).Hash.ToLower() -ne $distributionSha256Sum) {
++    Write-Error "Error: Failed to validate Maven distribution SHA-256, your Maven distribution might be compromised. If you updated your Maven version, you need to update the specified distributionSha256Sum property."
++  }
++}
++
++# unzip and move
++Expand-Archive "$TMP_DOWNLOAD_DIR/$distributionUrlName" -DestinationPath "$TMP_DOWNLOAD_DIR" | Out-Null
++Rename-Item -Path "$TMP_DOWNLOAD_DIR/$distributionUrlNameMain" -NewName $MAVEN_HOME_NAME | Out-Null
++try {
++  Move-Item -Path "$TMP_DOWNLOAD_DIR/$MAVEN_HOME_NAME" -Destination $MAVEN_HOME_PARENT | Out-Null
++} catch {
++  if (! (Test-Path -Path "$MAVEN_HOME" -PathType Container)) {
++    Write-Error "fail to move MAVEN_HOME"
++  }
++} finally {
++  try { Remove-Item $TMP_DOWNLOAD_DIR -Recurse -Force | Out-Null }
++  catch { Write-Warning "Cannot remove $TMP_DOWNLOAD_DIR" }
++}
++
++Write-Output "MVN_CMD=$MAVEN_HOME/bin/$MVN_CMD"
+Index: notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/NotificacionDTO.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/NotificacionDTO.java b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/NotificacionDTO.java
+new file mode 100644
+--- /dev/null	(date 1730983284366)
++++ b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/NotificacionDTO.java	(date 1730983284366)
+@@ -0,0 +1,14 @@
++package ar.edu.frc.utn.backend.notificaciones.DTO;
++
++import lombok.AllArgsConstructor;
++import lombok.Data;
++import lombok.NoArgsConstructor;
++
++@Data
++@AllArgsConstructor
++@NoArgsConstructor
++public class NotificacionDTO {
++    private int legajoEmpleado;
++    private String telefonoEmpleado;
++    private String mensaje;
++}
+Index: notificaciones/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/.gitignore b/notificaciones/.gitignore
+new file mode 100644
+--- /dev/null	(date 1730983284361)
++++ b/notificaciones/.gitignore	(date 1730983284361)
+@@ -0,0 +1,33 @@
++HELP.md
++target/
++!.mvn/wrapper/maven-wrapper.jar
++!**/src/main/**/target/
++!**/src/test/**/target/
++
++### STS ###
++.apt_generated
++.classpath
++.factorypath
++.project
++.settings
++.springBeans
++.sts4-cache
++
++### IntelliJ IDEA ###
++.idea
++*.iws
++*.iml
++*.ipr
++
++### NetBeans ###
++/nbproject/private/
++/nbbuild/
++/dist/
++/nbdist/
++/.nb-gradle/
++build/
++!**/src/main/**/build/
++!**/src/test/**/build/
++
++### VS Code ###
++.vscode/
+Index: notificaciones/src/test/java/ar/edu/frc/utn/backend/notificaciones/NotificacionesApplicationTests.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/src/test/java/ar/edu/frc/utn/backend/notificaciones/NotificacionesApplicationTests.java b/notificaciones/src/test/java/ar/edu/frc/utn/backend/notificaciones/NotificacionesApplicationTests.java
+new file mode 100644
+--- /dev/null	(date 1730983284373)
++++ b/notificaciones/src/test/java/ar/edu/frc/utn/backend/notificaciones/NotificacionesApplicationTests.java	(date 1730983284373)
+@@ -0,0 +1,13 @@
++package ar.edu.frc.utn.backend.notificaciones;
++
++import org.junit.jupiter.api.Test;
++import org.springframework.boot.test.context.SpringBootTest;
++
++@SpringBootTest
++class NotificacionesApplicationTests {
++
++	@Test
++	void contextLoads() {
++	}
++
++}
+Index: notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/Notificacion.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/Notificacion.java b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/Notificacion.java
+new file mode 100644
+--- /dev/null	(date 1730983284368)
++++ b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/Notificacion.java	(date 1730983284368)
+@@ -0,0 +1,28 @@
++package ar.edu.frc.utn.backend.notificaciones.entities;
++
++import jakarta.persistence.*;
++import lombok.AllArgsConstructor;
++import lombok.Data;
++import lombok.NoArgsConstructor;
++
++@Entity
++@Table(name="Notificacion")
++@Data
++@NoArgsConstructor
++@AllArgsConstructor
++public class Notificacion {
++    @Id
++    @Column(name = "ID")
++    @GeneratedValue(strategy = GenerationType.AUTO)
++    private int id;
++
++    @Column(name = "LEGAJO_EMPLEADO")
++    private int legajoEmpleado;
++
++    @Column(name="TELEFONO", nullable = false)
++    private String telefono;
++
++    @Column(name="MENSAJE", nullable = false)
++    private String mensaje;
++
++}
+Index: notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/controller/NotificacionController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/controller/NotificacionController.java b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/controller/NotificacionController.java
+new file mode 100644
+--- /dev/null	(date 1730983284367)
++++ b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/controller/NotificacionController.java	(date 1730983284367)
+@@ -0,0 +1,26 @@
++package ar.edu.frc.utn.backend.notificaciones.controller;
++
++import ar.edu.frc.utn.backend.notificaciones.DTO.NotificacionDTO;
++import ar.edu.frc.utn.backend.notificaciones.service.interfaces.NotificacionService;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.web.bind.annotation.*;
++
++@RestController
++@RequestMapping("/api/notificacion")
++public class NotificacionController {
++
++    private final NotificacionService notificacionService;
++
++    public NotificacionController(NotificacionService notificacionService, NotificacionService notificacionService1) {
++        this.notificacionService = notificacionService1;
++    }
++
++    @PostMapping
++    public String sendSMSMessage(@RequestBody NotificacionDTO notificacionDTO) {
++        try {
++            return notificacionService.sendSmsMessage(notificacionDTO);
++        } catch (RuntimeException e) {
++            throw new RuntimeException(e);
++        }
++    }
++}
+Index: notificaciones/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/pom.xml b/notificaciones/pom.xml
+new file mode 100644
+--- /dev/null	(date 1730983284364)
++++ b/notificaciones/pom.xml	(date 1730983284364)
+@@ -0,0 +1,103 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
++	<modelVersion>4.0.0</modelVersion>
++	<parent>
++		<groupId>org.springframework.boot</groupId>
++		<artifactId>spring-boot-starter-parent</artifactId>
++		<version>3.3.4</version>
++		<relativePath/> <!-- lookup parent from repository -->
++	</parent>
++	<groupId>ar.edu.frc.utn.backend</groupId>
++	<artifactId>vehiculoPosiciones</artifactId>
++	<version>0.0.1-SNAPSHOT</version>
++	<name>notificaciones</name>
++	<description>Demo project for Spring Boot</description>
++	<url/>
++	<licenses>
++		<license/>
++	</licenses>
++	<developers>
++		<developer/>
++	</developers>
++	<scm>
++		<connection/>
++		<developerConnection/>
++		<tag/>
++		<url/>
++	</scm>
++	<properties>
++		<java.version>21</java.version>
++		<spring-cloud.version>2023.0.3</spring-cloud.version>
++	</properties>
++	<dependencies>
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-data-jpa</artifactId>
++		</dependency>
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-web</artifactId>
++		</dependency>
++		<dependency>
++			<groupId>org.springframework.cloud</groupId>
++			<artifactId>spring-cloud-starter-gateway-mvc</artifactId>
++		</dependency>
++
++		<dependency>
++			<groupId>org.projectlombok</groupId>
++			<artifactId>lombok</artifactId>
++			<optional>true</optional>
++		</dependency>
++		<dependency>
++			<groupId>org.springframework.boot</groupId>
++			<artifactId>spring-boot-starter-test</artifactId>
++			<scope>test</scope>
++		</dependency>
++		<dependency>
++			<groupId>org.xerial</groupId>
++			<artifactId>sqlite-jdbc</artifactId>
++			<version>3.46.1.0</version>
++		</dependency>
++		<dependency>
++			<groupId>org.hibernate.orm</groupId>
++			<artifactId>hibernate-core</artifactId>
++			<version>6.5.2.Final</version>
++		</dependency>
++		<dependency>
++			<groupId>org.hibernate.orm</groupId>
++			<artifactId>hibernate-community-dialects</artifactId>
++			<version>6.5.2.Final</version>
++		</dependency>
++	</dependencies>
++	<dependencyManagement>
++		<dependencies>
++			<dependency>
++				<groupId>org.springframework.cloud</groupId>
++				<artifactId>spring-cloud-dependencies</artifactId>
++				<version>${spring-cloud.version}</version>
++				<type>pom</type>
++				<scope>import</scope>
++			</dependency>
++
++		</dependencies>
++	</dependencyManagement>
++
++	<build>
++		<plugins>
++			<plugin>
++				<groupId>org.springframework.boot</groupId>
++				<artifactId>spring-boot-maven-plugin</artifactId>
++				<configuration>
++					<excludes>
++						<exclude>
++							<groupId>org.projectlombok</groupId>
++							<artifactId>lombok</artifactId>
++						</exclude>
++					</excludes>
++				</configuration>
++			</plugin>
++		</plugins>
++	</build>
++
++</project>
+Index: notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/NotificacionImp.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/NotificacionImp.java b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/NotificacionImp.java
+new file mode 100644
+--- /dev/null	(date 1730983284370)
++++ b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/NotificacionImp.java	(date 1730983284370)
+@@ -0,0 +1,60 @@
++package ar.edu.frc.utn.backend.notificaciones.service;
++
++import ar.edu.frc.utn.backend.notificaciones.DTO.NotificacionDTO;
++import ar.edu.frc.utn.backend.notificaciones.entities.Notificacion;
++import ar.edu.frc.utn.backend.notificaciones.repository.NotificacionRepository;
++import ar.edu.frc.utn.backend.notificaciones.service.interfaces.NotificacionService;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.beans.factory.annotation.Value;
++import org.springframework.http.*;
++import org.springframework.stereotype.Service;
++import org.springframework.util.LinkedMultiValueMap;
++import org.springframework.web.client.HttpClientErrorException;
++import org.springframework.web.client.RestTemplate;
++
++import java.util.ArrayList;
++import java.util.List;
++import java.util.Optional;
++
++@Service
++public class NotificacionImp implements NotificacionService {
++    @Override
++    public void createAll(Iterable<NotificacionDTO> notificacion) {
++
++    }
++
++    @Override
++    public String sendSmsMessage(NotificacionDTO notificacion) {
++        return "";
++    }
++
++    @Override
++    public void create(NotificacionDTO notificacionDTO) {
++
++    }
++
++    @Override
++    public void update(NotificacionDTO notificacionDTO) {
++
++    }
++
++    @Override
++    public NotificacionDTO delete(Integer id) {
++        return null;
++    }
++
++    @Override
++    public boolean existById(Integer id) {
++        return false;
++    }
++
++    @Override
++    public NotificacionDTO findById(Integer id) {
++        return null;
++    }
++
++    @Override
++    public List<NotificacionDTO> findAll() {
++        return List.of();
++    }
++}
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <annotationProcessing>\r\n      <profile default=\"true\" name=\"Default\" enabled=\"true\" />\r\n      <profile name=\"Maven default annotation processors profile\" enabled=\"true\">\r\n        <sourceOutputDir name=\"target/generated-sources/annotations\" />\r\n        <sourceTestOutputDir name=\"target/generated-test-sources/test-annotations\" />\r\n        <outputRelativeToContentRoot value=\"true\" />\r\n        <module name=\"vehiculoPosiciones\" />\r\n        <module name=\"interesadosPruebas\" />\r\n        <module name=\"gateway\" />\r\n      </profile>\r\n    </annotationProcessing>\r\n    <bytecodeTargetLevel>\r\n      <module name=\"notificaciones\" target=\"21\" />\r\n      <module name=\"vehiculoPosiciones (1)\" target=\"21\" />\r\n    </bytecodeTargetLevel>\r\n  </component>\r\n  <component name=\"JavacSettings\">\r\n    <option name=\"ADDITIONAL_OPTIONS_OVERRIDE\">\r\n      <module name=\"gateway\" options=\"-parameters\" />\r\n      <module name=\"interesadosPruebas\" options=\"-parameters\" />\r\n      <module name=\"notificaciones\" options=\"-parameters\" />\r\n      <module name=\"vehiculoPosiciones\" options=\"-parameters\" />\r\n      <module name=\"vehiculoPosiciones (1)\" options=\"-parameters\" />\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+--- a/.idea/compiler.xml	(revision 5820b064c52d4ff74e5eb95a55f17409d54de14a)
++++ b/.idea/compiler.xml	(date 1730983284353)
+@@ -8,13 +8,13 @@
+         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+         <outputRelativeToContentRoot value="true" />
+         <module name="vehiculoPosiciones" />
++        <module name="vehiculoPosiciones (1)" />
+         <module name="interesadosPruebas" />
+         <module name="gateway" />
+       </profile>
+     </annotationProcessing>
+     <bytecodeTargetLevel>
+       <module name="notificaciones" target="21" />
+-      <module name="vehiculoPosiciones (1)" target="21" />
+     </bytecodeTargetLevel>
+   </component>
+   <component name="JavacSettings">
+Index: notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/NotificacionService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/NotificacionService.java b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/NotificacionService.java
+new file mode 100644
+--- /dev/null	(date 1730983284370)
++++ b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/NotificacionService.java	(date 1730983284370)
+@@ -0,0 +1,9 @@
++package ar.edu.frc.utn.backend.notificaciones.service.interfaces;
++
++
++import ar.edu.frc.utn.backend.notificaciones.DTO.NotificacionDTO;
++
++public interface NotificacionService extends Servicio<NotificacionDTO, Integer> {
++    void createAll(Iterable<NotificacionDTO> notificacion);
++    String sendSmsMessage(NotificacionDTO notificacion);
++}
+Index: notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/Servicio.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/Servicio.java b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/Servicio.java
+new file mode 100644
+--- /dev/null	(date 1730983284371)
++++ b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/Servicio.java	(date 1730983284371)
+@@ -0,0 +1,17 @@
++package ar.edu.frc.utn.backend.notificaciones.service.interfaces;
++
++import org.springframework.stereotype.Service;
++
++import java.util.List;
++
++@Service
++public abstract interface Servicio<T, K> {
++
++    void create(T t);
++    void update(T t);
++    T delete(K id);
++    boolean existById(Integer id);
++    T findById(K id);
++    List<T> findAll();
++
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e31adbf3-3d5f-4b7d-9317-905b8c40f447\" name=\"Changes\" comment=\"Solucionado entidades\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/modules.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/modules.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <list id=\"83f0fbaa-9992-4223-9963-33fd28e4ce5b\" name=\"Changes by Agus\" comment=\"\" />\r\n    <list id=\"ee9d434f-7222-40ed-921d-4670974f7a54\" name=\"Changes by AGUSTIN\" comment=\"\" />\r\n    <list id=\"95b6f1c9-ea33-4eb7-9312-8c2c1e19a1bc\" name=\"Changes by nacho\" comment=\"\" />\r\n    <list id=\"69da239c-c717-4530-abe3-0696ac5d98e2\" name=\"Changes by Usuario\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"AnnotationType\" />\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;LordLucky04&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/aguslibong/TPF_BDA_grupo94.git&quot;,\r\n    &quot;accountId&quot;: &quot;7dba63b1-8a35-421d-8f2f-fc536855c4a4&quot;\r\n  }\r\n}</component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHomeTypeForPersistence\" value=\"WRAPPER\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2no0QotaG3HMat98juyesBCJdTZ\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;Application.InteresadosPruebasApplication.executor&quot;: &quot;Run&quot;,\r\n    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,\r\n    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,\r\n    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,\r\n    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;Spring Boot.TpfBdaApplication.executor&quot;: &quot;Run&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;D:/UTN/2024/Backend/TPF_grupo94&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,\r\n=======\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,\r\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; b56547988e74c5b77b3ab5bbf08df6c7c2104c67\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateClassDialog.RecentsKey\">\r\n      <recent name=\"ar.edu.frc.utn.backend.gateway\" />\r\n    </key>\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\nacho\\Documents\\Facultad\\backend\\TPF_BDA\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"ar.edu.frc.utn.backend.notificaciones.service.interfaces\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunDashboard\">\r\n    <option name=\"configurationTypes\">\r\n      <set>\r\n        <option value=\"KtorApplicationConfigurationType\" />\r\n        <option value=\"MicronautRunConfigurationType\" />\r\n        <option value=\"QuarkusRunConfigurationType\" />\r\n        <option value=\"SpringBootApplicationConfigurationType\" />\r\n      </set>\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.InteresadosPruebasApplication\">\r\n    <configuration name=\"GatewayApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"ar.edu.frc.utn.backend.gateway.GatewayApplication\" />\r\n      <module name=\"gateway\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"ar.edu.frc.utn.backend.gateway.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"InteresadosPruebasApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"ar.edu.frc.utn.backend.interesadosPruebas.InteresadosPruebasApplication\" />\r\n      <module name=\"interesadosPruebas\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"ar.edu.frc.utn.backend.interesadosPruebas.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"VehiculoPosicionesApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"ar.edu.frc.utn.backend.notificaciones.VehiculoPosicionesApplication\" />\r\n      <module name=\"vehiculoPosiciones\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"ar.edu.frc.utn.backend.notificaciones.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"generated-requests | #1\" type=\"HttpClient.HttpRequestRunConfigurationType\" factoryName=\"HTTP Request\" temporary=\"true\" nameIsGenerated=\"true\" path=\"$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http\" requestIdentifier=\"#1\" runType=\"Run single request\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"JetRunConfigurationType\">\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"KotlinStandaloneScriptRunConfigurationType\">\r\n      <option name=\"filePath\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"GatewayApplication (1)\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"gateway\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"ar.edu.frc.utn.backend.gateway.GatewayApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"GatewayApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"gateway\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"ar.edu.utn.frc.backend.gateway.GatewayApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"InteresadosPruebasApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"interesadosPruebas\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"ar.edu.frc.utn.backend.interesadosPruebas.InteresadosPruebasApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"NotificacionesApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"vehiculoPosiciones (1)\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"ar.edu.frc.utn.backend.notificaciones.NotificacionesApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"TpfBdaApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"TPF_BDA\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"ar.edu.utn.frc.backend.TPF_BDA.TpfBdaApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"VehiculoPosicionesApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <module name=\"vehiculoPosiciones\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"ar.edu.frc.utn.backend.notificaciones.VehiculoPosicionesApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Application.GatewayApplication\" />\r\n      <item itemvalue=\"Application.InteresadosPruebasApplication\" />\r\n      <item itemvalue=\"Application.VehiculoPosicionesApplication\" />\r\n      <item itemvalue=\"HTTP Request.generated-requests | #1\" />\r\n      <item itemvalue=\"Spring Boot.GatewayApplication\" />\r\n      <item itemvalue=\"Spring Boot.GatewayApplication (1)\" />\r\n      <item itemvalue=\"Spring Boot.InteresadosPruebasApplication\" />\r\n      <item itemvalue=\"Spring Boot.NotificacionesApplication\" />\r\n      <item itemvalue=\"Spring Boot.TpfBdaApplication\" />\r\n      <item itemvalue=\"Spring Boot.VehiculoPosicionesApplication\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.InteresadosPruebasApplication\" />\r\n        <item itemvalue=\"Application.VehiculoPosicionesApplication\" />\r\n        <item itemvalue=\"Application.GatewayApplication\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142\" />\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e31adbf3-3d5f-4b7d-9317-905b8c40f447\" name=\"Changes\" comment=\"\" />\r\n      <created>1729624108047</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1729624108047</updated>\r\n      <workItem from=\"1729624109180\" duration=\"6669000\" />\r\n      <workItem from=\"1729636799500\" duration=\"8000\" />\r\n      <workItem from=\"1729695724390\" duration=\"9901000\" />\r\n      <workItem from=\"1729717569622\" duration=\"10500000\" />\r\n      <workItem from=\"1729736805540\" duration=\"11917000\" />\r\n      <workItem from=\"1729749327709\" duration=\"1424000\" />\r\n      <workItem from=\"1729777045304\" duration=\"4526000\" />\r\n      <workItem from=\"1729781690914\" duration=\"2551000\" />\r\n      <workItem from=\"1729790372354\" duration=\"3685000\" />\r\n      <workItem from=\"1729817793634\" duration=\"577000\" />\r\n      <workItem from=\"1729952636490\" duration=\"7409000\" />\r\n      <workItem from=\"1729987818381\" duration=\"103000\" />\r\n      <workItem from=\"1730211328347\" duration=\"1031000\" />\r\n      <workItem from=\"1730225711461\" duration=\"5186000\" />\r\n      <workItem from=\"1730982752314\" duration=\"313000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Solucionado entidades\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Solucionado entidades\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-field\">\r\n          <url>file://$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/NotificacionImp.java</url>\r\n          <line>23</line>\r\n          <properties field=\"restTemplate\" class=\"ar.edu.frc.utn.backend.notificaciones.service.NotificacionImp\" />\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 5820b064c52d4ff74e5eb95a55f17409d54de14a)
++++ b/.idea/workspace.xml	(date 1730983301967)
+@@ -5,8 +5,7 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="Solucionado entidades">
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <list id="83f0fbaa-9992-4223-9963-33fd28e4ce5b" name="Changes by Agus" comment="" />
+@@ -227,8 +226,8 @@
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
++        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
++        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -253,8 +252,8 @@
+       <workItem from="1729952636490" duration="7409000" />
+       <workItem from="1729987818381" duration="103000" />
+       <workItem from="1730211328347" duration="1031000" />
+-      <workItem from="1730225711461" duration="5186000" />
+-      <workItem from="1730982752314" duration="313000" />
++      <workItem from="1730225711461" duration="5319000" />
++      <workItem from="1730292510434" duration="13000" />
+     </task>
+     <servers />
+   </component>
+Index: notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/repository/NotificacionRepository.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/repository/NotificacionRepository.java b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/repository/NotificacionRepository.java
+new file mode 100644
+--- /dev/null	(date 1730983284369)
++++ b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/repository/NotificacionRepository.java	(date 1730983284369)
+@@ -0,0 +1,9 @@
++package ar.edu.frc.utn.backend.notificaciones.repository;
++
++import ar.edu.frc.utn.backend.notificaciones.entities.Notificacion;
++import org.springframework.data.repository.CrudRepository;
++import org.springframework.stereotype.Repository;
++
++@Repository
++public interface NotificacionRepository extends CrudRepository<Notificacion, Integer> {
++}
+Index: notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/restTemplate/RestTemplateConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/restTemplate/RestTemplateConfig.java b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/restTemplate/RestTemplateConfig.java
+new file mode 100644
+--- /dev/null	(date 1730983284369)
++++ b/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/restTemplate/RestTemplateConfig.java	(date 1730983284369)
+@@ -0,0 +1,13 @@
++package ar.edu.frc.utn.backend.notificaciones.restTemplate;
++
++import org.springframework.context.annotation.Bean;
++import org.springframework.context.annotation.Configuration;
++import org.springframework.web.client.RestTemplate;
++
++@Configuration
++public class RestTemplateConfig {
++    @Bean
++    public RestTemplate restTemplate() {
++        return new RestTemplate();
++    }
++}
+Index: notificaciones/src/main/resources/application.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/notificaciones/src/main/resources/application.yml b/notificaciones/src/main/resources/application.yml
+new file mode 100644
+--- /dev/null	(date 1730983284371)
++++ b/notificaciones/src/main/resources/application.yml	(date 1730983284371)
+@@ -0,0 +1,18 @@
++server:
++  port: 8083
++
++spring:
++  datasource:
++    url: jdbc:sqlite:agencia.db
++    driver-class-name: org.sqlite.JDBC
++  jpa:
++    database-platform: org.hibernate.community.dialect.SQLiteDialect
++    hibernate:
++      ddl-auto: update
++      naming:
++        # StandardImpl is used in order to not transform the attributes and tables from CamelCase to snake_case
++        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
++    properties:
++      hibernate:
++        show_sql: false
++
+Index: notificaciones/.mvn/wrapper/maven-wrapper.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/notificaciones/.mvn/wrapper/maven-wrapper.properties b/notificaciones/.mvn/wrapper/maven-wrapper.properties
+new file mode 100644
+--- /dev/null	(date 1730983284363)
++++ b/notificaciones/.mvn/wrapper/maven-wrapper.properties	(date 1730983284363)
+@@ -0,0 +1,19 @@
++# Licensed to the Apache Software Foundation (ASF) under one
++# or more contributor license agreements.  See the NOTICE file
++# distributed with this work for additional information
++# regarding copyright ownership.  The ASF licenses this file
++# to you under the Apache License, Version 2.0 (the
++# "License"); you may not use this file except in compliance
++# with the License.  You may obtain a copy of the License at
++#
++#   http://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing,
++# software distributed under the License is distributed on an
++# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
++# KIND, either express or implied.  See the License for the
++# specific language governing permissions and limitations
++# under the License.
++wrapperVersion=3.3.2
++distributionType=only-script
++distributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.9/apache-maven-3.9.9-bin.zip
