@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="Solucionado entidades" />
+    <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="Solucionado entidades">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/NotificacionImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/NotificacionImp.java" afterDir="false" />
+    </list>
     <list id="83f0fbaa-9992-4223-9963-33fd28e4ce5b" name="Changes by Agus" comment="" />
     <list id="ee9d434f-7222-40ed-921d-4670974f7a54" name="Changes by AGUSTIN" comment="" />
     <list id="95b6f1c9-ea33-4eb7-9312-8c2c1e19a1bc" name="Changes by nacho" comment="" />
@@ -204,6 +208,13 @@
       <item itemvalue="Application.GatewayApplication" />
       <item itemvalue="Application.InteresadosPruebasApplication" />
       <item itemvalue="Application.VehiculoPosicionesApplication" />
+      <item itemvalue="HTTP Request.generated-requests | #1" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication (1)" />
+      <item itemvalue="Spring Boot.InteresadosPruebasApplication" />
+      <item itemvalue="Spring Boot.NotificacionesApplication" />
+      <item itemvalue="Spring Boot.TpfBdaApplication" />
+      <item itemvalue="Spring Boot.VehiculoPosicionesApplication" />
     </list>
     <recent_temporary>
       <list>

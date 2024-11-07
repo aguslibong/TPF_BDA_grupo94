@@ -18,6 +18,13 @@ import java.util.Optional;
 
 @Service
 public class NotificacionImp implements NotificacionService {
+
+    private final NotificacionRepository notificacionRepository;
+
+    public NotificacionImp(NotificacionRepository notificacionRepository) {
+        this.notificacionRepository = notificacionRepository;
+    }
+
     @Override
     public void createAll(Iterable<NotificacionDTO> notificacion) {
 
@@ -25,17 +32,26 @@ public class NotificacionImp implements NotificacionService {
 
     @Override
     public String sendSmsMessage(NotificacionDTO notificacion) {
+        create(notificacion);
         return "";
+    }
+
+    private Notificacion crearNotificacion(NotificacionDTO notificacionDTO) {
+        Notificacion notificacion = new Notificacion();
+
+        notificacion.setMensaje(notificacionDTO.getMensaje());
+        notificacion.setTelefono(notificacionDTO.getTelefonoEmpleado());
+        notificacion.setLegajoEmpleado(notificacionDTO.getLegajoEmpleado());
+        return notificacion;
     }
 
     @Override
     public void create(NotificacionDTO notificacionDTO) {
-
+        notificacionRepository.save(this.crearNotificacion(notificacionDTO));
     }
 
     @Override
     public void update(NotificacionDTO notificacionDTO) {
-
     }
 
     @Override
