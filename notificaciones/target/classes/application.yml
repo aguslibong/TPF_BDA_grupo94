@@ -1,0 +1,21 @@
+server:
+  port: 8083
+
+spring:
+  datasource:
+    url: jdbc:sqlite:agencia.db
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: update
+      naming:
+        # StandardImpl is used in order to not transform the attributes and tables from CamelCase to snake_case
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        show_sql: false
+
+twilio:
+  account_sid: ACf973241ccdedfa6fd1cd5c856763ea8a
+  auth_token: b096d3568c3f6d53ef3bf5120b463785
