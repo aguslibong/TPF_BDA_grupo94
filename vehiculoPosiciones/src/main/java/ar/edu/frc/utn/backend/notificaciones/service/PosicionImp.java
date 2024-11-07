@@ -1,7 +1,6 @@
 package ar.edu.frc.utn.backend.notificaciones.service;
 
 import ar.edu.frc.utn.backend.notificaciones.DTO.*;
-import ar.edu.frc.utn.backend.notificaciones.entities.Posicion;
 import ar.edu.frc.utn.backend.notificaciones.service.interfaces.PosicionService;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -23,19 +22,26 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
             if (pruebaDTOActual == null) {
                 return ("El vehiculo no se encuentra en Prueba");
             }
-            //Si esta fuera del limite
-            if (esZonaPeligro(posicion)) {
-
+            int esZonapeligrosa = esZonaPeligro(posicion);
+            if (esZonapeligrosa == 1) {
                 EmpleadoDTO empleado = obtenerEmpleado(pruebaDTOActual);
-
                 restringirInteresado(pruebaDTOActual);
-
                 //* falta saber si es por zona peligrosa o por fuera de radio
                 String mensaje = "Se excidio del rango del Radio"; // este mensaje se mofifica segun el caso
                 NotificacionDTO notificacionDTO = crearNotificacionDTO(empleado, mensaje);
-                //enviarNotificacion(notificacionDTO);
+                enviarNotificacion(notificacionDTO);
                 return notificacionDTO.toString();
             }
+            if (esZonapeligrosa == 2) {
+                EmpleadoDTO empleado = obtenerEmpleado(pruebaDTOActual);
+                restringirInteresado(pruebaDTOActual);
+                //* falta saber si es por zona peligrosa o por fuera de radio
+                String mensaje = "Se encuentra en ZONA PELIGROSA"; // este mensaje se mofifica segun el caso
+                NotificacionDTO notificacionDTO = crearNotificacionDTO(empleado, mensaje);
+                enviarNotificacion(notificacionDTO);
+                return notificacionDTO.toString();
+            }
+
 
 
         } catch (RuntimeException e) {
@@ -71,24 +77,43 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
     }
 
     //aca recibimos los datos de la poscion y el radio
-    private boolean estaEnRadio(PosicionDTO posicionDTO, ZonaDTO zonaDTO) {
+    private boolean estaEnRadio(PosicionDTO posicionDTO, AgenciaInfoDTO agenciaInfoDTO) {
         // Obtén las coordenadas (catetos)
-        float latitudAuto = posicionDTO.getLatitud();
-        float longitudAuto = posicionDTO.getLongitud();
+        double latitudAuto = posicionDTO.getLatitud();
+        double longitudAuto = posicionDTO.getLongitud();
 
-        float latitudZona = zonaDTO.getLatitud();
-        float longitudZona = zonaDTO.getLongitud();
+        double latitudZona = agenciaInfoDTO.getCoordenadaAgencia().getLatitud();
+        double longitudZona = agenciaInfoDTO.getCoordenadaAgencia().getLongitud();
 
 
         // Calcula la distancia desde el origen (hipotenusa)
         double distancia = Math.sqrt(Math.pow((latitudZona-latitudAuto), 2) + Math.pow((longitudZona-longitudAuto), 2));
 
         // Verifica si la distancia está dentro del radio límite
-        if (distancia <= zonaDTO.getRadio()) {
+        if (distancia <= agenciaInfoDTO.getRadio()) {
             return true;
         } else {
             return false;
         }
+    }
+
+    private boolean estaEnZona(PosicionDTO posicionDTO, ZonaPeligrosaDTO zonaDTO) {
+        double latitudAuto = posicionDTO.getLatitud();
+        double longitudAuto = posicionDTO.getLongitud();
+
+        // Obtener las coordenadas mínimas y máximas de la zona peligrosa
+        double latitudMin = Math.min(zonaDTO.getNoreste().getLatitud(), zonaDTO.getSureste().getLatitud());
+        double latitudMax = Math.max(zonaDTO.getNoreste().getLatitud(), zonaDTO.getSureste().getLatitud());
+        double longitudMin = Math.min(zonaDTO.getNoreste().getLongitud(), zonaDTO.getSureste().getLongitud());
+        double longitudMax = Math.max(zonaDTO.getNoreste().getLongitud(), zonaDTO.getSureste().getLongitud());
+
+        // Verificar si la posición del vehículo está dentro del rectángulo
+        return estaEnRago(latitudAuto, latitudMin, latitudMax)
+                && estaEnRago(longitudAuto, longitudMin, longitudMax);
+    }
+
+    private boolean estaEnRago(double value, double min, double max) {
+        return value >= min && value <= max;
     }
 
     //RECORDAR HACER LA API PARA INTERESADO
@@ -103,7 +128,6 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
                 idInteresado
         );
     }
-
 
     private EmpleadoDTO obtenerEmpleado(PruebaDTO pruebaDTOActual) {
         RestTemplate template = new RestTemplate();
@@ -133,26 +157,26 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
                 NotificacionDTO.class);
     }
 
-    private boolean esZonaPeligro(PosicionDTO posicionDTO){
+    private int esZonaPeligro(PosicionDTO posicionDTO){
         RestTemplate template = new RestTemplate();
 
         //COMPLETAR API
         ResponseEntity res = template.getForEntity(
-                "http://localhost:8083/api/notificacion",
-                ZonaDTO.class);
-        ZonaDTO zonaDTO = (ZonaDTO) res.getBody();
+                "https://labsys.frc.utn.edu.ar/apps-disponibilizadas/backend/api/v1/configuracion/",
+                AgenciaInfoDTO.class);
+        AgenciaInfoDTO agenciaInfoDTO = (AgenciaInfoDTO) res.getBody();
 
-        if(!estaEnRadio(posicionDTO, zonaDTO)){
-            return true;
+        if(!estaEnRadio(posicionDTO, agenciaInfoDTO)){
+            return 1;
         };
 
-        for(ZonaDTO zona : zonaDTO.getListaZonaPeligrosas()){
-            if (estaEnRadio(posicionDTO, zona)) {
-                return true;
+        for(ZonaPeligrosaDTO zona : agenciaInfoDTO.getListaZonaPeligrosas()){
+            if (estaEnZona(posicionDTO, zona)) {
+                return 2;
             }
         }
 
-        return false;
+        return 3;
 
     }
 //metodo en PosicionService

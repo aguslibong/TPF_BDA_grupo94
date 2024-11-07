@@ -10,15 +10,14 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ZonaDTO {
+public class AgenciaInfoDTO {
 
 //Latitud/Longitud de la agencia
 //b. Radio máximo
 //c. Listado de zonas peligrosas
 
-    private float latitud;
-    private float longitud;
+    private CoordenadaDTO coordenadaAgencia;
     private float radio;
 
-    private List<ZonaDTO> listaZonaPeligrosas = new ArrayList<>();
+    private List<ZonaPeligrosaDTO> listaZonaPeligrosas = new ArrayList<>();
 }
