@@ -5,13 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="Solucionado entidades">
-      <change afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/CoordenadaDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/ZonaPeligrosaDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_11_2024_9_41__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/PosicionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/PosicionDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/ZonaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/AgenciaInfoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/PosicionImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/PosicionImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agencia.db" beforeDir="false" afterPath="$PROJECT_DIR$/agencia.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/EmpleadoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/EmpleadoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/EmpleadoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/EmpleadoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/NotificacionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/NotificacionDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/NotificacionesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/NotificacionesApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/controller/NotificacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/controller/NotificacionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/Notificacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Notificacion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/repository/NotificacionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/repository/NotificacionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/restTemplate/RestTemplateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/restTemplate/RestTemplateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/NotificacionImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/NotificacionImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/NotificacionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/interfaces/NotificacionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/Servicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/interfaces/Servicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificaciones/src/test/java/ar/edu/frc/utn/backend/notificaciones/NotificacionesApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/test/java/ar/edu/frc/utn/backend/vehiculoPosiciones/NotificacionesApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/AgenciaInfoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/AgenciaInfoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/CoordenadaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/CoordenadaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/EmpleadoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/EmpleadoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/NotificacionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/NotificacionDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/PosicionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/PosicionDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/PruebaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/PruebaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/VehiculoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/VehiculoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/ZonaPeligrosaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/DTO/ZonaPeligrosaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/VehiculoPosicionesApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/VehiculoPosicionesApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/controller/PosicionesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/controller/PosicionesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/controller/VehiculoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/controller/VehiculoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/Marca.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Marca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Modelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/Posicion.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Posicion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/Vehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/entities/Vehiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/repository/PosicionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/repository/PosicionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/repository/VehiculoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/repository/VehiculoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/PosicionImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/PosicionImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/ServicioImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/ServicioImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/VehiculoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/VehiculoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/PosicionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/interfaces/PosicionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/Servicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/interfaces/Servicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/VehiculoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculoPosiciones/service/interfaces/VehiculoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/test/java/ar/edu/frc/utn/backend/notificaciones/VehiculoPosicionesApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/test/java/ar/edu/frc/utn/backend/vehiculoPosiciones/VehiculoPosicionesApplicationTests.java" afterDir="false" />
     </list>
     <list id="83f0fbaa-9992-4223-9963-33fd28e4ce5b" name="Changes by Agus" comment="" />
     <list id="ee9d434f-7222-40ed-921d-4670974f7a54" name="Changes by AGUSTIN" comment="" />
@@ -112,7 +144,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.InteresadosPruebasApplication">
+  <component name="RunManager" selected="Application.VehiculoPosicionesApplication">
     <configuration name="GatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.gateway.GatewayApplication" />
       <module name="gateway" />
@@ -139,12 +171,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NotificacionesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.vehiculoPosiciones.NotificacionesApplication" />
+      <module name="vehiculoPosiciones (1)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.frc.utn.backend.vehiculoPosiciones.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VehiculoPosicionesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.notificaciones.VehiculoPosicionesApplication" />
+      <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.vehiculoPosiciones.VehiculoPosicionesApplication" />
       <module name="vehiculoPosiciones" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.edu.frc.utn.backend.notificaciones.*" />
+          <option name="PATTERN" value="ar.edu.frc.utn.backend.vehiculoPosiciones.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -209,14 +254,16 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.NotificacionesApplication" />
       <item itemvalue="Application.GatewayApplication" />
       <item itemvalue="Application.InteresadosPruebasApplication" />
       <item itemvalue="Application.VehiculoPosicionesApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.InteresadosPruebasApplication" />
         <item itemvalue="Application.VehiculoPosicionesApplication" />
+        <item itemvalue="Application.InteresadosPruebasApplication" />
+        <item itemvalue="Application.NotificacionesApplication" />
         <item itemvalue="Application.GatewayApplication" />
       </list>
     </recent_temporary>
