@@ -277,19 +277,21 @@ public class PruebaServiceImpl implements PruebaService {
     }
 
     @Override
-    public Integer calcularKilometros(PosicionPeriodoDTO posicionPeriodoDTO) throws Exception {
+    public Double calcularKilometros(PosicionPeriodoDTO posicionPeriodoDTO) throws Exception {
 
         try {
-            if( posicionPeriodoDTO.getFechaFin().after(posicionPeriodoDTO.getFechaInicio()) )
+            if( posicionPeriodoDTO.getFechaFin().isAfter(posicionPeriodoDTO.getFechaInicio()))
             {
                 Prueba prueba = getPruebaById(posicionPeriodoDTO.getIdPrueba());
 
                 if (prueba != null) {
 
+                    RestTemplate template = new RestTemplate();
                     VehiculoDTO vehiculo = fetchVehiculo(prueba.getIdVehiculo());
-                    ResponseEntity<Double> res = template.getForEntity("http://localhost:8081/api/posiciones/periodo", Double.class, idVehiculo);
+                    posicionPeriodoDTO.setIdVehiculo(vehiculo.getIdVehiculo());
+                    ResponseEntity<Double> res = template.getForEntity("http://localhost:8081/api/posiciones/periodo", Double.class, posicionPeriodoDTO);
 
-
+                    return res.getBody();
 
                 } else {
                     throw new RuntimeException("No existe la prueba");

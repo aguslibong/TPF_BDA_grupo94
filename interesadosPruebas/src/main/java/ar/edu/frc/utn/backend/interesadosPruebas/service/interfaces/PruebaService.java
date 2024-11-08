@@ -26,5 +26,5 @@ public interface PruebaService extends Servicio<PruebaDTO,Integer> {
 
     Iterable<PruebaDetalladaDTO> incidentesPorEmpleado(int idEmpleado) throws Exception;
 
-    Integer calcularKilometros(PosicionPeriodoDTO posicionPeriodoDTO) throws Exception;
+    Double calcularKilometros(PosicionPeriodoDTO posicionPeriodoDTO) throws Exception;
 }
