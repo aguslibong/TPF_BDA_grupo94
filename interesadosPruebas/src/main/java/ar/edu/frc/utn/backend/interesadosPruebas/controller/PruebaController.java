@@ -121,12 +121,17 @@ public class PruebaController {
         }
     }
 
-    @GetMapping('/reporte/kilometro')
+    @GetMapping("/reporte/kilometro")
     public ResponseEntity<String> reporteKilometro(@RequestBody PosicionPeriodoDTO posicionPeriodoDTO){
         try{
-            Integer kilometros = pruebaService.calcularKilometros(posicionPeriodoDTO);
+            Double kilometros = pruebaService.calcularKilometros(posicionPeriodoDTO);
 
             return ResponseEntity.ok("Los kilometros recorridos son: " + kilometros);
-        } catch
+
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("Error-Message", e.getMessage()).build();
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
     }
 }
