@@ -28,8 +28,8 @@ public class Posicion {
     private LocalDateTime fechaHora;
 
     @Column(name = "LATITUD", nullable = false)
-    private float latitud;
+    private double latitud;
 
     @Column(name = "LONGITUD", nullable = false)
-    private float longitud;
+    private double longitud;
 }
