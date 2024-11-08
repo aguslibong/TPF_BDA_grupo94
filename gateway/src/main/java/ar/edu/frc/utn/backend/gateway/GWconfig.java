@@ -23,4 +23,5 @@ public class GWconfig {
                 .route(p -> p.path("/api/notificacion/**").uri(uriNotificaciones))
                 .build();
     }
+
 }

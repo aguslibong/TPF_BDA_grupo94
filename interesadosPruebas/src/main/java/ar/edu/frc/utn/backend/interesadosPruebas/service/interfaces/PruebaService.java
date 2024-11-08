@@ -1,6 +1,7 @@
 package ar.edu.frc.utn.backend.interesadosPruebas.service.interfaces;
 
 import ar.edu.frc.utn.backend.interesadosPruebas.DTO.PruebaDTO;
+import ar.edu.frc.utn.backend.interesadosPruebas.DTO.PruebaDetalladaDTO;
 import ar.edu.frc.utn.backend.interesadosPruebas.entities.Prueba;
 import org.springframework.http.ResponseEntity;
 
@@ -19,4 +20,8 @@ public interface PruebaService extends Servicio<PruebaDTO,Integer> {
     String cambiarIncidente(int id);
 
     Iterable<PruebaDTO> incidenteReporte();
+
+    Iterable<PruebaDetalladaDTO> reporteVehiculo(int idVehiculo) throws Exception;
+
+    Iterable<PruebaDetalladaDTO> incidentesPorEmpleado(int idEmpleado) throws Exception;
 }

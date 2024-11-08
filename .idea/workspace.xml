@@ -5,28 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="Solucionado entidades">
-      <change afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/NotificacionPromocionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/controller/NotificacionEmpleadoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/controller/NotificacionPromocionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/NotificacionPromocion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/repository/NotificacionPromocionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/NotificacionEmpleadoImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/NotificacionPromocionImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/NotificacionEmpleadoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/NotificacionPromocionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agencia.db" beforeDir="false" afterPath="$PROJECT_DIR$/agencia.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/NotificacionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/NotificacionEmpleadoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/controller/NotificacionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/Notificacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/entities/NotificacionEmpleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/repository/NotificacionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/repository/NotificacionEmpleadoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/NotificacionImp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificaciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/interfaces/NotificacionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/ar/edu/frc/utn/backend/gateway/GWconfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/ar/edu/frc/utn/backend/gateway/GWconfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/repository/VehiculoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/repository/VehiculoRepository.java" afterDir="false" />
     </list>
     <list id="83f0fbaa-9992-4223-9963-33fd28e4ce5b" name="Changes by Agus" comment="" />
     <list id="186700cc-4f13-45b1-8739-d28aa3ed534f" name="Changes by AGUSTIN" comment="" />
     <list id="aaa4b668-d422-4f5d-b599-3af14f9c6115" name="Changes by nacho" comment="" />
-    <list id="69da239c-c717-4530-abe3-0696ac5d98e2" name="Changes by Usuario" comment="" />
+    <list id="69da239c-c717-4530-abe3-0696ac5d98e2" name="Changes by Usuario" comment="">
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/DTO/VehiculoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/DTO/VehiculoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/controller/PruebaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/PruebaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/VehiculoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/DTO/VehiculoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/VehiculoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/notificaciones/service/VehiculoImp.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +51,14 @@
     &quot;accountId&quot;: &quot;7dba63b1-8a35-421d-8f2f-fc536855c4a4&quot;
   }
 }</component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/interesadosPruebas/src/main/java/ar/edu/frc/utn/backend/interesadosPruebas/service/interfaces/PruebaService.java">
+      <ranges>
+        <range start1="3" end1="3" start2="3" end2="4" changelist="69da239c-c717-4530-abe3-0696ac5d98e2" />
+        <range start1="21" end1="21" start2="22" end2="26" changelist="e31adbf3-3d5f-4b7d-9317-905b8c40f447" />
+      </ranges>
+    </file>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -146,9 +149,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,6 +156,19 @@
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.frc.utn.backend.gateway.GatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.frc.utn.backend.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -174,9 +187,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NotificacionesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="vehiculoPosiciones (1)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.frc.utn.backend.notificaciones.NotificacionesApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.frc.utn.backend.notificaciones.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TpfBdaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="TPF_BDA" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.utn.frc.backend.TPF_BDA.TpfBdaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehiculoPosicionesApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="vehiculoPosiciones" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.frc.utn.backend.notificaciones.VehiculoPosicionesApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.frc.utn.backend.notificaciones.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -191,10 +230,20 @@
     <list>
       <item itemvalue="Application.InteresadosPruebasApplication" />
       <item itemvalue="Application.VehiculoPosicionesApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.InteresadosPruebasApplication" />
+      <item itemvalue="Spring Boot.TpfBdaApplication" />
+      <item itemvalue="Spring Boot.VehiculoPosicionesApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication (1)" />
+      <item itemvalue="Spring Boot.NotificacionesApplication" />
+      <item itemvalue="Spring Boot.VehiculoPosicionesApplication (1)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.InteresadosPruebasApplication" />
+        <item itemvalue="Spring Boot.NotificacionesApplication" />
+        <item itemvalue="Spring Boot.VehiculoPosicionesApplication (1)" />
+        <item itemvalue="Spring Boot.GatewayApplication (1)" />
         <item itemvalue="Application.VehiculoPosicionesApplication" />
       </list>
     </recent_temporary>

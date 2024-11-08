@@ -1,6 +1,7 @@
 package ar.edu.frc.utn.backend.interesadosPruebas.service;
 
 import ar.edu.frc.utn.backend.interesadosPruebas.DTO.PruebaDTO;
+import ar.edu.frc.utn.backend.interesadosPruebas.DTO.PruebaDetalladaDTO;
 import ar.edu.frc.utn.backend.interesadosPruebas.DTO.VehiculoDTO;
 import ar.edu.frc.utn.backend.interesadosPruebas.DTO.convert.PruebaToPruebaDTO;
 import ar.edu.frc.utn.backend.interesadosPruebas.entities.Empleado;
@@ -218,11 +219,57 @@ public class PruebaServiceImpl implements PruebaService {
         }
     }
 
+    private List <Prueba> listaDeIncidentes (){
+        List <Prueba> listaPruebas= pruebaRepository.findAllByIncidente(true);
+        return listaPruebas;
+    }
+
     @Override
     public Iterable<PruebaDTO> incidenteReporte() {
-        List <Prueba> listaPruebas= pruebaRepository.findAllByIncidente(true);
+        List <Prueba> listaPruebas= listaDeIncidentes();
         Iterable<PruebaDTO> listaPruebasDTO = listaPruebas.stream().map(prueba -> converter.apply(prueba)).collect(Collectors.toList());
         return listaPruebasDTO;
     }
+
+    private List<Prueba> obtenerPruebasDeVehiculo(int idVehiculo) {
+        return pruebaRepository.findAllByIdVehiculoEquals(idVehiculo);
+    }
+
+    @Override
+    public Iterable<PruebaDetalladaDTO> reporteVehiculo(int idVehiculo) throws Exception {
+        try {
+            VehiculoDTO vehiculo = fetchVehiculo(idVehiculo);
+            List<Prueba> prueba = obtenerPruebasDeVehiculo(idVehiculo);
+            List <PruebaDetalladaDTO> listaPruebaDetallada = new ArrayList<>();
+            prueba.forEach(i -> {
+                PruebaDetalladaDTO pruebaDetallada = new PruebaDetalladaDTO(i,vehiculo);
+                listaPruebaDetallada.add(pruebaDetallada);
+            });
+            
+            return listaPruebaDetallada;
+
+        } catch (RuntimeException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    @Override
+    public Iterable<PruebaDetalladaDTO> incidentesPorEmpleado(int idEmpleado) throws Exception {
+        try {
+            List <Prueba> listaIncidentes = listaDeIncidentes();
+            List<Prueba> listafiltradoempleado =listaIncidentes.stream().filter(i -> i.getEmpleado().getLEGAJO() == idEmpleado).collect(Collectors.toList());
+            List <PruebaDetalladaDTO> listaPruebaDetallada = new ArrayList<>();
+            listafiltradoempleado.forEach(i -> {
+                VehiculoDTO vehiculo = fetchVehiculo(i.getIdVehiculo());
+                PruebaDetalladaDTO pruebaDetallada = new PruebaDetalladaDTO(i,vehiculo);
+                listaPruebaDetallada.add(pruebaDetallada);
+            });
+            return listaPruebaDetallada;
+        } catch (RuntimeException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
 }
