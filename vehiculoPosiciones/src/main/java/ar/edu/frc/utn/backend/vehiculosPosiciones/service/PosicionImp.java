@@ -2,24 +2,31 @@ package ar.edu.frc.utn.backend.vehiculosPosiciones.service;
 
 import ar.edu.frc.utn.backend.vehiculosPosiciones.DTO.*;
 import ar.edu.frc.utn.backend.vehiculosPosiciones.entities.Posicion;
+import ar.edu.frc.utn.backend.vehiculosPosiciones.entities.Vehiculo;
 import ar.edu.frc.utn.backend.vehiculosPosiciones.repository.PosicionRepository;
+import ar.edu.frc.utn.backend.vehiculosPosiciones.repository.VehiculoRepository;
 import ar.edu.frc.utn.backend.vehiculosPosiciones.service.interfaces.PosicionService;
+import ar.edu.frc.utn.backend.vehiculosPosiciones.service.interfaces.VehiculoService;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements PosicionService {
 
     private PosicionRepository posicionRepository;
+    private VehiculoRepository vehiculoRepository;
 
-    public PosicionImp(PosicionRepository repository ) {
+    public PosicionImp(PosicionRepository repository, VehiculoRepository vehiculoRepository ) {
         this.posicionRepository = repository;
+        this.vehiculoRepository = vehiculoRepository;
     }
 
     public ResponseEntity<String> corroborar(PosicionDTO posicion) {
@@ -35,10 +42,10 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
                 EmpleadoDTO empleado = obtenerEmpleado(pruebaDTOActual);
                 restringirInteresado(pruebaDTOActual);
                 marcarPruebaIncidente(pruebaDTOActual);
-
                 String mensaje = obtenerMensajeZonaPeligrosa(esZonapeligrosa);
                 NotificacionDTO notificacionDTO = crearNotificacionDTO(empleado, mensaje);
-                Posicion posicionNueva = crearPosicion(posicion);
+                LocalDateTime fechaActual = LocalDateTime.now();
+                Posicion posicionNueva = crearPosicion(posicion, fechaActual);
                 posicionRepository.save(posicionNueva);
                 return enviarNotificacion(notificacionDTO);
             }
@@ -48,6 +55,21 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
         return ResponseEntity.ok ("EL vehiculo se Encuentra en una posisicon Legal");
     }
 
+    private Posicion crearPosicion(PosicionDTO posicion, LocalDateTime fechaActual) {
+        Optional<Vehiculo> vehiculo = vehiculoRepository.findById(posicion.getId_vehiculo());
+        if (vehiculo.isPresent()) {
+            Posicion posicionNueva = new Posicion();
+            posicionNueva.setVehiculo(vehiculo.get());
+            posicionNueva.setLatitud(posicion.getLatitud());
+            posicionNueva.setLongitud(posicion.getLongitud());
+            posicionNueva.setFechaHora(fechaActual);
+            return posicionNueva;
+
+        } else {
+            throw new RuntimeException("El vehiculo no existe");
+        }
+
+    }
 
 
     private String obtenerMensajeZonaPeligrosa(int esZonapeligrosa) {
