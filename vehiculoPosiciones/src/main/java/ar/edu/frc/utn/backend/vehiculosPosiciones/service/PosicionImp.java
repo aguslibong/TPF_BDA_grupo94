@@ -96,18 +96,25 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
         double longitudZona = agenciaInfoDTO.getCoordenadasAgencia().getLon();
 
         // Factor de conversión en kilómetros
-        double factorLatitud = 111.0; // 1 grado de latitud ≈ 111 km
-        double factorLongitud = 111.0 * Math.cos(Math.toRadians(latitudAuto)); // Aproximación según latitud
+
 
         // Calcula la distancia euclídea ajustada
-        double distancia = Math.sqrt(
-                Math.pow((latitudZona - latitudAuto) * factorLatitud, 2) +
-                        Math.pow((longitudZona - longitudAuto) * factorLongitud, 2)
-        );
+        double distancia = CalculoDisatancia(latitudAuto,longitudAuto,latitudZona,longitudZona);
         System.out.println(distancia); // Distancia en kilómetros aproximada
 
         // Verifica si está dentro del radio admitido
         return distancia <= agenciaInfoDTO.getRadioAdmitidoKm();
+    }
+
+    private double CalculoDisatancia(double latitudA, double longitudA, double latitudB, double longitudB  ){
+        double factorLatitud = 111.0; // 1 grado de latitud ≈ 111 km
+        double factorLongitud = 111.0 * Math.cos(Math.toRadians(latitudA)); // Aproximación según latitud
+
+        double distancia = Math.sqrt(
+                Math.pow((latitudB - latitudA) * factorLatitud, 2) +
+                        Math.pow((longitudB - longitudA) * factorLongitud, 2)
+        );
+        return distancia;
     }
 
     private boolean estaEnZona(PosicionDTO posicionDTO, ZonaPeligrosaDTO zonaDTO) {
@@ -215,9 +222,38 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
     }
 
     @Override
-    public Iterable<PosicionDTO> getPosicionesEnPeriodo(PruebaPosicionPeriodoDTO pruebaPossicion) {
-        List<Posicion> listaPosiciones =
+    public double getPosicionesEnPeriodo(PosicionPeriodoDTO pruebaPosicion) {
+        // Obtener las posiciones de la base de datos
+        List<Posicion> listaPosiciones = posicionRepository.findByVehicleIdAndDateRange(
+                pruebaPosicion.getIdVehiculo(),
+                pruebaPosicion.getFechaInicio(),
+                pruebaPosicion.getFechaFin()
+        );
+        double cantKilometros = 0d;
+        // Verificamos si hay más de una posición para realizar el cálculo
+        for (int i = 0; i < listaPosiciones.size() - 1; i++) {
+            // Obtener las coordenadas de la posición actual y la siguiente
+            Posicion posicionActual = listaPosiciones.get(i);
+            Posicion posicionSiguiente = listaPosiciones.get(i + 1);
+
+            // Calcular la distancia entre la posición actual y la siguiente
+            double distancia = CalculoDisatancia(
+                    posicionActual.getLatitud(),
+                    posicionActual.getLongitud(),
+                    posicionSiguiente.getLatitud(),
+                    posicionSiguiente.getLongitud()
+            );
+
+            // Acumulamos la distancia
+            cantKilometros += distancia;
+        }
+
+        // Aquí ya tenemos la cantidad total de kilómetros recorridos
+        System.out.println("Kilómetros recorridos: " + cantKilometros);
+
+        return cantKilometros;
     }
+
 //metodo en PosicionService
 
     @Override

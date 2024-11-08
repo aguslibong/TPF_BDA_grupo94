@@ -1,7 +1,7 @@
 package ar.edu.frc.utn.backend.vehiculosPosiciones.controller;
 
 import ar.edu.frc.utn.backend.vehiculosPosiciones.DTO.PosicionDTO;
-import ar.edu.frc.utn.backend.vehiculosPosiciones.DTO.PruebaPosicionPeriodoDTO;
+import ar.edu.frc.utn.backend.vehiculosPosiciones.DTO.PosicionPeriodoDTO;
 import ar.edu.frc.utn.backend.vehiculosPosiciones.service.interfaces.PosicionService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,15 +29,16 @@ public class PosicionesController {
         }
     }
 
-    @GetMapping("/periodo"){
-        public ResponseEntity<Iterable<PosicionDTO>> getPosicionesEnPeriodo(@RequestBody PruebaPosicionPeriodoDTO pruebaPosicion) {
-            try {
-                return posicionService.getPosicionesEnPeriodo(pruebaPosicion);
-            } catch (IllegalArgumentException e) {
-                return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("Error-Message", e.getMessage()).build();
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
+    @GetMapping("/periodo")
+    public ResponseEntity<Double> getPosicionesEnPeriodo(@RequestBody PosicionPeriodoDTO pruebaPosicion) {
+        try {
+            double Kilometros = posicionService.getPosicionesEnPeriodo(pruebaPosicion);
+            return ResponseEntity.ok(Kilometros);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();  // 400 Bad Request
+        } catch (Exception e) {
+            throw new RuntimeException(e);  // Rethrow other unexpected errors
         }
     }
+
 }
