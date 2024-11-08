@@ -12,6 +12,7 @@ import java.util.List;
 
 @Repository
 public interface PosicionRepository extends JpaRepository<Posicion, Integer> {
+
     @Query("SELECT p FROM Posicion p WHERE p.idVehiculo = :idVehiculo AND p.fechaHora BETWEEN :fechaDesde AND :fechaHasta ORDER BY p.fechaHora ASC")
     List<Posicion> findByVehicleIdAndDateRange(
             @Param("idVehiculo") int idVehiculo,

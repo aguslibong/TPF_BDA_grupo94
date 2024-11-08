@@ -7,6 +7,7 @@ import ar.edu.frc.utn.backend.vehiculosPosiciones.repository.PosicionRepository;
 import ar.edu.frc.utn.backend.vehiculosPosiciones.repository.VehiculoRepository;
 import ar.edu.frc.utn.backend.vehiculosPosiciones.service.interfaces.PosicionService;
 import ar.edu.frc.utn.backend.vehiculosPosiciones.service.interfaces.VehiculoService;
+import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -245,36 +246,53 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
 
     @Override
     public double getPosicionesEnPeriodo(PosicionPeriodoDTO pruebaPosicion) {
-        // Obtener las posiciones de la base de datos
-        List<Posicion> listaPosiciones = posicionRepository.findByVehicleIdAndDateRange(
-                pruebaPosicion.getIdVehiculo(),
-                pruebaPosicion.getFechaInicio(),
-                pruebaPosicion.getFechaFin()
-        );
         double cantKilometros = 0d;
-        // Verificamos si hay más de una posición para realizar el cálculo
-        for (int i = 0; i < listaPosiciones.size() - 1; i++) {
-            // Obtener las coordenadas de la posición actual y la siguiente
-            Posicion posicionActual = listaPosiciones.get(i);
-            Posicion posicionSiguiente = listaPosiciones.get(i + 1);
-
-            // Calcular la distancia entre la posición actual y la siguiente
-            double distancia = CalculoDisatancia(
-                    posicionActual.getLatitud(),
-                    posicionActual.getLongitud(),
-                    posicionSiguiente.getLatitud(),
-                    posicionSiguiente.getLongitud()
+        try {
+            // Obtener las posiciones de la base de datos
+            List<Posicion> listaPosiciones = posicionRepository.findByVehicleIdAndDateRange(
+                    pruebaPosicion.getIdVehiculo(),
+                    pruebaPosicion.getFechaInicio(),
+                    pruebaPosicion.getFechaFin()
             );
 
-            // Acumulamos la distancia
-            cantKilometros += distancia;
-        }
+            // Verificamos si hay más de una posición para realizar el cálculo
+            for (int i = 0; i < listaPosiciones.size() - 1; i++) {
+                // Obtener las coordenadas de la posición actual y la siguiente
+                Posicion posicionActual = listaPosiciones.get(i);
+                Posicion posicionSiguiente = listaPosiciones.get(i + 1);
 
-        // Aquí ya tenemos la cantidad total de kilómetros recorridos
-        System.out.println("Kilómetros recorridos: " + cantKilometros);
+                // Calcular la distancia entre la posición actual y la siguiente
+                double distancia = CalculoDisatancia(
+                        posicionActual.getLatitud(),
+                        posicionActual.getLongitud(),
+                        posicionSiguiente.getLatitud(),
+                        posicionSiguiente.getLongitud()
+                );
+
+                // Acumulamos la distancia
+                cantKilometros += distancia;
+            }
+
+            // Aquí ya tenemos la cantidad total de kilómetros recorridos
+            System.out.println("Kilómetros recorridos: " + cantKilometros);
+
+        } catch (DataAccessException e) {
+            // Manejo de excepciones relacionadas con el acceso a datos
+            System.err.println("Error al acceder a los datos: " + e.getMessage());
+            e.printStackTrace();
+        } catch (IllegalArgumentException e) {
+            // Manejo de excepciones relacionadas con argumentos inválidos
+            System.err.println("Argumento inválido proporcionado: " + e.getMessage());
+            e.printStackTrace();
+        } catch (Exception e) {
+            // Manejo de cualquier otra excepción
+            System.err.println("Ocurrió un error inesperado: " + e.getMessage());
+            e.printStackTrace();
+        }
 
         return cantKilometros;
     }
+
 
 //metodo en PosicionService
 
