@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 
@@ -12,9 +11,9 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PosicionPeriodoDTO {
-    private Timestamp fechaInicio;
-    private Timestamp fechaFin;
-    private Integer idPrueba;
+    private LocalDateTime fechaInicio;
+    private LocalDateTime fechaFin;
+    private int idPrueba;
     private Integer idVehiculo;
 }
 

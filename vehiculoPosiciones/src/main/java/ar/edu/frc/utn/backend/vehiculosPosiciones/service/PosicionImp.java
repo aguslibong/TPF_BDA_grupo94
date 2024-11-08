@@ -7,6 +7,7 @@ import ar.edu.frc.utn.backend.vehiculosPosiciones.repository.PosicionRepository;
 import ar.edu.frc.utn.backend.vehiculosPosiciones.repository.VehiculoRepository;
 import ar.edu.frc.utn.backend.vehiculosPosiciones.service.interfaces.PosicionService;
 import ar.edu.frc.utn.backend.vehiculosPosiciones.service.interfaces.VehiculoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,6 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -26,8 +26,9 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
     private PosicionRepository posicionRepository;
     private VehiculoRepository vehiculoRepository;
 
-    public PosicionImp(PosicionRepository repository, VehiculoRepository vehiculoRepository ) {
-        this.posicionRepository = repository;
+    @Autowired
+    public PosicionImp(PosicionRepository posicionRepository, VehiculoRepository vehiculoRepository ) {
+        this.posicionRepository = posicionRepository;
         this.vehiculoRepository = vehiculoRepository;
     }
 
@@ -250,34 +251,38 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
         double cantKilometros = 0d;
         try {
             // Obtener las posiciones de la base de datos
-            /*List<Posicion> listaPosiciones = posicionRepository.findByVehicleIdAndDateRange(
-                    pruebaPosicion.getIdVehiculo(),
-                    pruebaPosicion.getFechaInicio(),
-                    pruebaPosicion.getFechaFin()
-            );*/
-            List<Posicion> listaPosiciones = new ArrayList<>();
-
-            // Verificamos si hay más de una posición para realizar el cálculo
-            for (int i = 0; i < listaPosiciones.size() - 1; i++) {
-                // Obtener las coordenadas de la posición actual y la siguiente
-                Posicion posicionActual = listaPosiciones.get(i);
-                Posicion posicionSiguiente = listaPosiciones.get(i + 1);
-
-                // Calcular la distancia entre la posición actual y la siguiente
-                double distancia = CalculoDisatancia(
-                        posicionActual.getLatitud(),
-                        posicionActual.getLongitud(),
-                        posicionSiguiente.getLatitud(),
-                        posicionSiguiente.getLongitud()
+            Optional<Vehiculo> vehiculo = vehiculoRepository.findById(pruebaPosicion.getIdVehiculo());
+            if(vehiculo.isPresent()) {
+                List<Posicion> listaPosiciones = posicionRepository.findByVehiculoAndFechaHoraBetween(
+                        vehiculo.get(),
+                        pruebaPosicion.getFechaInicio(),
+                        pruebaPosicion.getFechaFin()
                 );
 
-                // Acumulamos la distancia
-                cantKilometros += distancia;
+                // Verificamos si hay más de una posición para realizar el cálculo
+                for (int i = 0; i < listaPosiciones.size() - 1; i++) {
+                    // Obtener las coordenadas de la posición actual y la siguiente
+                    Posicion posicionActual = listaPosiciones.get(i);
+                    Posicion posicionSiguiente = listaPosiciones.get(i + 1);
+
+                    // Calcular la distancia entre la posición actual y la siguiente
+                    double distancia = CalculoDisatancia(
+                            posicionActual.getLatitud(),
+                            posicionActual.getLongitud(),
+                            posicionSiguiente.getLatitud(),
+                            posicionSiguiente.getLongitud()
+                    );
+
+                    // Acumulamos la distancia
+                    cantKilometros += distancia;
+                }
+
+                // Aquí ya tenemos la cantidad total de kilómetros recorridos
+                System.out.println("Kilómetros recorridos: " + cantKilometros);
             }
-
-            // Aquí ya tenemos la cantidad total de kilómetros recorridos
-            System.out.println("Kilómetros recorridos: " + cantKilometros);
-
+            else {
+                throw new RuntimeException("Vehiculo no encontrado");
+            }
         } catch (DataAccessException e) {
             // Manejo de excepciones relacionadas con el acceso a datos
             System.err.println("Error al acceder a los datos: " + e.getMessage());
