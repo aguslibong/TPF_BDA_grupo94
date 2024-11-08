@@ -2,6 +2,7 @@ package ar.edu.frc.utn.backend.interesadosPruebas.service;
 
 import ar.edu.frc.utn.backend.interesadosPruebas.DTO.PruebaDTO;
 import ar.edu.frc.utn.backend.interesadosPruebas.DTO.VehiculoDTO;
+import ar.edu.frc.utn.backend.interesadosPruebas.DTO.convert.PruebaToPruebaDTO;
 import ar.edu.frc.utn.backend.interesadosPruebas.entities.Empleado;
 import ar.edu.frc.utn.backend.interesadosPruebas.entities.Interesado;
 import ar.edu.frc.utn.backend.interesadosPruebas.entities.Prueba;
@@ -9,6 +10,7 @@ import ar.edu.frc.utn.backend.interesadosPruebas.repository.EmpleadoRepository;
 import ar.edu.frc.utn.backend.interesadosPruebas.repository.InteresadoRepository;
 import ar.edu.frc.utn.backend.interesadosPruebas.repository.PruebaRepository;
 import ar.edu.frc.utn.backend.interesadosPruebas.service.interfaces.PruebaService;
+import ar.edu.frc.utn.backend.interesadosPruebas.service.interfaces.Servicio;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
@@ -29,6 +31,7 @@ public class PruebaServiceImpl implements PruebaService {
     private final InteresadoRepository interesadorepository;
     private final EmpleadoRepository empleadorepository;
     private final PruebaRepository pruebaRepository;
+    private final PruebaToPruebaDTO converter; //
 
     // Constructor con inyección de dependencias
     public PruebaServiceImpl(PruebaRepository pruebarepository, InteresadoRepository interesadorepository, EmpleadoRepository empleadoRepository, PruebaRepository pruebaRepository) {
@@ -36,31 +39,10 @@ public class PruebaServiceImpl implements PruebaService {
         this.interesadorepository = interesadorepository;
         this.empleadorepository = empleadoRepository;
         this.pruebaRepository = pruebaRepository;
+        this.converter = new PruebaToPruebaDTO(); // Inicializar el converter
     }
 
     //PUNTO 1 CREAR PRUEBA
-    @Override
-    public void crearPrueba(PruebaDTO pruebaDTO) {
-        try {
-            validatePruebaDTO(pruebaDTO);
-
-            Interesado interesado = getInteresado(pruebaDTO.getIdInteresado());
-            Empleado empleado = getEmpleado(pruebaDTO.getIdEmpleado());
-
-            validateInteresado(interesado);
-
-            VehiculoDTO vehiculoDTO = fetchVehiculo(pruebaDTO.getIdVehiculo());
-
-            validateVehiculo(pruebaDTO.getIdVehiculo());
-
-            Prueba prueba = createPruebaEntity(pruebaDTO, interesado, empleado);
-
-            pruebarepository.save(prueba);
-
-        } catch (RuntimeException e) {
-            throw new RuntimeException(e);
-        }
-    }
 
     private void validatePruebaDTO(PruebaDTO pruebaDTO) {
         if (Integer.valueOf(pruebaDTO.getIdEmpleado()) == null || Integer.valueOf(pruebaDTO.getIdInteresado()) == null || Integer.valueOf(pruebaDTO.getIdVehiculo()) == null) {
@@ -93,31 +75,34 @@ public class PruebaServiceImpl implements PruebaService {
     private VehiculoDTO fetchVehiculo(Integer idVehiculo) {
         try {
             RestTemplate template = new RestTemplate();
+
             ResponseEntity<VehiculoDTO> res = template.getForEntity("http://localhost:8081/api/vehiculo/{id}", VehiculoDTO.class, idVehiculo);
 
-            if (res.getStatusCode().is2xxSuccessful()) {
-                return res.getBody();
-            } else {
-                throw new RuntimeException("El vehiculo no existe");
-            }
+            if (res.getStatusCode().is2xxSuccessful()) return res.getBody();
 
         } catch (HttpClientErrorException ex) {
-            throw new RuntimeException("No exitoso la respuesta del cliente", ex);
+            throw new RuntimeException("No exitoso la respuesta el vehiculo no existe", ex);
         }
+        return null;
     }
 
     private void validateVehiculo(Integer idVehiculo) {
 
-        List<Prueba> listapruebaVehiculo = pruebarepository.findAllByIdVehiculo(idVehiculo);
+        List<Prueba> listapruebaVehiculo = pruebarepository.findAllByIdVehiculoEquals(idVehiculo);
+        listapruebaVehiculo.forEach(p -> {
+            System.out.println(p.toString());
+        });
         boolean isVehiculoOcupado = listapruebaVehiculo.stream()
-                .anyMatch(prueba -> prueba.getFechaHoraFin() == prueba.getFechaHoraInicio());
+                .anyMatch(prueba -> prueba.getFechaHoraFin().equals(prueba.getFechaHoraInicio()));
+
 
         if (isVehiculoOcupado) {
             throw new RuntimeException("El Vehiculo esta siendo usado en otra prueba");
         }
     }
 
-    private Prueba createPruebaEntity(PruebaDTO pruebaDTO, Interesado interesado, Empleado empleado) {
+
+    private Prueba createPrueba(PruebaDTO pruebaDTO, Interesado interesado, Empleado empleado) {
         LocalDateTime fechaHoraActual = LocalDateTime.now();
 
         Prueba prueba = new Prueba();
@@ -131,27 +116,18 @@ public class PruebaServiceImpl implements PruebaService {
     }
 
 
-    //Listar todas las pruebas en curso en un momento dado
-    private PruebaDTO convertirAPruebaDTO (Prueba prueba) {
-        PruebaDTO dto = new PruebaDTO();
-        dto.setIdInteresado(prueba.getInteresado().getID());
-        dto.setIdVehiculo(prueba.getIdVehiculo());
-        dto.setIdEmpleado(prueba.getEmpleado().getLEGAJO());
-        dto.setIdPrueba(prueba.getId());
-        return dto;
-    }
-
-    @Override
     public Iterable<PruebaDTO> obtenerListaPruebasMomento() {
         Iterable<Prueba> listaPrueba = pruebarepository.findAllByFechaHoraFinNull();
         List<PruebaDTO> listaPruebaDTO = new ArrayList<>();
+
         for (Prueba prueba : listaPrueba) {
-            listaPruebaDTO.add(convertirAPruebaDTO(prueba));
+            listaPruebaDTO.add(converter.apply(prueba));
         }
+
         return listaPruebaDTO;
     }
 
-    @Override
+
     public ResponseEntity finalizarPrueba(int idPruebaFinalizar, String comentario)  {
         try {
             Optional<Prueba> prueba = pruebaRepository.findById(idPruebaFinalizar);
@@ -180,10 +156,73 @@ public class PruebaServiceImpl implements PruebaService {
         }
     }
 
+
+
     @Override
-    public Iterable<Prueba> findALL() throws Exception {
-        return pruebaRepository.findAll();
+    public void create(PruebaDTO pruebaDTO) throws Exception {
+        try {
+            validatePruebaDTO(pruebaDTO);
+
+            Interesado interesado = getInteresado(pruebaDTO.getIdInteresado());
+            Empleado empleado = getEmpleado(pruebaDTO.getIdEmpleado());
+
+            validateInteresado(interesado);
+
+            VehiculoDTO vehiculoDTO = fetchVehiculo(pruebaDTO.getIdVehiculo());
+
+            validateVehiculo(pruebaDTO.getIdVehiculo());
+
+            Prueba prueba = createPrueba(pruebaDTO, interesado, empleado);
+
+            pruebarepository.save(prueba);
+
+        } catch (RuntimeException e) {
+            throw new RuntimeException(e);
+        }
     }
 
+    @Override
+    public void update(PruebaDTO prueba) {
+
+    }
+
+    @Override
+    public PruebaDTO delete(Integer id) {
+        return null;
+    }
+
+    @Override
+    public PruebaDTO findById(Integer id) {
+        return null;
+    }
+
+    @Override
+    public List<PruebaDTO> findAll() {
+        return pruebaRepository.findAll().stream().map(prueba -> converter.apply(prueba)).collect(Collectors.toList());
+    }
+
+    @Override
+    public String cambiarIncidente(int id) {
+        Optional<Prueba> optionalPrueba = pruebaRepository.findById(id);
+        if (optionalPrueba.isPresent() ) {
+            Prueba prueba = optionalPrueba.get();
+            if (prueba.isIncidente() == false){
+                prueba.setIncidente(true);
+                pruebaRepository.save(prueba);
+                return "Se modificó la prueba como incidente";
+            } else {
+                return "La prueba ya fue marcada como incidente";
+            }
+        } else {
+            return "No se encontró el interesado con el id: " + id;
+        }
+    }
+
+    @Override
+    public Iterable<PruebaDTO> incidenteReporte() {
+        List <Prueba> listaPruebas= pruebaRepository.findAllByIncidente(true);
+        Iterable<PruebaDTO> listaPruebasDTO = listaPruebas.stream().map(prueba -> converter.apply(prueba)).collect(Collectors.toList());
+        return listaPruebasDTO;
+    }
 
 }

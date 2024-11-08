@@ -10,5 +10,6 @@ spring:
         wiretap: false
 
 microservicios:
-  vehiculos: http://localhost:8081/api/vehiculo
-  interesados: http://localhost:8082/api/prubea
+  vehiculos: http://localhost:8081
+  interesados: http://localhost:8082
+  notificaciones: http://localhost:8083
