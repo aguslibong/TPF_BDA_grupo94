@@ -1,5 +1,6 @@
 package ar.edu.frc.utn.backend.interesadosPruebas.service;
 
+import ar.edu.frc.utn.backend.interesadosPruebas.DTO.PosicionPeriodoDTO;
 import ar.edu.frc.utn.backend.interesadosPruebas.DTO.PruebaDTO;
 import ar.edu.frc.utn.backend.interesadosPruebas.DTO.PruebaDetalladaDTO;
 import ar.edu.frc.utn.backend.interesadosPruebas.DTO.VehiculoDTO;
@@ -245,7 +246,7 @@ public class PruebaServiceImpl implements PruebaService {
                 PruebaDetalladaDTO pruebaDetallada = new PruebaDetalladaDTO(i,vehiculo);
                 listaPruebaDetallada.add(pruebaDetallada);
             });
-            
+
             return listaPruebaDetallada;
 
         } catch (RuntimeException e) {
@@ -271,5 +272,35 @@ public class PruebaServiceImpl implements PruebaService {
         }
     }
 
+    private Prueba getPruebaById(int idPrueba) {
+        return pruebaRepository.getById(idPrueba);
+    }
+
+    @Override
+    public Integer calcularKilometros(PosicionPeriodoDTO posicionPeriodoDTO) throws Exception {
+
+        try {
+            if( posicionPeriodoDTO.getFechaFin().after(posicionPeriodoDTO.getFechaInicio()) )
+            {
+                Prueba prueba = getPruebaById(posicionPeriodoDTO.getIdPrueba());
+
+                if (prueba != null) {
+
+                    VehiculoDTO vehiculo = fetchVehiculo(prueba.getIdVehiculo());
+                    ResponseEntity<Double> res = template.getForEntity("http://localhost:8081/api/posiciones/periodo", Double.class, idVehiculo);
+
+
+
+                } else {
+                    throw new RuntimeException("No existe la prueba");
+                }
+            } else {
+                throw new RuntimeException("El periodo es incorrecto");
+            }
+        }
+        catch (RuntimeException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
 }

@@ -1,5 +1,6 @@
 package ar.edu.frc.utn.backend.interesadosPruebas.controller;
 
+import ar.edu.frc.utn.backend.interesadosPruebas.DTO.PosicionPeriodoDTO;
 import ar.edu.frc.utn.backend.interesadosPruebas.DTO.PruebaDTO;
 import ar.edu.frc.utn.backend.interesadosPruebas.DTO.PruebaDetalladaDTO;
 import ar.edu.frc.utn.backend.interesadosPruebas.entities.Prueba;
@@ -118,5 +119,14 @@ public class PruebaController {
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
+    }
+
+    @GetMapping('/reporte/kilometro')
+    public ResponseEntity<String> reporteKilometro(@RequestBody PosicionPeriodoDTO posicionPeriodoDTO){
+        try{
+            Integer kilometros = pruebaService.calcularKilometros(posicionPeriodoDTO);
+
+            return ResponseEntity.ok("Los kilometros recorridos son: " + kilometros);
+        } catch
     }
 }
