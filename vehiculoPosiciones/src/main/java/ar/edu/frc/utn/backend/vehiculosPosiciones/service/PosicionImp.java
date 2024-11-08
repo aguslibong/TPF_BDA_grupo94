@@ -35,6 +35,7 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
     public ResponseEntity<String> corroborar(PosicionDTO posicion) {
         //Esto es la API que consumimos para que nos devuelva el listado
         //http://localhost:8082/api/prueba/momento
+        LocalDateTime fechaActual = LocalDateTime.now();
         try {
             PruebaDTO pruebaDTOActual = estaEnPrueba(posicion.getId_vehiculo());
             if (pruebaDTOActual == null) {
@@ -47,7 +48,6 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
                 marcarPruebaIncidente(pruebaDTOActual);
                 String mensaje = obtenerMensajeZonaPeligrosa(esZonapeligrosa);
                 NotificacionDTO notificacionDTO = crearNotificacionDTO(empleado, mensaje);
-                LocalDateTime fechaActual = LocalDateTime.now();
                 Posicion posicionNueva = crearPosicion(posicion, fechaActual);
                 posicionRepository.save(posicionNueva);
                 return enviarNotificacion(notificacionDTO);
@@ -55,6 +55,8 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
         } catch (RuntimeException e) {
             throw new RuntimeException(e);
         }
+        Posicion posicionNueva = crearPosicion(posicion, fechaActual);
+        posicionRepository.save(posicionNueva);
         return ResponseEntity.ok ("EL vehiculo se Encuentra en una posisicon Legal");
     }
 
@@ -253,17 +255,21 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
             // Obtener las posiciones de la base de datos
             Optional<Vehiculo> vehiculo = vehiculoRepository.findById(pruebaPosicion.getIdVehiculo());
             if(vehiculo.isPresent()) {
-                List<Posicion> listaPosiciones = posicionRepository.findByVehiculoAndFechaHoraBetween(
+                List<Posicion> listaPosiciones = posicionRepository.findAllByVehiculoAndFechaHoraBetween(
                         vehiculo.get(),
                         pruebaPosicion.getFechaInicio(),
                         pruebaPosicion.getFechaFin()
                 );
+                //List<Posicion> listaPosiciones = posicionRepository.findAllByVehiculo(vehiculo.get());
+                System.out.println(listaPosiciones);
+                System.out.println(pruebaPosicion.getFechaFin());
 
                 // Verificamos si hay más de una posición para realizar el cálculo
                 for (int i = 0; i < listaPosiciones.size() - 1; i++) {
                     // Obtener las coordenadas de la posición actual y la siguiente
                     Posicion posicionActual = listaPosiciones.get(i);
                     Posicion posicionSiguiente = listaPosiciones.get(i + 1);
+                    System.out.println(posicionActual);
 
                     // Calcular la distancia entre la posición actual y la siguiente
                     double distancia = CalculoDisatancia(

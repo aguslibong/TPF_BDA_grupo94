@@ -22,6 +22,7 @@ public interface PosicionRepository extends JpaRepository<Posicion, Integer> {
     );
 */
 
-    List<Posicion> findByVehiculoAndFechaHoraBetween(Vehiculo vehiculo, LocalDateTime fechaDesde, LocalDateTime fechaHasta);
+    List<Posicion> findAllByVehiculoAndFechaHoraBetween(Vehiculo vehiculo, LocalDateTime fechaDesde, LocalDateTime fechaHasta);
 
+    List<Posicion> findAllByVehiculo(Vehiculo vehiculo);
 }
