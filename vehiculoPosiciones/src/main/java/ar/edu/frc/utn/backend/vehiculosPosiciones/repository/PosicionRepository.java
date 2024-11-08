@@ -7,17 +7,20 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Repository
 public interface PosicionRepository extends JpaRepository<Posicion, Integer> {
 
-    @Query("SELECT p FROM Posicion p WHERE p.idVehiculo = :idVehiculo AND p.fechaHora BETWEEN :fechaDesde AND :fechaHasta ORDER BY p.fechaHora ASC")
+   /*@Query("SELECT p FROM Posicion p WHERE p.idVehiculo = :idVehiculo AND p.fechaHora BETWEEN :fechaDesde AND :fechaHasta ORDER BY p.fechaHora ASC")
     List<Posicion> findByVehicleIdAndDateRange(
-            @Param("idVehiculo") int idVehiculo,
-            @Param("fechaDesde") LocalDateTime fechaDesde,
-            @Param("fechaHasta") LocalDateTime fechaHasta
-    );
+            @Param("idVehiculo") Integer idVehiculo,
+            @Param("fechaDesde") Timestamp fechaDesde,
+            @Param("fechaHasta") Timestamp fechaHasta
+    );*/
+
+
 
 }

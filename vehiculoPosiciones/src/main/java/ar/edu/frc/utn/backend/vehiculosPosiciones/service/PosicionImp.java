@@ -15,6 +15,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -249,11 +250,12 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
         double cantKilometros = 0d;
         try {
             // Obtener las posiciones de la base de datos
-            List<Posicion> listaPosiciones = posicionRepository.findByVehicleIdAndDateRange(
+            /*List<Posicion> listaPosiciones = posicionRepository.findByVehicleIdAndDateRange(
                     pruebaPosicion.getIdVehiculo(),
                     pruebaPosicion.getFechaInicio(),
                     pruebaPosicion.getFechaFin()
-            );
+            );*/
+            List<Posicion> listaPosiciones = new ArrayList<>();
 
             // Verificamos si hay más de una posición para realizar el cálculo
             for (int i = 0; i < listaPosiciones.size() - 1; i++) {
