@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="Solucionado entidades">
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculosPosiciones/controller/PosicionesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculosPosiciones/controller/PosicionesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculosPosiciones/repository/PosicionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculosPosiciones/repository/PosicionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculosPosiciones/service/PosicionImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculosPosiciones/service/PosicionImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculosPosiciones/service/interfaces/PosicionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculosPosiciones/service/interfaces/PosicionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="83f0fbaa-9992-4223-9963-33fd28e4ce5b" name="Changes by Agus" comment="" />
     <list id="186700cc-4f13-45b1-8739-d28aa3ed534f" name="Changes by AGUSTIN" comment="" />
@@ -106,7 +103,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.InteresadosPruebasApplication">
+  <component name="RunManager" selected="Spring Boot.VehiculoPosicionesApplication (1)">
     <configuration name="InteresadosPruebasApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.interesadosPruebas.InteresadosPruebasApplication" />
       <module name="interesadosPruebas" />
@@ -133,9 +130,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -143,6 +137,19 @@
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.frc.utn.backend.gateway.GatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.frc.utn.backend.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -161,9 +168,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NotificacionesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="vehiculoPosiciones (1)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.frc.utn.backend.vehiculosPosiciones.NotificacionesApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.frc.utn.backend.vehiculosPosiciones.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TpfBdaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="TPF_BDA" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.utn.frc.backend.TPF_BDA.TpfBdaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehiculoPosicionesApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="vehiculoPosiciones" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.frc.utn.backend.vehiculosPosiciones.VehiculoPosicionesApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.frc.utn.backend.vehiculosPosiciones.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -178,9 +211,19 @@
     <list>
       <item itemvalue="Application.InteresadosPruebasApplication" />
       <item itemvalue="Application.VehiculoPosicionesApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.InteresadosPruebasApplication" />
+      <item itemvalue="Spring Boot.TpfBdaApplication" />
+      <item itemvalue="Spring Boot.VehiculoPosicionesApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication (1)" />
+      <item itemvalue="Spring Boot.NotificacionesApplication" />
+      <item itemvalue="Spring Boot.VehiculoPosicionesApplication (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.VehiculoPosicionesApplication (1)" />
+        <item itemvalue="Spring Boot.NotificacionesApplication" />
+        <item itemvalue="Spring Boot.GatewayApplication (1)" />
         <item itemvalue="Application.InteresadosPruebasApplication" />
         <item itemvalue="Application.VehiculoPosicionesApplication" />
       </list>
@@ -212,5 +255,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Solucionado entidades" />
     <option name="LAST_COMMIT_MESSAGE" value="Solucionado entidades" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vehiculoPosiciones/src/main/java/ar/edu/frc/utn/backend/vehiculosPosiciones/VehiculoPosicionesApplication.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
