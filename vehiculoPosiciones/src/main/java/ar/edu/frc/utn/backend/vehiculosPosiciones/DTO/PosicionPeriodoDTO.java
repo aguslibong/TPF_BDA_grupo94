@@ -14,6 +14,6 @@ public class PosicionPeriodoDTO {
     private LocalDateTime fechaInicio;
     private LocalDateTime fechaFin;
     private int idPrueba;
-    private int idVehiculo;
+    private Integer idVehiculo;
 }
 

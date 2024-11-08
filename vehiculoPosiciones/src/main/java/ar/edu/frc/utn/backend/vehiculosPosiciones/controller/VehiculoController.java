@@ -23,7 +23,7 @@ public class VehiculoController {
     public VehiculoDTO getByIdVehiculo(@PathVariable int id) {
         try {
             return vehiculoImp.findById(id);
-        } catch (IllegalArgumentException e){
+        } catch (IllegalArgumentException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Vehículo no encontrado");
         }
     }

@@ -49,7 +49,7 @@ public class VehiculoImp extends ServicioImp<VehiculoDTO, Integer> implements Ve
         if (!optionalVehiculo.isEmpty()) {
             // Obtener el objeto Vehiculo del Optional
             Vehiculo vehiculo = optionalVehiculo.get();
-
+            System.out.println(vehiculo);
             VehiculoDTO vehiculoDTO = convert.apply(vehiculo);
 
             return vehiculoDTO;
