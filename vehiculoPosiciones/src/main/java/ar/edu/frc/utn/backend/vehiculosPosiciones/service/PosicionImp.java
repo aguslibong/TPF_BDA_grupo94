@@ -1,6 +1,8 @@
 package ar.edu.frc.utn.backend.vehiculosPosiciones.service;
 
 import ar.edu.frc.utn.backend.vehiculosPosiciones.DTO.*;
+import ar.edu.frc.utn.backend.vehiculosPosiciones.entities.Posicion;
+import ar.edu.frc.utn.backend.vehiculosPosiciones.repository.PosicionRepository;
 import ar.edu.frc.utn.backend.vehiculosPosiciones.service.interfaces.PosicionService;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +15,12 @@ import java.util.List;
 
 @Service
 public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements PosicionService {
+
+    private PosicionRepository posicionRepository;
+
+    public PosicionImp(PosicionRepository repository ) {
+        this.posicionRepository = repository;
+    }
 
     public ResponseEntity<String> corroborar(PosicionDTO posicion) {
         //Esto es la API que consumimos para que nos devuelva el listado
@@ -30,6 +38,8 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
 
                 String mensaje = obtenerMensajeZonaPeligrosa(esZonapeligrosa);
                 NotificacionDTO notificacionDTO = crearNotificacionDTO(empleado, mensaje);
+                Posicion posicionNueva = crearPosicion(posicion);
+                posicionRepository.save(posicionNueva);
                 return enviarNotificacion(notificacionDTO);
             }
         } catch (RuntimeException e) {
@@ -38,10 +48,7 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
         return ResponseEntity.ok ("EL vehiculo se Encuentra en una posisicon Legal");
     }
 
-    @Override
-    public Iterable<PosicionDTO> getPosicionesEnPeriodo(PruebaPosicionPeriodoDTO pruebaPossicion) {
-       ;
-    }
+
 
     private String obtenerMensajeZonaPeligrosa(int esZonapeligrosa) {
         switch (esZonapeligrosa) {
@@ -205,6 +212,11 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
 
         return 3;
 
+    }
+
+    @Override
+    public Iterable<PosicionDTO> getPosicionesEnPeriodo(PruebaPosicionPeriodoDTO pruebaPossicion) {
+        List<Posicion> listaPosiciones =
     }
 //metodo en PosicionService
 

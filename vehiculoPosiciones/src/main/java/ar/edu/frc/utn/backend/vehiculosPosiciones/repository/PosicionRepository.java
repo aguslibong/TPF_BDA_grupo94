@@ -6,8 +6,9 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Repository
 public interface PosicionRepository extends JpaRepository<Posicion, Integer> {
-    List<Posicion> registros = findByVehicleIdAndDateRange(int idVehiculo, LocalDateTime fechaDesde, LocalDateTime fechaHasta ;
+    List<Posicion> registros = findByVehicleIdAndDateRange(int idVehiculo, LocalDateTime fechaDesde, LocalDateTime fechaHasta );
 }
