@@ -55,4 +55,18 @@ public class InteresadoServiceImp implements InteresadoService {
         return repository.findAll().stream().map(converter)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public String restringir(int id) {
+        Optional<Interesado> optionalInteresado = repository.findById(id);
+        if (optionalInteresado.isPresent()) {
+            Interesado interesado = optionalInteresado.get();
+            interesado.setRestringido(true);
+            repository.save(interesado);
+            return "El interesado se restringió";
+        } else {
+            return "No se encontró el interesado con el id: " + id;
+        }
+    }
 }
+

@@ -38,4 +38,15 @@ public class Prueba {
 
     @Column(name = "COMENTARIOS", nullable = false)
     private String comentarios;
+
+    @Column(name = "INCIDENTE", nullable = false)
+    private boolean incidente ;
+
+    public boolean isIncidente() {
+        return incidente;
+    }
+
+    public void setIncidente(boolean incidente) {
+        this.incidente = incidente;
+    }
 }

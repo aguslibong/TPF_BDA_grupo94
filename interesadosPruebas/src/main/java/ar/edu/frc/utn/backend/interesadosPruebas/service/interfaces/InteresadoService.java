@@ -11,4 +11,6 @@ public interface InteresadoService extends Servicio<InteresadoDTO, Integer>{
     Optional<Interesado> findById(int id);
 
     List<InteresadoDTO> findAll();
+
+    String restringir(int id);
 }
