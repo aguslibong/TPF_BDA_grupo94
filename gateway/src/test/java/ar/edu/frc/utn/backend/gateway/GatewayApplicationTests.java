@@ -1,4 +1,4 @@
-package ar.edu.utn.frc.backend.gateway;
+package ar.edu.frc.utn.backend.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

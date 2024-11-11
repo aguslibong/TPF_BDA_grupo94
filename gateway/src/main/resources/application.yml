@@ -10,9 +10,12 @@ spring:
         wiretap: false
   security:
     oauth2:
-      resource-server:
+      resourceserver:
         jwt:
-          issuer-uri: https://labsys.frc.utn.edu.ar/aim/realms/backend-tps
+          issuer-uri: https://labsys.frc.utn.edu.ar/aim/
+
+
+
 
 microservicios:
   vehiculos: http://localhost:8081

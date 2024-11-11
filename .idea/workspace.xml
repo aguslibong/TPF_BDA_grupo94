@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="Solucionado entidades">
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/ar/edu/frc/utn/backend/gateway/ResourceServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/ar/edu/frc/utn/backend/gateway/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/ar/edu/frc/utn/backend/gateway/GWconfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/ar/edu/frc/utn/backend/gateway/GWconfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/test/java/ar/edu/utn/frc/backend/gateway/GatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/test/java/ar/edu/frc/utn/backend/gateway/GatewayApplicationTests.java" afterDir="false" />
     </list>
-    <list id="186700cc-4f13-45b1-8739-d28aa3ed534f" name="Changes by AGUSTIN" comment="" />
-    <list id="aaa4b668-d422-4f5d-b599-3af14f9c6115" name="Changes by nacho" comment="" />
+    <list id="83f0fbaa-9992-4223-9963-33fd28e4ce5b" name="Changes by Agus" comment="" />
+    <list id="ee9d434f-7222-40ed-921d-4670974f7a54" name="Changes by AGUSTIN" comment="" />
+    <list id="95b6f1c9-ea33-4eb7-9312-8c2c1e19a1bc" name="Changes by nacho" comment="" />
     <list id="69da239c-c717-4530-abe3-0696ac5d98e2" name="Changes by Usuario" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -86,16 +90,15 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="ReactorSettings">
-    <option name="notificationShown" value="true" />
-  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="ar.edu.frc.utn.backend.gateway.apiConfig" />
       <recent name="ar.edu.frc.utn.backend.gateway" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\nacho\Documents\Facultad\backend\TPF_BDA" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ar.edu.frc.utn.backend.notificaciones.service.interfaces" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -108,13 +111,13 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.GatewayApplication (1)">
+  <component name="RunManager" selected="Application.ar.edu.frc.utn.backend.vehiculosPosiciones.VehiculoPosicionesApplication">
     <configuration name="GatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.gateway.GatewayApplication" />
       <module name="gateway" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.edu.frc.utn.backend.gateway.apiConfig.*" />
+          <option name="PATTERN" value="ar.edu.frc.utn.backend.gateway.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,12 +138,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NotificacionesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.vehiculosPosiciones.NotificacionesApplication" />
-      <module name="vehiculoPosiciones (1)" />
+    <configuration name="VehiculoPosicionesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.notificaciones.VehiculoPosicionesApplication" />
+      <module name="vehiculoPosiciones" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.edu.frc.utn.backend.vehiculosPosiciones.*" />
+          <option name="PATTERN" value="ar.edu.frc.utn.backend.notificaciones.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,12 +151,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VehiculoPosicionesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.vehiculoPosiciones.VehiculoPosicionesApplication" />
-      <module name="vehiculoPosiciones" />
+    <configuration name="ar.edu.frc.utn.backend.vehiculosPosiciones.NotificacionesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.vehiculosPosiciones.NotificacionesApplication" />
+      <module name="vehiculoPosiciones (1)" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.edu.frc.utn.backend.vehiculoPosiciones.*" />
+          <option name="PATTERN" value="ar.edu.frc.utn.backend.vehiculosPosiciones.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -207,8 +210,8 @@
       </method>
     </configuration>
     <configuration name="NotificacionesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="vehiculoPosiciones (1)" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.frc.utn.backend.vehiculosPosiciones.NotificacionesApplication" />
+      <module name="notificaciones" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.frc.utn.backend.notificaciones.NotificacionesApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -220,24 +223,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VehiculoPosicionesApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="vehiculoPosiciones" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.frc.utn.backend.vehiculosPosiciones.VehiculoPosicionesApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="VehiculoPosicionesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="vehiculoPosiciones" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.frc.utn.backend.vehiculoPosiciones.VehiculoPosicionesApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ar.edu.frc.utn.backend.notificaciones.VehiculoPosicionesApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.ar.edu.frc.utn.backend.vehiculosPosiciones.NotificacionesApplication" />
       <item itemvalue="Application.ar.edu.frc.utn.backend.vehiculosPosiciones.VehiculoPosicionesApplication" />
       <item itemvalue="Application.GatewayApplication" />
-      <item itemvalue="Application.NotificacionesApplication" />
       <item itemvalue="Application.InteresadosPruebasApplication" />
       <item itemvalue="Application.VehiculoPosicionesApplication" />
       <item itemvalue="Spring Boot.GatewayApplication" />
@@ -246,15 +242,14 @@
       <item itemvalue="Spring Boot.NotificacionesApplication" />
       <item itemvalue="Spring Boot.TpfBdaApplication" />
       <item itemvalue="Spring Boot.VehiculoPosicionesApplication" />
-      <item itemvalue="Spring Boot.VehiculoPosicionesApplication (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.VehiculoPosicionesApplication" />
-        <item itemvalue="Application.InteresadosPruebasApplication" />
-        <item itemvalue="Application.NotificacionesApplication" />
         <item itemvalue="Application.ar.edu.frc.utn.backend.vehiculosPosiciones.VehiculoPosicionesApplication" />
+        <item itemvalue="Application.ar.edu.frc.utn.backend.vehiculosPosiciones.NotificacionesApplication" />
+        <item itemvalue="Application.InteresadosPruebasApplication" />
         <item itemvalue="Application.GatewayApplication" />
+        <item itemvalue="Application.VehiculoPosicionesApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -275,25 +270,27 @@
       <workItem from="1729777045304" duration="4526000" />
       <workItem from="1729781690914" duration="2551000" />
       <workItem from="1729790372354" duration="3685000" />
+      <workItem from="1729817793634" duration="577000" />
+      <workItem from="1729952636490" duration="7409000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Solucionado entidades" />
     <option name="LAST_COMMIT_MESSAGE" value="Solucionado entidades" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/gateway/src/main/java/ar/edu/frc/utn/backend/gateway/GatewayApplication.java</url>
-          <line>9</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

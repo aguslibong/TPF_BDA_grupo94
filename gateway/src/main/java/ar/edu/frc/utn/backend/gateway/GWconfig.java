@@ -5,8 +5,11 @@ import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
+
 
 @Configuration
+@EnableWebFluxSecurity
 public class GWconfig {
     @Bean
     public RouteLocator configurarRutas(RouteLocatorBuilder builder,
@@ -23,5 +26,8 @@ public class GWconfig {
                 .route(p -> p.path("/api/notificacion/**").uri(uriNotificaciones))
                 .build();
     }
+
+
+
 
 }
