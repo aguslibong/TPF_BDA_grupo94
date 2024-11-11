@@ -1,12 +1,12 @@
-package ar.edu.frc.utn.backend.interesadosPruebas.DTO;
+package ar.edu.frc.utn.backend.vehiculosPosiciones.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class VehiculoDTO {
     private int idVehiculo;
     private String patente;

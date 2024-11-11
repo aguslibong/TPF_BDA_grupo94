@@ -66,5 +66,7 @@ public class InteresadoServiceImp implements InteresadoService {
             return "El interesado se restringió";
         } else {
             return "No se encontró el interesado con el id: " + id;
-        }}}
+        }
+    }
+}
 

@@ -22,5 +22,7 @@ public interface PruebaRepository extends JpaRepository<Prueba, Integer> {
 
 
 
+    List<Prueba>  findAllByIncidente(boolean incidente);
+
 
 }

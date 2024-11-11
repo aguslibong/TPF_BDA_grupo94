@@ -12,6 +12,7 @@ public class PruebaToPruebaDTO implements Function<Prueba, PruebaDTO> {
         pruebaDTO.setIdInteresado(prueba.getInteresado().getID());
         pruebaDTO.setIdEmpleado(prueba.getEmpleado().getLEGAJO());
         pruebaDTO.setIdVehiculo(prueba.getIdVehiculo());
+        pruebaDTO.setIncidente(prueba.isIncidente());
         return pruebaDTO;
     }
 }
