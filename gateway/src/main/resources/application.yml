@@ -8,6 +8,14 @@ spring:
         wiretap: false
       httpclient:
         wiretap: false
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://labsys.frc.utn.edu.ar/aim/
+
+
+
 
 microservicios:
   vehiculos: http://localhost:8081

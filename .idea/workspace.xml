@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e31adbf3-3d5f-4b7d-9317-905b8c40f447" name="Changes" comment="Solucionado entidades">
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/ar/edu/frc/utn/backend/gateway/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/ar/edu/frc/utn/backend/gateway/GWconfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/ar/edu/frc/utn/backend/gateway/GWconfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/test/java/ar/edu/utn/frc/backend/gateway/GatewayApplicationTests.java" beforeDir="false" />
     </list>
     <list id="83f0fbaa-9992-4223-9963-33fd28e4ce5b" name="Changes by Agus" comment="" />
     <list id="ee9d434f-7222-40ed-921d-4670974f7a54" name="Changes by AGUSTIN" comment="" />
@@ -106,7 +115,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.VehiculoPosicionesApplication">
+  <component name="RunManager" selected="Application.ar.edu.frc.utn.backend.vehiculosPosiciones.VehiculoPosicionesApplication">
     <configuration name="GatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.gateway.GatewayApplication" />
       <module name="gateway" />
@@ -133,19 +142,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NotificacionesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.notificaciones.NotificacionesApplication" />
-      <module name="vehiculoPosiciones (1)" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.edu.frc.utn.backend.notificaciones.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="VehiculoPosicionesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.notificaciones.VehiculoPosicionesApplication" />
       <module name="vehiculoPosiciones" />
@@ -159,8 +155,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
+    <configuration name="ar.edu.frc.utn.backend.vehiculosPosiciones.NotificacionesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.vehiculosPosiciones.NotificacionesApplication" />
+      <module name="vehiculoPosiciones (1)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.frc.utn.backend.vehiculosPosiciones.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ar.edu.frc.utn.backend.vehiculosPosiciones.VehiculoPosicionesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ar.edu.frc.utn.backend.vehiculosPosiciones.VehiculoPosicionesApplication" />
+      <module name="vehiculoPosiciones" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.edu.frc.utn.backend.vehiculosPosiciones.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -216,17 +235,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.NotificacionesApplication" />
+      <item itemvalue="Application.ar.edu.frc.utn.backend.vehiculosPosiciones.NotificacionesApplication" />
+      <item itemvalue="Application.ar.edu.frc.utn.backend.vehiculosPosiciones.VehiculoPosicionesApplication" />
       <item itemvalue="Application.GatewayApplication" />
       <item itemvalue="Application.InteresadosPruebasApplication" />
       <item itemvalue="Application.VehiculoPosicionesApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.VehiculoPosicionesApplication" />
-        <item itemvalue="Application.NotificacionesApplication" />
+        <item itemvalue="Application.ar.edu.frc.utn.backend.vehiculosPosiciones.VehiculoPosicionesApplication" />
+        <item itemvalue="Application.ar.edu.frc.utn.backend.vehiculosPosiciones.NotificacionesApplication" />
         <item itemvalue="Application.InteresadosPruebasApplication" />
         <item itemvalue="Application.GatewayApplication" />
+        <item itemvalue="Application.VehiculoPosicionesApplication" />
       </list>
     </recent_temporary>
   </component>
