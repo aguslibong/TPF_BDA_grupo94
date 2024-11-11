@@ -10,11 +10,11 @@
         <module name="vehiculoPosiciones" />
         <module name="vehiculoPosiciones (1)" />
         <module name="interesadosPruebas" />
-        <module name="demo" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="gateway" target="21" />
+      <module name="demo" target="21" />
       <module name="notificaciones" target="21" />
     </bytecodeTargetLevel>
   </component>
