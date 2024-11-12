@@ -29,7 +29,7 @@ public class PosicionesController {
         }
     }
 
-    @GetMapping("/periodo")
+    @PostMapping("/periodo")
     public ResponseEntity<Double> getPosicionesEnPeriodo(@RequestBody PosicionPeriodoDTO pruebaPosicion) {
         try {
             double Kilometros = posicionService.getPosicionesEnPeriodo(pruebaPosicion);
@@ -40,5 +40,4 @@ public class PosicionesController {
             throw new RuntimeException(e);  // Rethrow other unexpected errors
         }
     }
-
 }

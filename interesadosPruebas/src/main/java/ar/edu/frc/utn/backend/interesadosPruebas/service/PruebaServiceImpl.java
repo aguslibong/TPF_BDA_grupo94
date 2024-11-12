@@ -310,18 +310,11 @@ public class PruebaServiceImpl implements PruebaService {
             {
                 Prueba prueba = getPruebaById(posicionPeriodoDTO.getIdPrueba());
 
-                if (prueba != null) {
-
                     RestTemplate template = new RestTemplate();
                     VehiculoDTO vehiculo = fetchVehiculo(prueba.getIdVehiculo());
                     posicionPeriodoDTO.setIdVehiculo(vehiculo.getIdVehiculo());
-                    ResponseEntity<Double> res = template.getForEntity("http://localhost:8081/api/posicion/periodo", Double.class, posicionPeriodoDTO);
-
+                    ResponseEntity<Double> res = template.postForEntity("http://localhost:8081/api/posicion/periodo", posicionPeriodoDTO, Double.class);
                     return res.getBody();
-
-                } else {
-                    throw new RuntimeException("No existe la prueba");
-                }
             } else {
                 throw new RuntimeException("El periodo es incorrecto");
             }

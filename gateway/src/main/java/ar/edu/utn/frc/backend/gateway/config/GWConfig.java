@@ -30,6 +30,7 @@ public class GWConfig {
                 .route(p -> p.path("/api/empleado/**").uri(uriInteresados))
                 .route(p -> p.path("/api/vehiculo/**").uri(uriVehiculos))
                 .route(p -> p.path("/api/posicion/**").uri(uriVehiculos))
+                .route(p -> p.path("/api/reporte/**").uri(uriInteresados))
                 .route(p -> p.path("/api/notificacion/**").uri(uriNotificaciones))
                 .build();
     }
@@ -39,18 +40,22 @@ public class GWConfig {
         http.authorizeExchange(exchanges -> exchanges
 
                         .pathMatchers("/api/prueba/**")
-                        .hasAnyRole("EMPLEADO","ADMIN")
+                        .hasRole("EMPLEADO")
 
+                        .pathMatchers("/api/reporte/**")
+                        .hasRole("ADMIN")
 
                         .pathMatchers("/api/interesado/**")
-                        .hasAnyRole("EMPLEADO","ADMIN")
+                        .hasRole("EMPLEADO")
 
+                        .pathMatchers("/api/notificacion/**")
+                        .hasRole("EMPLEADO")
 
                         .pathMatchers("/api/vehiculo/**")
-                        .hasAnyRole("EMPLEADO","ADMIN")
+                        .hasRole("EMPLEADO")
 
                         .pathMatchers(HttpMethod.POST,"/api/posicion/corroborar")
-                        .hasAnyRole("VEHICULO","ADMIN")
+                        .hasRole("VEHICULO")
 
 
 
