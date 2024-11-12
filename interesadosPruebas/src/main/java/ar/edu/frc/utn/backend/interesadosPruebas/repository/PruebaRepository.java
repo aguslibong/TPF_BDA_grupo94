@@ -20,8 +20,6 @@ public interface PruebaRepository extends JpaRepository<Prueba, Integer> {
     @Query("SELECT p FROM Prueba p WHERE p.fechaHoraFin = p.fechaHoraInicio")
     List<Prueba> findAllByFechaHoraFinNull();
 
-
-
     List<Prueba>  findAllByIncidente(boolean incidente);
 
 

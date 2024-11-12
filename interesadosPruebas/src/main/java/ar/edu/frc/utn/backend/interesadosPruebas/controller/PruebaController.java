@@ -25,10 +25,10 @@ public class PruebaController {
     }
 
     @PostMapping
-    public ResponseEntity<Prueba> crearPrueba(@RequestBody PruebaDTO pruebaDTO) {
+    public ResponseEntity<String> crearPrueba(@RequestBody PruebaDTO pruebaDTO) {
         try {
             pruebaService.create(pruebaDTO);
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok("Se ha creado con exito la prueba!");
         } catch (IllegalArgumentException e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("Error-Message", e.getMessage()).build();
         } catch (Exception e) {
@@ -49,7 +49,7 @@ public class PruebaController {
     }
 
     @PutMapping("/finalizar/{id}")
-    public ResponseEntity putPruebaFinalizar(@PathVariable int id, @RequestBody String comentario){
+    public ResponseEntity<String> putPruebaFinalizar(@PathVariable int id, @RequestBody String comentario){
         try{
             return pruebaService.finalizarPrueba(id,comentario);
         } catch (IllegalArgumentException e) {

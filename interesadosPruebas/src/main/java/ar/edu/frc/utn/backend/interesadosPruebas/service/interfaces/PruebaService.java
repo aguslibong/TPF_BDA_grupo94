@@ -14,7 +14,7 @@ public interface PruebaService extends Servicio<PruebaDTO,Integer> {
 
     Iterable<PruebaDTO> obtenerListaPruebasMomento() throws Exception;
 
-    ResponseEntity finalizarPrueba(int id, String comentario) throws Exception;
+    ResponseEntity<String> finalizarPrueba(int id, String comentario) throws Exception;
 
     List<PruebaDTO> findAll() throws Exception;
 

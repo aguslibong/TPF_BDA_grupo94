@@ -25,7 +25,7 @@ public class NotificacionPromocionController {
     public ResponseEntity<String> promocionNotificacion(@RequestBody List<NotificacionPromocionDTO> notificacionPromocionDTO) {
         try {
             notificacionPromocionService.createAll(notificacionPromocionDTO);
-            return ResponseEntity.ok(notificacionPromocionDTO.toString());
+            return ResponseEntity.ok("Se han enviado los mensajes con éxito");
         } catch (RuntimeException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Error al enviar las notificaciones" + notificacionPromocionDTO.toString());

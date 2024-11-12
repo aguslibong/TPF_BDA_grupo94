@@ -130,7 +130,7 @@ public class PruebaServiceImpl implements PruebaService {
     }
 
 
-    public ResponseEntity finalizarPrueba(int idPruebaFinalizar, String comentario)  {
+    public ResponseEntity<String> finalizarPrueba(int idPruebaFinalizar, String comentario)  {
         try {
             Optional<Prueba> prueba = pruebaRepository.findById(idPruebaFinalizar);
             if(prueba.isEmpty()) {
@@ -151,13 +151,29 @@ public class PruebaServiceImpl implements PruebaService {
             pruebarepository.save(pruebaFinalizar);
 
 
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok("Prueba finalizada con éxito");
 
         } catch (RuntimeException e) {
             throw new RuntimeException(e);
         }
     }
 
+
+    private void validatarInteresadoYEmpleado(Empleado empleado, Interesado interesado) {
+
+        Iterable<PruebaDTO> pruebas = obtenerListaPruebasMomento();
+
+        for(PruebaDTO pruebaDTO : pruebas) {
+
+            if( pruebaDTO.getIdInteresado() == interesado.getID()){
+                throw new RuntimeException("El interesado ya está en prueba");
+            }
+            if (pruebaDTO.getIdEmpleado() == empleado.getLEGAJO()){
+                throw new RuntimeException("El empleado ya está en prueba");
+            }
+        }
+
+    }
 
 
     @Override
@@ -166,9 +182,12 @@ public class PruebaServiceImpl implements PruebaService {
             validatePruebaDTO(pruebaDTO);
 
             Interesado interesado = getInteresado(pruebaDTO.getIdInteresado());
+
             Empleado empleado = getEmpleado(pruebaDTO.getIdEmpleado());
 
             validateInteresado(interesado);
+
+            validatarInteresadoYEmpleado(empleado, interesado);
 
             VehiculoDTO vehiculoDTO = fetchVehiculo(pruebaDTO.getIdVehiculo());
 
@@ -258,16 +277,23 @@ public class PruebaServiceImpl implements PruebaService {
     @Override
     public Iterable<PruebaDetalladaDTO> incidentesPorEmpleado(int idEmpleado) throws Exception {
         try {
-            List <Prueba> listaIncidentes = listaDeIncidentes();
-            List<Prueba> listafiltradoempleado =listaIncidentes.stream().filter(i -> i.getEmpleado().getLEGAJO() == idEmpleado).collect(Collectors.toList());
-            List <PruebaDetalladaDTO> listaPruebaDetallada = new ArrayList<>();
-            listafiltradoempleado.forEach(i -> {
-                VehiculoDTO vehiculo = fetchVehiculo(i.getIdVehiculo());
-                PruebaDetalladaDTO pruebaDetallada = new PruebaDetalladaDTO(i,vehiculo);
-                listaPruebaDetallada.add(pruebaDetallada);
-            });
-            return listaPruebaDetallada;
-        } catch (RuntimeException e) {
+
+            Optional<Empleado> empleado = empleadorepository.findById(idEmpleado);
+            if (empleado.isPresent()) {
+                List<Prueba> listaIncidentes = listaDeIncidentes();
+                List<Prueba> listafiltradoempleado = listaIncidentes.stream().filter(i -> i.getEmpleado().getLEGAJO() == idEmpleado).collect(Collectors.toList());
+                List<PruebaDetalladaDTO> listaPruebaDetallada = new ArrayList<>();
+                listafiltradoempleado.forEach(i -> {
+                    VehiculoDTO vehiculo = fetchVehiculo(i.getIdVehiculo());
+                    PruebaDetalladaDTO pruebaDetallada = new PruebaDetalladaDTO(i, vehiculo);
+                    listaPruebaDetallada.add(pruebaDetallada);
+                });
+                return listaPruebaDetallada;
+            } else {
+                throw new Exception("El id del empleado no existe");
+            }
+
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
@@ -289,7 +315,7 @@ public class PruebaServiceImpl implements PruebaService {
                     RestTemplate template = new RestTemplate();
                     VehiculoDTO vehiculo = fetchVehiculo(prueba.getIdVehiculo());
                     posicionPeriodoDTO.setIdVehiculo(vehiculo.getIdVehiculo());
-                    ResponseEntity<Double> res = template.getForEntity("http://localhost:8081/api/posiciones/periodo", Double.class, posicionPeriodoDTO);
+                    ResponseEntity<Double> res = template.getForEntity("http://localhost:8081/api/posicion/periodo", Double.class, posicionPeriodoDTO);
 
                     return res.getBody();
 

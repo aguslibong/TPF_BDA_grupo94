@@ -27,7 +27,7 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
     private VehiculoRepository vehiculoRepository;
 
     @Autowired
-    public PosicionImp(PosicionRepository posicionRepository, VehiculoRepository vehiculoRepository ) {
+    public PosicionImp(PosicionRepository posicionRepository, VehiculoRepository vehiculoRepository) {
         this.posicionRepository = posicionRepository;
         this.vehiculoRepository = vehiculoRepository;
     }
@@ -37,27 +37,33 @@ public class PosicionImp extends ServicioImp<PosicionDTO, Integer> implements Po
         //http://localhost:8082/api/prueba/momento
         LocalDateTime fechaActual = LocalDateTime.now();
         try {
-            PruebaDTO pruebaDTOActual = estaEnPrueba(posicion.getId_vehiculo());
-            if (pruebaDTOActual == null) {
-                return ResponseEntity.ok ("El vehiculo no se encuentra en Prueba");
-            }
-            int esZonapeligrosa = esZonaPeligro(posicion);
-            if (esZonapeligrosa == 1 || esZonapeligrosa == 2) {
-                EmpleadoDTO empleado = obtenerEmpleado(pruebaDTOActual);
-                restringirInteresado(pruebaDTOActual);
-                marcarPruebaIncidente(pruebaDTOActual);
-                String mensaje = obtenerMensajeZonaPeligrosa(esZonapeligrosa);
-                NotificacionDTO notificacionDTO = crearNotificacionDTO(empleado, mensaje);
-                Posicion posicionNueva = crearPosicion(posicion, fechaActual);
-                posicionRepository.save(posicionNueva);
-                return enviarNotificacion(notificacionDTO);
+
+            Optional<Vehiculo> vehiculo = vehiculoRepository.findById(posicion.getId_vehiculo());
+            if(vehiculo.isPresent()) {
+                PruebaDTO pruebaDTOActual = estaEnPrueba(posicion.getId_vehiculo());
+                if (pruebaDTOActual == null) {
+                    return ResponseEntity.ok("El vehiculo no se encuentra en Prueba");
+                }
+                int esZonapeligrosa = esZonaPeligro(posicion);
+                if (esZonapeligrosa == 1 || esZonapeligrosa == 2) {
+                    EmpleadoDTO empleado = obtenerEmpleado(pruebaDTOActual);
+                    restringirInteresado(pruebaDTOActual);
+                    marcarPruebaIncidente(pruebaDTOActual);
+                    String mensaje = obtenerMensajeZonaPeligrosa(esZonapeligrosa);
+                    NotificacionDTO notificacionDTO = crearNotificacionDTO(empleado, mensaje);
+                    Posicion posicionNueva = crearPosicion(posicion, fechaActual);
+                    posicionRepository.save(posicionNueva);
+                    return enviarNotificacion(notificacionDTO);
+                }
+            } else {
+                return ResponseEntity.ok("El vehiculo no existe");
             }
         } catch (RuntimeException e) {
             throw new RuntimeException(e);
         }
         Posicion posicionNueva = crearPosicion(posicion, fechaActual);
         posicionRepository.save(posicionNueva);
-        return ResponseEntity.ok ("EL vehiculo se Encuentra en una posisicon Legal");
+        return ResponseEntity.ok("EL vehiculo se Encuentra en una posisicon Legal");
     }
 
     private Posicion crearPosicion(PosicionDTO posicion, LocalDateTime fechaActual) {
