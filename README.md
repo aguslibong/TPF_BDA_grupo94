@@ -1,12 +1,15 @@
 Trabajo Práctico Integrador
  Backend de Aplicaciones 2024
+ 
  Enunciado
+ 
  En este trabajo los estudiantes asumirán el rol de desarrolladores de un backend para una
  agencia de venta de vehículos usados que les da la posibilidad a sus clientes de realizar
  pruebas de manejo de sus productos.
  Cada vez que un interesado quiere probar un auto, esta prueba se registra, asociando los
  datos del cliente, del vehículo a probar y del empleado de la agencia que acompañará al
  cliente.
+ 
  Los vehículos que tiene para la venta la agencia cuentan con un sistema de geolocalización
  que transmite de forma regular la posición del mismo al backend, de manera que se puede
  conocer la ubicación de cada vehículo en un determinado momento.
@@ -20,6 +23,7 @@ Trabajo Práctico Integrador
  prueba indicando que haga regresar el vehículo de manera inmediata, además de agregar
  al cliente en una lista de clientes restringidos (no podrán probar más vehículos en la
  agencia).
+ 
  ATENCIÓN: Para cualquier cálculo referente a las coordenadas enviadas por el
  vehículo, debe considerarse que se trabaja en un plano y utilizando distancia
  euclídea. Si algún grupo quiere trabajar con un sistema de coordenadas esféricas, no hay
